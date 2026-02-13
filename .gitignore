@@ -1,0 +1,54 @@
+# Environment variables (NEVER commit these!)
+.env
+.env.local
+.env.production
+.env.*.local
+
+# Google Service Account (NEVER commit this!)
+data/google-service-account.json
+
+# Dependencies
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# OS files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Logs
+*.log
+logs/
+.cache/
+
+# Test coverage
+coverage/
+
+# Build outputs
+dist/
+build/
+
+# Runtime data
+data/cron-log.json
+data/blog-tracker.json
+content/drafts/*.md
+content/review/*.md
+output/html/*.json
+output/thumbnails/*.png
+output/reports/*.md
+
+# Temporary files
+*.tmp
+.temp/

@@ -1,0 +1,345 @@
+# Comprehensive Prop Firm & Trading Platform Brand Exclusion List
+# Use this in SEMrush "Exclude keywords" filter
+# Last updated: 2026-02-12
+
+## Major Prop Firms (Top Tier)
+ftmo
+the5ers
+topstep
+earn2trade
+fidelcrest
+myfundedfx
+myforexfunds
+funded next
+fundednext
+funded trader plus
+fundedtraderplus
+lux trading firm
+luxtradinglirm
+alpha capital group
+alphacapital
+apex trader funding
+apextrader
+true forex funds
+trueforexfunds
+surge trader
+surgetrader
+the funded trader
+thefundedtrader
+funded trading plus
+fundedtradingplus
+blue guardian
+blueguardian
+bulenox
+city traders imperium
+citytraders
+e8 funding
+e8funding
+fast track trading
+fasttracktrading
+for traders
+fortraders
+funding pips
+fundingpips
+funding talent
+fundingtalent
+fundingtraders
+funded engineer
+fundedengineer
+goat funded trader
+goatfundedtrader
+instant funding
+instantfunding
+maven trading
+maventrading
+save to trade
+savetotrade
+skilled funded trader
+skilledfundedtrader
+take profit trader
+takeprofittrader
+the trading pit
+thetradingpit
+traders with edge
+traderswithege
+trade the pool
+tradethepool
+uat funding
+uatfunding
+
+## Mid-Tier Prop Firms
+aqua funded
+aquafunded
+axi select
+axiselect
+big mike funding
+bigmikefunding
+breakout
+cfunds
+cognitrader
+CTI
+darwinex
+elite trader funding
+elitetrading
+exness
+funded peaks
+fundedpeaks
+funded trader
+fundedtrader
+funding frontier
+fundingfrontier
+glow node
+glownode
+greenbull
+green bull
+hantec funding
+hantecfunding
+ic funding
+icfunding
+lark funding
+larkfunding
+market masters
+marketmasters
+oneup trader
+oneuptrader
+opofinance
+opo finance
+peak trader funding
+peaktrader
+profit first
+profitfirst
+prop trading tech
+proptradingtech
+qaunta
+quantum trader
+quantumtrader
+round rock capital
+roundrockcapital
+sage trader
+sagetrader
+shcapital
+smart prop trader
+smartproptrader
+smc trade
+smctrade
+t4t capital
+t4tcapital
+tallinex
+the prop trading
+theproptrading
+tlc funded
+tlcfunded
+traders club
+tradersclub
+traders flow
+tradersflow
+tradex fund
+tradexfund
+tradify
+traderify
+unicorn
+unicornfunding
+
+## Newer/Emerging Prop Firms
+5percenters
+funded futures
+fundedfutures
+goated trading
+goatedtrading
+hyper funded
+hyperfunded
+infinity futures funding
+infinityfutures
+jumpstart trading
+jumpstarttrading
+leveled up society
+leveledupsociety
+maven funded
+mavenfunded
+mint funded
+mintfunded
+nexus funded
+nexusfunded
+nordic funder
+nordicfunder
+orca funds
+orcafunds
+phoenix trader funding
+phoenixtrader
+prop capital
+propcapital
+prop firm x
+propfirmx
+propify
+quick funded
+quickfunded
+rebel funded
+rebelfunded
+rocket 21
+rocket21
+scale capital
+scalecapital
+sonic trading
+sonictrading
+stellar trading
+stellartrading
+swift trader funding
+swifttrader
+the trading academy
+thetradingacademy
+traders with edge
+traderswithege
+uprofit trader
+uprofittrader
+vault markets
+vaultmarkets
+
+## Forex Brokers (Not Prop Firms - Exclude)
+oanda
+fxcm
+forex.com
+forexcom
+ig markets
+igmarkets
+ig group
+interactive brokers
+interactivebrokers
+etoro
+plus500
+avatrade
+pepperstone
+admirals
+exness
+xm
+xmtrading
+hotforex
+fbs
+octafx
+tickmill
+roboforex
+ic markets
+icmarkets
+fp markets
+fpmarkets
+eightcap
+tmgm
+axi
+blueberry markets
+blueberrymarkets
+vantage
+vantagefx
+global prime
+globalprime
+go markets
+gomarkets
+thinkmarkets
+think markets
+hantec
+saxo bank
+saxobank
+swissquote
+dukascopy
+gain capital
+gaincapital
+forex4you
+acy securities
+acysecurities
+alpari
+fxtm
+forextime
+just2trade
+
+## Trading Platforms (Software - Exclude)
+metatrader
+mt4
+mt5
+tradingview
+ninjatrader
+ctrader
+thinkorswim
+tradestation
+multicharts
+quantower
+sierra chart
+sierrachart
+jforex
+protrader
+zulutrade
+myfxbook
+edgewonk
+edgewonk
+tradezella
+dxtrade
+match trader
+matchtrader
+webtrader
+vertex
+acttrader
+sirix
+
+## Crypto Exchanges (Different Niche - Exclude)
+binance
+coinbase
+kraken
+gemini
+bitstamp
+bitfinex
+bybit
+okx
+kucoin
+huobi
+gate.io
+bitget
+mexc
+crypto.com
+ftx
+
+## Educational/Signal Services (Different Niche - Exclude)
+babypips
+forexfactory
+myfxbook
+tradingview ideas
+investing.com
+dailyfx
+actionforex
+fxstreet
+earnforex
+forexlive
+tradimo
+im academy
+imacademy
+imi
+vip signals
+
+## Payment Processors (Not Related)
+riseworks
+riseup
+payoneer
+paypal
+skrill
+neteller
+wise
+transferwise
+
+## Country-Specific Variations
+ftmo uk
+ftmo eu
+ftmo usa
+topstep uk
+topstep europe
+myforexfunds uk
+fidelcrest europe
+earn2trade uk
+
+## Common Misspellings (Exclude These Too)
+ftmo.com
+ftm0
+the5%ers
+the 5ers
+top step
+my forex funds
+my funded fx
+funded-next
+blue-guardian
+lux-trading
+funded-trader-plus

@@ -1,0 +1,27 @@
+{
+  "calculatedAt": "2026-02-12T22:35:51.647Z",
+  "daysAnalyzed": 89,
+  "dateRange": {
+    "start": "2025-11-14",
+    "end": "2026-02-10"
+  },
+  "traffic": {
+    "total": 6450,
+    "average": 72,
+    "min": 31,
+    "max": 123
+  },
+  "tier": {
+    "current": 50,
+    "label": "50-100",
+    "next": 100,
+    "nextLabel": "100-200",
+    "clicksToNextTier": 28
+  },
+  "recommendations": {
+    "targetMonthlySearchVolume": "50-100",
+    "keywordsToFind": "30-45 KGR keywords",
+    "publishingRate": "1-2 articles per day",
+    "expectedRankingTime": "2 weeks to top 20"
+  }
+}

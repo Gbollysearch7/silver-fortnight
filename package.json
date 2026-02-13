@@ -1,0 +1,50 @@
+{
+  "name": "tradersyard-blog-automation",
+  "version": "1.0.0",
+  "description": "Autonomous blog pipeline: generate, SEO check, thumbnail, publish, track",
+  "type": "module",
+  "scripts": {
+    "test:ai": "node scripts/test-ai.mjs",
+    "generate": "node scripts/generate.mjs",
+    "seo": "node scripts/seo-check.mjs",
+    "thumbnail": "node scripts/thumbnail.mjs",
+    "graphics": "node scripts/graphics.mjs",
+    "publish": "node scripts/publish.mjs",
+    "index": "node scripts/index.mjs",
+    "calendar": "node scripts/calendar.mjs",
+    "performance": "node scripts/performance.mjs",
+    "pipeline": "node scripts/pipeline.mjs",
+    "status": "node scripts/status.mjs",
+    "cron": "node scripts/cron.mjs",
+    "report": "node scripts/report.mjs",
+    "tier": "node scripts/tier-calculator.mjs",
+    "tier:blog": "node scripts/tier-calculator-blog-only.mjs",
+    "staging": "node scripts/cron.mjs --staging",
+    "staging:once": "node scripts/cron.mjs --staging --once",
+    "bulk-publish": "node scripts/bulk-publish.mjs",
+    "kgr": "node scripts/kgr-research.mjs",
+    "kgr:add": "node scripts/kgr-research.mjs --add-to-queue",
+    "redirects": "node scripts/generate-redirect-csv.mjs",
+    "agent:seo": "node agents/seo-keyword-research-agent.mjs",
+    "agent:calendar": "node agents/seo-content-calendar-agent.mjs",
+    "keywords:merge": "node scripts/merge-keywords.mjs",
+    "keywords:filter": "node scripts/filter-audience.mjs",
+    "keywords:import": "node scripts/import-keywords.mjs",
+    "start": "node scripts/cron.mjs",
+    "keywords:validate": "node scripts/ai-keyword-validator.mjs"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.74.0",
+    "@fal-ai/serverless-client": "^0.15.0",
+    "dotenv": "^16.4.7",
+    "googleapis": "^144.0.0",
+    "openai": "^6.21.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "devDependencies": {
+    "docx": "^9.5.1",
+    "markdown-to-docx": "^1.2.0"
+  }
+}

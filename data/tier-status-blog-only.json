@@ -1,0 +1,22 @@
+{
+  "calculatedAt": "2026-02-12T22:44:55.380Z",
+  "filter": "blog.tradersyard.com only",
+  "daysAnalyzed": 89,
+  "dateRange": {
+    "start": "2025-11-14",
+    "end": "2026-02-10"
+  },
+  "traffic": {
+    "total": 24,
+    "average": 0,
+    "min": 0,
+    "max": 2
+  },
+  "tier": {
+    "current": 0,
+    "label": "0-10",
+    "next": 10,
+    "nextLabel": "10-20",
+    "clicksToNextTier": 10
+  }
+}

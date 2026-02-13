@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Migration Guide: Subdomain → Subdirectory</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 20px;
+            color: #333;
+            background: #fff;
+        }
+        h1 {
+            color: #1a1a2e;
+            font-size: 2.5em;
+            margin-bottom: 0.5em;
+            border-bottom: 3px solid #4250eb;
+            padding-bottom: 10px;
+        }
+        h2 {
+            color: #1a1a2e;
+            font-size: 1.8em;
+            margin-top: 1.5em;
+            margin-bottom: 0.5em;
+            border-bottom: 2px solid #e2e8f0;
+            padding-bottom: 5px;
+        }
+        h3 {
+            color: #2d2d44;
+            font-size: 1.4em;
+            margin-top: 1.2em;
+            margin-bottom: 0.5em;
+        }
+        h4 {
+            color: #2d2d44;
+            font-size: 1.1em;
+            margin-top: 1em;
+            margin-bottom: 0.5em;
+        }
+        p {
+            margin: 0.8em 0;
+        }
+        code {
+            background: #f1f5f9;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9em;
+        }
+        pre {
+            background: #1a1a2e;
+            color: #e2e8f0;
+            padding: 15px;
+            border-radius: 5px;
+            overflow-x: auto;
+            margin: 1em 0;
+        }
+        pre code {
+            background: transparent;
+            color: #e2e8f0;
+            padding: 0;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.5em 0;
+        }
+        th, td {
+            border: 1px solid #d1d5db;
+            padding: 12px;
+            text-align: left;
+        }
+        th {
+            background: #4250eb;
+            color: white;
+            font-weight: 600;
+        }
+        tr:nth-child(even) {
+            background: #f9fafb;
+        }
+        ul, ol {
+            margin: 0.8em 0;
+            padding-left: 2em;
+        }
+        li {
+            margin: 0.5em 0;
+        }
+        .checkbox-item {
+            list-style: none;
+            margin-left: -1.5em;
+        }
+        .checkbox-item:before {
+            content: "☐ ";
+            margin-right: 5px;
+        }
+        .info-box {
+            background: #eff6ff;
+            border-left: 4px solid #4250eb;
+            padding: 15px;
+            margin: 1.5em 0;
+        }
+        .warning-box {
+            background: #fef3c7;
+            border-left: 4px solid #f59e0b;
+            padding: 15px;
+            margin: 1.5em 0;
+        }
+        .success-box {
+            background: #d1fae5;
+            border-left: 4px solid #4ade80;
+            padding: 15px;
+            margin: 1.5em 0;
+        }
+        strong {
+            color: #1a1a2e;
+            font-weight: 600;
+        }
+        hr {
+            border: none;
+            border-top: 2px solid #e5e7eb;
+            margin: 2em 0;
+        }
+        .page-break {
+            page-break-after: always;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Blog Migration Guide: Subdomain → Subdirectory</h1>
+
+<h2>Overview</h2>
+
+<p>Migrate from <code>blog.tradersyard.com</code> to <code>tradersyard.com/blog/</code> to inherit main domain's Tier 50 authority instantly.</p>
+
+<div class="info-box">
+    <p><strong>Current Setup:</strong></p>
+    <ul>
+        <li>Blog: <code>blog.tradersyard.com</code> (separate subdomain, Tier 0)</li>
+        <li>Main: <code>tradersyard.com</code> (Tier 50)</li>
+    </ul>
+    <p><strong>Target Setup:</strong></p>
+    <ul>
+        <li>Blog: <code>tradersyard.com/blog/</code> (subdirectory, inherits Tier 50)</li>
+        <li>Main: <code>tradersyard.com</code> (Tier 50)</li>
+    </ul>
+</div>
+
+<div class="success-box">
+    <p><strong>Benefit:</strong> Skip 12 months of tier progression, compete for 50-100 monthly search volume keywords immediately.</p>
+</div>
+
+<hr>
+
+<h2>Prerequisites Check</h2>
+
+<h3>1. Verify Webflow Setup</h3>
+
+<p><strong>Check if blog can be moved to subdirectory:</strong></p>
+
+<ul class="checkbox-item">
+    <li class="checkbox-item">Is blog on a separate Webflow site/project from main site?
+        <ul>
+            <li>If YES → Migration requires Webflow plan upgrade or restructuring</li>
+            <li>If NO → Migration is straightforward</li>
+        </ul>
+    </li>
+</ul>
+
+<ul class="checkbox-item">
+    <li class="checkbox-item">Does main site Webflow plan support CMS collections?
+        <ul>
+            <li>If YES → Can host blog at <code>/blog/</code></li>
+            <li>If NO → Need to upgrade plan</li>
+        </ul>
+    </li>
+</ul>
+
+<ul class="checkbox-item">
+    <li class="checkbox-item">How many blog posts exist currently?
+        <ul>
+            <li>Count: <strong>77 posts</strong></li>
+            <li>These will all need 301 redirects</li>
+        </ul>
+    </li>
+</ul>
+
+<h3>2. DNS Access</h3>
+
+<ul class="checkbox-item">
+    <li class="checkbox-item">Access to DNS settings (Cloudflare, Namecheap, etc.)</li>
+    <li class="checkbox-item">Ability to remove <code>blog</code> subdomain CNAME record</li>
+    <li class="checkbox-item">Ability to add new DNS records if needed</li>
+</ul>
+
+<h3>3. Google Search Console Access</h3>
+
+<ul class="checkbox-item">
+    <li class="checkbox-item">Access to GSC for both properties</li>
+    <li class="checkbox-item">Ability to add new property for <code>tradersyard.com/blog/</code></li>
+</ul>
+
+<hr>
+<div class="page-break"></div>
+
+<h2>Migration Plan</h2>
+
+<h3>Phase 1: Technical Setup (1-2 days)</h3>
+
+<h4>Step 1: Webflow Configuration</h4>
+
+<p><strong>If blog is separate Webflow site:</strong></p>
+<ol>
+    <li>Export all blog posts from current site</li>
+    <li>Create CMS collection in main Webflow site</li>
+    <li>Import posts to new collection</li>
+    <li>Set up blog template at <code>/blog/</code> path</li>
+    <li>Configure collection list page at <code>/blog/</code></li>
+    <li>Configure collection item pages at <code>/blog/[slug]</code></li>
+</ol>
+
+<p><strong>If blog is same Webflow site:</strong></p>
+<ol>
+    <li>Change blog pages path from subdomain to <code>/blog/</code> subdirectory</li>
+    <li>Update Webflow site settings to remove subdomain</li>
+    <li>Republish all blog pages</li>
+</ol>
+
+<h4>Step 2: URL Mapping</h4>
+
+<p>Create a complete URL mapping spreadsheet:</p>
+
+<table>
+    <thead>
+        <tr>
+            <th>Old URL</th>
+            <th>New URL</th>
+            <th>Status</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><code>blog.tradersyard.com/post-1</code></td>
+            <td><code>tradersyard.com/blog/post-1</code></td>
+            <td>Pending</td>
+        </tr>
+        <tr>
+            <td><code>blog.tradersyard.com/post-2</code></td>
+            <td><code>tradersyard.com/blog/post-2</code></td>
+            <td>Pending</td>
+        </tr>
+        <tr>
+            <td>...</td>
+            <td>...</td>
+            <td>...</td>
+        </tr>
+    </tbody>
+</table>
+
+<p>Export this from Webflow CMS or create manually. <strong>CSV file ready:</strong> <code>data/blog-redirects.csv</code> (79 redirects)</p>
+
+<h4>Step 3: 301 Redirects Setup</h4>
+
+<p><strong>Option A: Webflow Hosting (Recommended)</strong></p>
+<ol>
+    <li>Go to Webflow project settings → Hosting → 301 Redirects</li>
+    <li>Add redirects for each blog post:
+        <pre><code>/post-1 → /blog/post-1
+/post-2 → /blog/post-2
+...</code></pre>
+    </li>
+    <li>Add wildcard redirect if Webflow supports:
+        <pre><code>/* → /blog/$1</code></pre>
+    </li>
+</ol>
+
+<p><strong>Option B: Cloudflare (If using Cloudflare)</strong></p>
+<ol>
+    <li>Use Cloudflare Bulk Redirects</li>
+    <li>Upload CSV with old → new URL mappings</li>
+    <li>Set redirect type to 301 (permanent)</li>
+</ol>
+
+<p><strong>Option C: Custom redirects.txt (If Webflow supports)</strong></p>
+<p>Create <code>redirects.txt</code> file:</p>
+<pre><code>/post-1 /blog/post-1 301
+/post-2 /blog/post-2 301</code></pre>
+
+<h4>Step 4: DNS Changes</h4>
+
+<ol>
+    <li><strong>Remove subdomain CNAME:</strong>
+        <ul><li>Delete <code>blog</code> CNAME record pointing to Webflow</li></ul>
+    </li>
+    <li><strong>Verify main domain A record:</strong>
+        <ul><li>Ensure <code>tradersyard.com</code> points to Webflow IP</li></ul>
+    </li>
+    <li><strong>Wait for DNS propagation</strong> (up to 48 hours, usually 1-2 hours)</li>
+</ol>
+
+<hr>
+<div class="page-break"></div>
+
+<h3>Phase 2: Content Migration (1 day)</h3>
+
+<h4>Step 1: Backup Everything</h4>
+
+<ul class="checkbox-item">
+    <li class="checkbox-item">Export all blog posts from Webflow CMS</li>
+    <li class="checkbox-item">Download all blog images/assets</li>
+    <li class="checkbox-item">Save current sitemap</li>
+    <li class="checkbox-item">Take screenshots of current blog homepage, archive, individual posts</li>
+</ul>
+
+<h4>Step 2: Migrate Content</h4>
+
+<p><strong>If using same Webflow project:</strong></p>
+<ol>
+    <li>Update page paths to <code>/blog/[slug]</code></li>
+    <li>Republish all pages</li>
+</ol>
+
+<p><strong>If moving to new Webflow project:</strong></p>
+<ol>
+    <li>Create CMS collection in main site</li>
+    <li>Import blog posts (CSV or manual)</li>
+    <li>Re-upload images to new project</li>
+    <li>Verify all internal links work</li>
+</ol>
+
+<h4>Step 3: Update Internal Links</h4>
+
+<p><strong>In blog posts:</strong></p>
+<ul>
+    <li>Find/replace: <code>blog.tradersyard.com</code> → <code>tradersyard.com/blog</code></li>
+    <li>Update navigation links</li>
+    <li>Update category/tag links</li>
+</ul>
+
+<p><strong>On main site:</strong></p>
+<ul>
+    <li>Update any links to blog from homepage, footer, etc.</li>
+    <li>Change from <code>blog.tradersyard.com</code> → <code>/blog/</code></li>
+</ul>
+
+<hr>
+<div class="page-break"></div>
+
+<h3>Phase 3: SEO Migration (1 day)</h3>
+
+<h4>Step 1: Google Search Console</h4>
+
+<ol>
+    <li><strong>Add new property:</strong> <code>tradersyard.com</code> (if not already added)</li>
+    <li><strong>Verify ownership</strong> via DNS or meta tag</li>
+    <li><strong>Submit sitemap:</strong> <code>tradersyard.com/sitemap.xml</code> (should include <code>/blog/</code> URLs)</li>
+    <li><strong>Request re-indexing</strong> for all migrated blog posts</li>
+</ol>
+
+<h4>Step 2: Change of Address (Optional but Recommended)</h4>
+
+<ol>
+    <li>Go to old GSC property (<code>blog.tradersyard.com</code>)</li>
+    <li>Settings → Change of Address</li>
+    <li>Select new property: <code>tradersyard.com</code></li>
+    <li>This tells Google you've moved</li>
+</ol>
+
+<h4>Step 3: Submit Sitemap</h4>
+
+<ol>
+    <li>Ensure Webflow generates sitemap with new URLs</li>
+    <li>Submit to GSC: <code>https://tradersyard.com/sitemap.xml</code></li>
+    <li>Monitor indexing in GSC</li>
+</ol>
+
+<h4>Step 4: Analytics Update</h4>
+
+<p><strong>Google Analytics:</strong></p>
+<ol>
+    <li>Update GA4 property if needed</li>
+    <li>Verify tracking code works on <code>/blog/</code> pages</li>
+    <li>Set up filters if tracking main site + blog separately</li>
+</ol>
+
+<hr>
+<div class="page-break"></div>
+
+<h3>Phase 4: Testing & Validation (1 day)</h3>
+
+<h4>Pre-Launch Checklist</h4>
+
+<ul class="checkbox-item">
+    <li class="checkbox-item">All blog posts accessible at <code>tradersyard.com/blog/[slug]</code></li>
+    <li class="checkbox-item">Old URLs redirect to new URLs with 301</li>
+    <li class="checkbox-item">Sitemap includes new blog URLs</li>
+    <li class="checkbox-item">Internal navigation works</li>
+    <li class="checkbox-item">Images load correctly</li>
+    <li class="checkbox-item">Meta tags/SEO fields preserved</li>
+    <li class="checkbox-item">Social sharing works (OG tags)</li>
+    <li class="checkbox-item">Analytics tracking works</li>
+    <li class="checkbox-item">Search functionality works (if applicable)</li>
+</ul>
+
+<h4>Test Redirects</h4>
+
+<p>Use this tool: <code>curl -I https://blog.tradersyard.com/old-post</code></p>
+
+<p>Should return:</p>
+<pre><code>HTTP/1.1 301 Moved Permanently
+Location: https://tradersyard.com/blog/old-post</code></pre>
+
+<h4>Monitor for Issues</h4>
+
+<p><strong>Week 1 after launch:</strong></p>
+<ul class="checkbox-item">
+    <li class="checkbox-item">Check GSC for crawl errors daily</li>
+    <li class="checkbox-item">Monitor organic traffic (expect 5-10% dip initially)</li>
+    <li class="checkbox-item">Verify redirects working in GSC Coverage report</li>
+    <li class="checkbox-item">Check for broken links</li>
+</ul>
+
+<p><strong>Week 2-4:</strong></p>
+<ul class="checkbox-item">
+    <li class="checkbox-item">Traffic should recover to previous levels</li>
+    <li class="checkbox-item">New URLs should start appearing in GSC</li>
+    <li class="checkbox-item">Old URLs should show "Redirected" status</li>
+</ul>
+
+<hr>
+<div class="page-break"></div>
+
+<h3>Phase 5: Cleanup (1 week after launch)</h3>
+
+<h4>Step 1: Verify Migration Success</h4>
+
+<ul class="checkbox-item">
+    <li class="checkbox-item">All old URLs redirect correctly</li>
+    <li class="checkbox-item">New URLs indexed in Google (check GSC)</li>
+    <li class="checkbox-item">Traffic recovered or growing</li>
+    <li class="checkbox-item">No major crawl errors</li>
+</ul>
+
+<h4>Step 2: Update External Links (If Possible)</h4>
+
+<ul class="checkbox-item">
+    <li class="checkbox-item">Update social media bio links</li>
+    <li class="checkbox-item">Update email signatures</li>
+    <li class="checkbox-item">Update newsletter links</li>
+    <li class="checkbox-item">Contact sites linking to old URLs (optional)</li>
+</ul>
+
+<h4>Step 3: Keep Redirects Permanent</h4>
+
+<div class="warning-box">
+    <p><strong>IMPORTANT:</strong> Never remove 301 redirects</p>
+    <ul>
+        <li>Google needs them to transfer ranking signals</li>
+        <li>Users with old bookmarks need them</li>
+        <li>External sites linking to old URLs need them</li>
+        <li>Keep redirects for minimum 1 year (ideally forever)</li>
+    </ul>
+</div>
+
+<hr>
+<div class="page-break"></div>
+
+<h2>Expected Outcomes</h2>
+
+<h3>Immediate (Week 1)</h3>
+<ul>
+    <li>All blog content accessible at new URLs</li>
+    <li>301 redirects preserve link equity</li>
+    <li>Minor traffic dip (5-10%) is normal</li>
+</ul>
+
+<h3>Short-term (Week 2-4)</h3>
+<ul>
+    <li>Traffic recovers to pre-migration levels</li>
+    <li>New URLs appear in search results</li>
+    <li>Google recognizes blog as part of main domain</li>
+</ul>
+
+<h3>Long-term (Month 2-3)</h3>
+<ul>
+    <li><strong>Blog inherits Tier 50 authority</strong></li>
+    <li>Can compete for 50-100 monthly search volume keywords</li>
+    <li>Rankings improve for existing content</li>
+    <li>New content ranks faster</li>
+</ul>
+
+<hr>
+
+<h2>Rollback Plan (If Migration Fails)</h2>
+
+<p>If critical issues occur within first 48 hours:</p>
+
+<ol>
+    <li><strong>Revert DNS:</strong> Re-add <code>blog</code> CNAME to Webflow</li>
+    <li><strong>Remove redirects:</strong> Delete 301 redirects (or reverse them)</li>
+    <li><strong>Restore old site:</strong> Re-publish blog at subdomain</li>
+    <li><strong>Inform Google:</strong> Submit old sitemap again</li>
+</ol>
+
+<p><strong>Cost:</strong> Lose 2-3 days of SEO signals (minimal impact)</p>
+
+<hr>
+<div class="page-break"></div>
+
+<h2>Migration Checklist Summary</h2>
+
+<h3>Pre-Migration</h3>
+<ul class="checkbox-item">
+    <li class="checkbox-item">Verify Webflow setup compatibility</li>
+    <li class="checkbox-item">Create URL mapping spreadsheet (✅ CSV ready)</li>
+    <li class="checkbox-item">Backup all content and assets</li>
+    <li class="checkbox-item">Set up staging environment (if possible)</li>
+</ul>
+
+<h3>Migration Day</h3>
+<ul class="checkbox-item">
+    <li class="checkbox-item">Configure Webflow paths to <code>/blog/</code></li>
+    <li class="checkbox-item">Set up 301 redirects</li>
+    <li class="checkbox-item">Update DNS settings</li>
+    <li class="checkbox-item">Republish all content</li>
+    <li class="checkbox-item">Update internal links</li>
+</ul>
+
+<h3>Post-Migration</h3>
+<ul class="checkbox-item">
+    <li class="checkbox-item">Submit sitemap to GSC</li>
+    <li class="checkbox-item">Test all redirects</li>
+    <li class="checkbox-item">Monitor for errors</li>
+    <li class="checkbox-item">Request re-indexing</li>
+    <li class="checkbox-item">Track traffic/rankings</li>
+</ul>
+
+<h3>Week 1-4 After</h3>
+<ul class="checkbox-item">
+    <li class="checkbox-item">Monitor GSC Coverage report daily</li>
+    <li class="checkbox-item">Track organic traffic</li>
+    <li class="checkbox-item">Fix any broken links</li>
+    <li class="checkbox-item">Verify redirect preservation</li>
+</ul>
+
+<hr>
+<div class="page-break"></div>
+
+<h2>Cost-Benefit Analysis</h2>
+
+<h3>Costs</h3>
+<table>
+    <thead>
+        <tr>
+            <th>Item</th>
+            <th>Cost</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Time</td>
+            <td>3-5 days of focused work</td>
+        </tr>
+        <tr>
+            <td>Risk</td>
+            <td>Temporary traffic dip (5-10% for 1-2 weeks)</td>
+        </tr>
+        <tr>
+            <td>Webflow</td>
+            <td>Possible plan upgrade if needed (~$0-200)</td>
+        </tr>
+    </tbody>
+</table>
+
+<h3>Benefits</h3>
+<table>
+    <thead>
+        <tr>
+            <th>Benefit</th>
+            <th>Impact</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Authority</td>
+            <td>Instant Tier 50 inheritance (skip 12 months)</td>
+        </tr>
+        <tr>
+            <td>Rankings</td>
+            <td>Compete for 50-100 monthly search volume immediately</td>
+        </tr>
+        <tr>
+            <td>Compound growth</td>
+            <td>All blog content builds main domain authority</td>
+        </tr>
+        <tr>
+            <td>Long-term</td>
+            <td>Every article strengthens tradersyard.com overall</td>
+        </tr>
+    </tbody>
+</table>
+
+<div class="success-box">
+    <p><strong>ROI:</strong> If successful, you save 12 months of building from Tier 0 → Tier 50. That's ~360 low-value articles you don't need to publish first.</p>
+</div>
+
+<hr>
+
+<h2>Alternative: If Migration Not Possible</h2>
+
+<p>If Webflow limitations prevent subdirectory setup, see <code>TIER-0-KEYWORD-STRATEGY.md</code> for the SEO Avalanche approach starting at Tier 0.</p>
+
+<hr>
+
+<div style="margin-top: 3em; padding: 20px; background: #f9fafb; border-radius: 8px;">
+    <p style="text-align: center; color: #6b7280; font-size: 0.9em;">
+        <strong>TradersYard Blog Migration Guide</strong><br>
+        Generated: February 2026<br>
+        77 blog posts ready for migration
+    </p>
+</div>
+
+</body>
+</html>

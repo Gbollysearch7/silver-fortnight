@@ -1,0 +1,68 @@
+{
+  "site": {
+    "name": "TradersYard",
+    "baseUrl": "https://tradersyard.com",
+    "blogPath": "/blog",
+    "author": "TradersYard"
+  },
+  "webflow": {
+    "apiBase": "https://api.webflow.com/v2",
+    "blogCollectionId": "67b4bd39747043c9b6d29c6e",
+    "fieldMapping": {
+      "title": "name",
+      "slug": "slug",
+      "body": "post-body",
+      "summary": "post-summary"
+    }
+  },
+  "seo": {
+    "titleMaxLength": 60,
+    "descriptionMinLength": 150,
+    "descriptionMaxLength": 160,
+    "slugMaxLength": 60,
+    "minWordCount": 1000,
+    "targetWordCount": 2000,
+    "maxKeywordDensity": 0.025,
+    "minInternalLinks": 3,
+    "minExternalAuthorityLinks": 1,
+    "minSeoScoreToPublish": 70
+  },
+  "social": {
+    "platforms": ["twitter", "linkedin", "instagram"],
+    "hashtags": {
+      "twitter": ["#PropTrading", "#FundedTrader", "#TradersYard", "#ForexTrading"],
+      "instagram": ["#proptrading", "#fundedtrader", "#forextrader", "#tradinglife", "#daytrader", "#tradersyard", "#propfirm"],
+      "linkedin": ["#trading", "#finance", "#proptrading", "#entrepreneurship", "#fundedtrader"]
+    }
+  },
+  "omnisend": {
+    "apiBase": "https://api.omnisend.com/v3"
+  },
+  "design": {
+    "primaryColor": "#4250eb",
+    "primaryRgb": "66, 80, 235",
+    "darkBg1": "#1a1a2e",
+    "darkBg2": "#16161f",
+    "darkBg3": "#12121a",
+    "successGreen": "#4ade80",
+    "warningYellow": "#fbbf24",
+    "textLight": "#e2e8f0",
+    "textMuted": "#94a3b8",
+    "borderColor": "#2d2d44"
+  },
+  "categories": [
+    "trading-education",
+    "prop-firm-guides",
+    "market-analysis",
+    "trader-stories",
+    "country-guides",
+    "product-updates"
+  ],
+  "templates": {
+    "ultimate-guide": { "minWords": 2500, "targetWords": 3500 },
+    "listicle": { "minWords": 1500, "targetWords": 2000 },
+    "how-to": { "minWords": 1000, "targetWords": 1500 },
+    "comparison": { "minWords": 2000, "targetWords": 3000 },
+    "success-story": { "minWords": 800, "targetWords": 1200 }
+  }
+}
