@@ -237,7 +237,7 @@ for (let i = 0; i < jobs.length; i++) {
     if (job.filePath) {
       updateFrontmatter(job.filePath, {
         featured_image: {
-          url: thumbPath,
+          url: imageUrl, // Use fal.ai URL, not local path
           alt: `${job.title} - TradersYard`,
         },
         updated_at: formatDate(),
@@ -246,7 +246,8 @@ for (let i = 0; i < jobs.length; i++) {
 
     // Update tracker
     updateTrackerPost(TRACKER_PATH, job.slug, {
-      thumbnailPath: thumbPath,
+      thumbnailPath: thumbPath, // Local path for reference
+      thumbnailUrl: imageUrl, // fal.ai URL for Webflow
       thumbnailGeneratedAt: formatDate(),
     });
 
