@@ -14,12 +14,12 @@
 import { existsSync, renameSync, writeFileSync } from 'fs';
 import { resolve, basename } from 'path';
 import {
-  PUBLISHED_DIR, HTML_DIR, TRACKER_PATH,
+  PUBLISHED_DIR, HTML_DIR, TRACKER_PATH, OUTPUT_DIR,
 } from '../lib/config.mjs';
 import { parseArgs, formatDate, printHeader, printSection, printSuccess, printError, printWarning, printInfo, ensureDir, updateTrackerPost } from '../lib/utils.mjs';
 import { parseFile, updateFrontmatter, toHtml, extractHeadings } from '../lib/markdown.mjs';
 import { styleForWebflow } from '../lib/html-styler.mjs';
-import { createItem, updateItem, publishItems, getCollectionFields, buildFieldData } from '../lib/webflow.mjs';
+import { createItem, updateItem, publishItems, getCollectionFields, buildFieldData, uploadAsset } from '../lib/webflow.mjs';
 
 const args = parseArgs();
 
@@ -97,9 +97,22 @@ for (const filePath of files) {
     const headings = extractHeadings(content);
     const styledHtml = styleForWebflow(rawHtml, frontmatter, headings);
 
+    // Upload thumbnail to Webflow if exists
+    let thumbnailUrl = null;
+    const thumbnailPath = resolve(OUTPUT_DIR, 'thumbnails', `${slug}.png`);
+    if (existsSync(thumbnailPath)) {
+      printInfo('Uploading thumbnail to Webflow...');
+      try {
+        thumbnailUrl = await uploadAsset(thumbnailPath, `${slug}-thumbnail.png`);
+        printSuccess(`Thumbnail uploaded: ${thumbnailUrl}`);
+      } catch (err) {
+        printWarning(`Thumbnail upload failed: ${err.message}`);
+      }
+    }
+
     // Save HTML payload
     ensureDir(HTML_DIR);
-    const payload = buildFieldData(frontmatter, styledHtml);
+    const payload = buildFieldData(frontmatter, styledHtml, thumbnailUrl);
     const payloadPath = resolve(HTML_DIR, `${slug}.json`);
     writeFileSync(payloadPath, JSON.stringify({ fieldData: payload }, null, 2), 'utf-8');
     printSuccess(`HTML payload saved: ${payloadPath}`);
