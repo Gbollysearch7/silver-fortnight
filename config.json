@@ -1,13 +1,16 @@
 {
   "site": {
     "name": "TradersYard",
-    "baseUrl": "https://tradersyard.com",
-    "blogPath": "/blog",
-    "author": "TradersYard"
+    "baseUrl": "https://blog.tradersyard.com",
+    "blogPath": "",
+    "author": "TradersYard",
+    "_comment": "CRITICAL: blog.tradersyard.com is CURRENT domain until migration complete. DO NOT change to tradersyard.com/blog until user confirms migration."
   },
   "webflow": {
     "apiBase": "https://api.webflow.com/v2",
-    "blogCollectionId": "67b4bd39747043c9b6d29c6e",
+    "blogCollectionId": "68fa557e6e6c4fcedde849e0",
+    "_WRONG_collectionId_DO_NOT_USE": "67b4bd39747043c9b6d29c6e",
+    "_comment": "Collection 68fa557e6e6c4fcedde849e0 = blog.tradersyard.com (CORRECT). Collection 67b4bd39747043c9b6d29c6e = tradersyard.com/blog (WRONG until migration).",
     "fieldMapping": {
       "title": "name",
       "slug": "slug",
