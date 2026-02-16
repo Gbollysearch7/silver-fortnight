@@ -10,16 +10,16 @@ author: TradersYard
 template: ultimate-guide
 status: published
 created_at: "2026-02-13T16:28:29.045Z"
-updated_at: "2026-02-16T01:40:25.067Z"
+updated_at: "2026-02-16T01:42:33.544Z"
 scheduled_date: null
-published_at: "2026-02-16T01:40:25.067Z"
+published_at: "2026-02-16T01:42:33.544Z"
 meta_title: How to Pass a Prop Firm Challenge | TradersYard
 meta_description: "how to pass prop firm challenge: You're staring at your trading screen, palms sweaty, knowing that one wrong move could reset your entire prop firm challenge. S"
 seo_score: null
 featured_image:
-  url: "https://v3b.fal.media/files/b/0a8e55db/xu9TlvCu288VroS1DhMSq_image.png"
+  url: "https://v3b.fal.media/files/b/0a8ea566/QhiNlGPe78tepJf94ZsRL_image.png"
   alt: How to Pass a Prop Firm Challenge - TradersYard
-webflow_item_id: 698f5201ff22e3ab8e641f98
+webflow_item_id: 69927607b4a21b354e6e856d
 webflow_published: true
 related_posts:
   - ""

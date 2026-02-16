@@ -29,8 +29,8 @@ if (!args.file && !args['process-scheduled']) {
   console.log('Usage: node scripts/pipeline.mjs --file <path> [options]');
   console.log('\nOptions:');
   console.log('  --file <path>          Blog post markdown file');
-  console.log('  --from <step>          Start from step: seo, thumbnail, publish, index');
-  console.log('  --phase <group>        Run phase: seo, thumbnail, publish, all');
+  console.log('  --from <step>          Start from step: seo, thumbnail, images, publish, index');
+  console.log('  --phase <group>        Run phase: seo, thumbnail, images, publish, all');
   console.log('  --process-scheduled    Process all scheduled posts that are due');
   console.log('  --dry-run              Preview without making changes');
   console.log('  --stop-on-error        Stop pipeline on first error');
@@ -40,6 +40,7 @@ if (!args.file && !args['process-scheduled']) {
 const STEPS = [
   { name: 'seo', phase: 'seo', script: 'seo-check.mjs', label: 'SEO Check' },
   { name: 'thumbnail', phase: 'thumbnail', script: 'thumbnail.mjs', label: 'Thumbnail Generation' },
+  { name: 'images', phase: 'images', script: 'add-images.mjs', label: 'In-Article Images' },
   { name: 'publish', phase: 'publish', script: 'publish.mjs', label: 'Webflow Publish' },
   { name: 'index', phase: 'publish', script: 'index.mjs', label: 'Google Indexing' },
 ];
