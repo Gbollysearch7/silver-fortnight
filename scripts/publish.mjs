@@ -14,7 +14,7 @@
 import { existsSync, renameSync, writeFileSync } from 'fs';
 import { resolve, basename } from 'path';
 import {
-  PUBLISHED_DIR, HTML_DIR, TRACKER_PATH, OUTPUT_DIR,
+  PUBLISHED_DIR, HTML_DIR, TRACKER_PATH, OUTPUT_DIR, blogConfig,
 } from '../lib/config.mjs';
 import { parseArgs, formatDate, printHeader, printSection, printSuccess, printError, printWarning, printInfo, ensureDir, updateTrackerPost } from '../lib/utils.mjs';
 import { parseFile, updateFrontmatter, toHtml, extractHeadings } from '../lib/markdown.mjs';
