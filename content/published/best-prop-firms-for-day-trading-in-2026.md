@@ -10,9 +10,9 @@ author: TradersYard
 template: listicle
 status: published
 created_at: "2026-02-16T01:43:09.961Z"
-updated_at: "2026-02-16T01:45:46.192Z"
+updated_at: "2026-02-16T02:15:02.339Z"
 scheduled_date: null
-published_at: "2026-02-16T01:45:46.192Z"
+published_at: "2026-02-16T02:15:02.339Z"
 meta_title: Best Prop Firms for Day Trading in 2026 | TradersYard
 meta_description: "best prop firms for day trading: The proprietary trading landscape has exploded in recent years, giving active traders unprecedented access to capital. But with"
 seo_score: null

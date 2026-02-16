@@ -77,16 +77,27 @@ function buildPrompt(title, theme = 'guide') {
     .join(' ')
     .trim();
 
-  return [
-    'Professional dark fintech blog thumbnail,',
-    themeElement + ',',
-    'trading charts in electric blue (#4250EB) glow,',
-    'modern minimalist tech style,',
-    'dark navy background (#0F172A),',
-    `clean white text "${shortTitle}" centered,`,
-    'no clutter, no stock photo feel,',
-    '16:9 aspect ratio, 4K quality, ultra sharp',
-  ].join(' ');
+  // Detailed prompt inspired by TYSEO AGENT approach
+  return `Professional trading and finance themed thumbnail image for "${shortTitle}" blog article.
+
+Style: Modern, clean, professional financial/trading aesthetic with Bloomberg Terminal vibes
+Core Elements:
+- ${themeElement}
+- Trading charts, candlestick patterns, or market data visualizations
+- Professional dark navy gradient background (#0F172A to #1a1a2e)
+- Electric blue (#4250EB) and cyan accent highlights
+- Subtle grid patterns or data overlay
+- Clean geometric shapes for visual interest
+
+Text Elements:
+- Clean white text "${shortTitle}" prominently displayed
+- Modern sans-serif font, high contrast, easily readable
+- Text should integrate naturally with the design
+
+Mood: Trustworthy, professional, sophisticated, modern fintech
+Aspect ratio: 16:9 (widescreen thumbnail, 1200x630 ideal)
+Quality: High resolution, sharp clean edges, ultra crisp, 4K quality
+Important: NO stock photo feel, NO generic clip art, professional Bloomberg/TradingView aesthetic`;
 }
 
 function detectTheme(frontmatter, content) {

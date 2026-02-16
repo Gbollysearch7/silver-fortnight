@@ -99,10 +99,29 @@ function extractSections(content) {
 // --- Build Image Prompt ---
 
 function buildImagePrompt(articleTitle, sectionHeading) {
-  // Create contextual prompt based on section
-  const baseStyle = 'Professional dark fintech illustration, navy blue background (#0F172A), electric blue accents (#4250EB), clean modern design, high quality, 4K resolution';
+  // Create detailed, professional prompt inspired by TYSEO AGENT approach
+  const prompt = `Professional trading and finance themed illustration for blog section.
 
-  return `${sectionHeading} - ${articleTitle}. ${baseStyle}. Icon-based or diagram style, no text in image, minimalist, suitable for blog article section.`;
+**Section**: ${sectionHeading}
+**Article**: ${articleTitle}
+
+**Style**: Modern, clean, professional financial/trading aesthetic
+**Elements to include**:
+- Abstract trading charts, candlestick patterns, or financial data visualizations
+- Clean geometric shapes representing growth, analysis, or strategy
+- Professional dark blue or navy gradient background (#0F172A to #1a1a2e)
+- Electric blue (#4250EB) and cyan accents for highlights
+- Subtle grid or data overlay patterns
+- Corporate, trustworthy fintech look
+
+**Mood**: Professional, sophisticated, modern, trustworthy
+**Quality**: High resolution, sharp clean edges, vector-like clarity
+**Important**: NO text, NO words on the image - only visual elements
+**Format**: 4:3 aspect ratio, suitable for blog article section
+
+Think: Bloomberg Terminal aesthetics meets modern SaaS design`;
+
+  return prompt;
 }
 
 // --- Insert Images into Markdown ---
