@@ -2,9 +2,9 @@
   "site": {
     "name": "TradersYard",
     "baseUrl": "https://blog.tradersyard.com",
-    "blogPath": "",
+    "blogPath": "blog-posts",
     "author": "TradersYard",
-    "_comment": "CRITICAL: blog.tradersyard.com is CURRENT domain until migration complete. DO NOT change to tradersyard.com/blog until user confirms migration."
+    "_comment": "CRITICAL: blog.tradersyard.com is CURRENT domain until migration complete. DO NOT change to tradersyard.com/blog until user confirms migration. blogPath must match Webflow collection slug."
   },
   "webflow": {
     "apiBase": "https://api.webflow.com/v2",

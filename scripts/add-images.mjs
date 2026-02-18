@@ -20,7 +20,7 @@ const args = parseArgs();
 const IMAGES_DIR = resolve(OUTPUT_DIR, 'in-article-images');
 ensureDir(IMAGES_DIR);
 
-// --- fal.ai Image Generation ---
+// --- fal.ai Ideogram v3 Image Generation ---
 
 async function generateImage(prompt) {
   const res = await fetch('https://fal.run/fal-ai/ideogram/v3', {
@@ -31,8 +31,9 @@ async function generateImage(prompt) {
     },
     body: JSON.stringify({
       prompt,
-      aspect_ratio: '4:3', // 4:3 for in-article images
+      aspect_ratio: '16:9',
       style: 'AUTO',
+      num_images: 1,
     }),
   });
 
@@ -66,16 +67,27 @@ async function downloadImage(url, filepath) {
   });
 }
 
-// --- Extract Key Sections ---
+// --- Extract Key Sections (with context) ---
 
 function extractSections(content) {
-  // Find all H2 headings and extract the section title
+  // Find all H2 headings, their positions, and the first ~200 chars of section text
   const h2Regex = /^##\s+(.+)$/gm;
-  const sections = [];
+  const allSections = [];
   let match;
 
   while ((match = h2Regex.exec(content)) !== null) {
-    const heading = match[1];
+    allSections.push({
+      heading: match[1],
+      position: match.index,
+      headingEnd: match.index + match[0].length,
+    });
+  }
+
+  const sections = [];
+  for (let i = 0; i < allSections.length; i++) {
+    const section = allSections[i];
+    const heading = section.heading;
+
     // Skip FAQ sections and conclusion
     if (
       heading.toLowerCase().includes('faq') ||
@@ -85,9 +97,16 @@ function extractSections(content) {
     ) {
       continue;
     }
+
+    // Extract first ~200 chars of section body for context
+    const nextSectionStart = allSections[i + 1]?.position || content.length;
+    const sectionBody = content.slice(section.headingEnd, nextSectionStart).trim();
+    const context = sectionBody.replace(/[#*_\[\]()]/g, '').slice(0, 200).trim();
+
     sections.push({
       heading,
-      position: match.index,
+      position: section.position,
+      context,
     });
   }
 
@@ -96,32 +115,58 @@ function extractSections(content) {
   return sections.slice(0, maxImages);
 }
 
-// --- Build Image Prompt ---
+// --- Build Contextual Image Prompt ---
+// IMPORTANT: Every image MUST visually represent the specific section content.
+// Never use generic stock photos — the image should tell the section's story.
 
 function buildImagePrompt(articleTitle, sectionHeading) {
-  // Create detailed, professional prompt inspired by TYSEO AGENT approach
-  const prompt = `Professional trading and finance themed illustration for blog section.
+  const heading = sectionHeading.toLowerCase();
 
-**Section**: ${sectionHeading}
-**Article**: ${articleTitle}
+  // Build a scene that directly represents what the section is about
+  let scene;
 
-**Style**: Modern, clean, professional financial/trading aesthetic
-**Elements to include**:
-- Abstract trading charts, candlestick patterns, or financial data visualizations
-- Clean geometric shapes representing growth, analysis, or strategy
-- Professional dark blue or navy gradient background (#0F172A to #1a1a2e)
-- Electric blue (#4250EB) and cyan accents for highlights
-- Subtle grid or data overlay patterns
-- Corporate, trustworthy fintech look
+  if (heading.includes('risk') || heading.includes('drawdown') || heading.includes('stop-loss') || heading.includes('manage')) {
+    scene = 'A professional trader\'s monitor showing a trading chart with clearly marked stop-loss levels as red horizontal lines and take-profit as green lines, a position size calculator visible in a smaller window, the trader\'s hand resting on the mouse with a controlled posture, immaculately organized desk conveying discipline and risk control, cool blue and grey tones';
+  } else if (heading.includes('strateg') || heading.includes('plan') || heading.includes('consistency')) {
+    scene = 'A calm trader\'s desk with an open trading journal showing a written strategy with rules and checkmarks, a single monitor displaying a methodical chart with few well-placed trades and a steadily rising equity curve, the workspace is clean and organized reflecting consistency over chaos, warm natural lighting';
+  } else if (heading.includes('psycholog') || heading.includes('disciplin') || heading.includes('mental') || heading.includes('emotion')) {
+    scene = 'A trader sitting calmly at their desk with eyes closed in a moment of composure, trading screens glowing softly in the background showing an open position, hands resting flat on the desk not touching the mouse conveying the discipline of patience, warm side lighting with shallow depth of field';
+  } else if (heading.includes('profit') || heading.includes('earn') || heading.includes('money') || heading.includes('payout') || heading.includes('funded')) {
+    scene = 'A laptop screen showing a trading account dashboard with a green profit chart trending upward, a payout confirmation notification visible, the trader\'s hands on the keyboard with a confident posture, warm ambient lighting, coffee nearby';
+  } else if (heading.includes('math') || heading.includes('statistic') || heading.includes('number') || heading.includes('data') || heading.includes('reality')) {
+    scene = 'An overhead flat-lay of a trader\'s desk with a notebook showing handwritten risk-reward calculations and win rate formulas, a calculator with numbers displayed, a printed chart showing a bell curve of trading outcomes, a coffee cup and pen completing the scene, clean editorial style, warm natural lighting from above';
+  } else if (heading.includes('challenge') || heading.includes('pass') || heading.includes('phase') || heading.includes('evaluation')) {
+    scene = 'A dramatic trader\'s workspace at night with multiple monitors — one showing a challenge countdown timer, another showing a profit/loss tracker approaching a target line, a third with live candlestick charts, a notebook open beside the keyboard, lit by blue screen glow and a warm desk lamp, conveying determination and focus';
+  } else if (heading.includes('mistake') || heading.includes('fail') || heading.includes('avoid') || heading.includes('wrong')) {
+    scene = 'A tense trading scene — a trader rubbing their temples with frustrated body language, monitors showing red charts with sharp drawdowns, crumpled papers on the desk, an overturned coffee cup, the lighting is harsh and cold, conveying the cost of mistakes and undisciplined trading';
+  } else if (heading.includes('platform') || heading.includes('tool') || heading.includes('software') || heading.includes('setup') || heading.includes('technical')) {
+    scene = 'A clean professional trading setup with an ultra-wide monitor showing a modern trading platform interface with multiple chart panels and indicators, a second monitor with a scanner or news feed, organized desk with mechanical keyboard and quality mouse, ambient blue lighting reflecting off the screens';
+  } else if (heading.includes('beginner') || heading.includes('start') || heading.includes('learn') || heading.includes('basic') || heading.includes('introduction')) {
+    scene = 'A person at a coffee shop learning to trade on a laptop, a notebook with handwritten notes and diagrams beside them, educational charts on screen with annotations, a cup of coffee nearby, natural daylight streaming through windows, approachable and warm atmosphere';
+  } else if (heading.includes('compar') || heading.includes(' vs ') || heading.includes('differ') || heading.includes('choose')) {
+    scene = 'Two monitors side by side on a desk each showing different trading platforms with distinct chart styles, a trader\'s notepad between them with a pros/cons list being written, editorial photography style with clean workspace and balanced composition';
+  } else if (heading.includes('account') || heading.includes('fund') || heading.includes('capital') || heading.includes('size')) {
+    scene = 'A trader reviewing account options on a laptop with different account tier cards displayed on screen, financial documents and a notepad with calculations on the desk, a professional and organized workspace conveying careful financial planning, natural window light';
+  } else if (heading.includes('step') || heading.includes('game plan') || heading.includes('process') || heading.includes('guide') || heading.includes('how to')) {
+    scene = 'A trader\'s desk with a clear step-by-step roadmap pinned to a board behind the monitor, the monitor shows a clean trading chart, numbered sticky notes on the desk outlining a process, everything organized and methodical, bright workspace with warm lighting conveying clarity and direction';
+  } else if (heading.includes('advanced') || heading.includes('expert') || heading.includes('pro tip') || heading.includes('edge')) {
+    scene = 'An experienced trader at a sophisticated multi-monitor setup showing advanced analytics — correlation matrices, order flow charts, and custom indicators — a cup of black coffee and reading glasses on the desk suggesting expertise, moody dramatic lighting with deep blue tones';
+  } else if (heading.includes('success') || heading.includes('advantage') || heading.includes('benefit') || heading.includes('support')) {
+    scene = 'A confident trader smiling while reviewing positive performance metrics on a large monitor, a clean modern office with city skyline visible through windows, the atmosphere is bright and optimistic, natural lighting portrait style';
+  } else if (heading.includes('rule') || heading.includes('requirement') || heading.includes('condition')) {
+    scene = 'A clean desk with a printed checklist of trading rules next to a laptop showing a trading platform, each rule has a checkbox, a pen rests on the paper, the setup is immaculate and organized conveying structure and compliance, soft overhead lighting';
+  } else if (heading.includes('country') || heading.includes('region') || heading.includes('local')) {
+    scene = 'A trader working in a modern co-working space with a city skyline visible through large windows, laptop showing international market data with multiple currency pairs, a world clock widget visible, the atmosphere conveys global connectivity';
+  } else if (heading.includes('tax') || heading.includes('legal') || heading.includes('regulat')) {
+    scene = 'A desk with official-looking financial documents and tax forms next to a laptop showing trading records, a pen and reading glasses on the papers, clean professional setting with warm overhead lighting conveying seriousness and compliance';
+  } else if (heading.includes('journal') || heading.includes('track') || heading.includes('review') || heading.includes('analyz')) {
+    scene = 'An open trading journal on a desk with handwritten trade logs showing entry/exit prices and lessons learned, a laptop behind it showing a performance analytics dashboard with charts, a highlighter and pen on the journal, warm study lamp lighting';
+  } else {
+    // Fallback: use the heading itself to build a contextual scene
+    scene = `A professional trading workspace scene that visually represents "${sectionHeading}" — a trader at a modern desk with monitors showing relevant financial data, the composition and mood should match the topic, cinematic lighting, editorial photography style`;
+  }
 
-**Mood**: Professional, sophisticated, modern, trustworthy
-**Quality**: High resolution, sharp clean edges, vector-like clarity
-**Important**: NO text, NO words on the image - only visual elements
-**Format**: 4:3 aspect ratio, suitable for blog article section
-
-Think: Bloomberg Terminal aesthetics meets modern SaaS design`;
-
-  return prompt;
+  return `${scene}. Professional stock photography, sharp focus, high resolution, no text or watermarks, no logos.`;
 }
 
 // --- Insert Images into Markdown ---

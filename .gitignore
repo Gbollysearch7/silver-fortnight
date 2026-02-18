@@ -52,3 +52,9 @@ output/reports/*.md
 # Temporary files
 *.tmp
 .temp/
+
+# Claude Code
+.claude/
+
+# Image comparison output (dev only)
+output/image-comparison/

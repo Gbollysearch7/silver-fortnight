@@ -18,7 +18,7 @@
 import { resolve, dirname } from 'path';
 import { fileURLToPath } from 'url';
 import { execFileSync } from 'child_process';
-import { ROOT_DIR, DATA_DIR, TRACKER_PATH } from '../lib/config.mjs';
+import { ROOT_DIR, DATA_DIR, TRACKER_PATH, blogConfig } from '../lib/config.mjs';
 import { parseArgs, printHeader, printSection, printSuccess, printError, printInfo, printWarning, readJsonFile, writeJsonFile, formatDate, formatDateShort, loadTracker } from '../lib/utils.mjs';
 
 const __filename = fileURLToPath(import.meta.url);
@@ -195,7 +195,7 @@ async function processKeyword(item, dryRun = false, stagingMode = false) {
         try {
           execFileSync('node', [
             resolve(__dirname, 'index.mjs'),
-            '--url', `https://tradersyard.com/blog/${slug}`,
+            '--url', `${blogConfig.site.baseUrl}/${blogConfig.site.blogPath}/${slug}`,
           ], {
             encoding: 'utf-8',
             cwd: ROOT_DIR,
@@ -233,7 +233,7 @@ async function processKeyword(item, dryRun = false, stagingMode = false) {
     if (stagingMode) {
       printSuccess(`Done in ${duration}s: STAGED at content/approved/${slug}.md`);
     } else {
-      printSuccess(`Done in ${duration}s: https://tradersyard.com/blog/${slug}`);
+      printSuccess(`Done in ${duration}s: ${blogConfig.site.baseUrl}/${blogConfig.site.blogPath}/${slug}`);
     }
     return { success: true, slug };
 
@@ -296,6 +296,12 @@ async function shouldSendWeeklyReport() {
   return now.getUTCDay() === 0 && now.getUTCHours() === 18 && now.getUTCMinutes() < 5;
 }
 
+async function shouldSubmitSitemap() {
+  const now = new Date();
+  // Monday at 7:00 UTC
+  return now.getUTCDay() === 1 && now.getUTCHours() === 7 && now.getUTCMinutes() < 5;
+}
+
 // --- Main ---
 
 const stagingMode = args.staging || false;
@@ -332,7 +338,7 @@ async function tick() {
       await runOnce(args['dry-run'], stagingMode);
     }
 
-    // Weekly report check
+    // Weekly report check (Sunday 18:00 UTC)
     if (await shouldSendWeeklyReport()) {
       printInfo('Sending weekly report...');
       try {
@@ -345,6 +351,22 @@ async function tick() {
         printSuccess('Weekly report sent');
       } catch (reportErr) {
         printWarning(`Report failed: ${reportErr.message.slice(0, 100)}`);
+      }
+    }
+
+    // Weekly sitemap submission (Monday 7:00 UTC)
+    if (await shouldSubmitSitemap()) {
+      printInfo('Submitting sitemap to Google Search Console...');
+      try {
+        execFileSync('node', [resolve(__dirname, 'submit-sitemap.mjs')], {
+          encoding: 'utf-8',
+          cwd: ROOT_DIR,
+          timeout: 30000,
+          env: process.env,
+        });
+        printSuccess('Sitemap submitted to GSC');
+      } catch (sitemapErr) {
+        printWarning(`Sitemap submission failed: ${sitemapErr.message.slice(0, 100)}`);
       }
     }
   } catch (err) {

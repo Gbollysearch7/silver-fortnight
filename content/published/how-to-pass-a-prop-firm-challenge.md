@@ -10,16 +10,16 @@ author: TradersYard
 template: ultimate-guide
 status: published
 created_at: "2026-02-13T16:28:29.045Z"
-updated_at: "2026-02-16T01:42:33.544Z"
+updated_at: "2026-02-18T05:37:36.792Z"
 scheduled_date: null
-published_at: "2026-02-16T01:42:33.544Z"
+published_at: "2026-02-18T05:37:36.792Z"
 meta_title: How to Pass a Prop Firm Challenge | TradersYard
 meta_description: "how to pass prop firm challenge: You're staring at your trading screen, palms sweaty, knowing that one wrong move could reset your entire prop firm challenge. S"
 seo_score: null
 featured_image:
-  url: "https://v3b.fal.media/files/b/0a8ea566/QhiNlGPe78tepJf94ZsRL_image.png"
+  url: "https://v3b.fal.media/files/b/0a8eedf7/O789U-09-0GjSR-PHGFmC.png"
   alt: How to Pass a Prop Firm Challenge - TradersYard
-webflow_item_id: 69927607b4a21b354e6e856d
+webflow_item_id: 6995510f3d3ab15fba5f4315
 webflow_published: true
 related_posts:
   - ""
@@ -40,6 +40,8 @@ At TradersYard, we've funded thousands of traders and watched countless challeng
 
 ## Understanding Prop Firm Challenges: What You're Really Up Against
 
+![Trader analyzing charts on multiple monitors in home office](https://v3b.fal.media/files/b/0a8eee3f/oTToNT-m28SghgoWYPY6j.png)
+
 Before diving into strategies, let's establish what you're actually trying to accomplish. A **prop firm challenge** is an evaluation period where you prove you can trade profitably while following specific rules. It's not just about making money—it's about demonstrating consistency, discipline, and proper risk management.
 
 Most prop firms (including TradersYard) offer two main challenge structures:
@@ -50,10 +52,6 @@ This streamlined evaluation requires you to hit a single profit target while mai
 
 - 8% profit target
 - 5% maximum daily loss
-
-
-![Understanding Prop Firm Challenges: What You're Really Up Against - How to Pass a Prop Firm Challenge](https://v3b.fal.media/files/b/0a8ea551/YIcwtCYK52ntHJsNGtUgz_image.png)
-
 - 10% maximum total drawdown
 - No minimum trading days
 - No time limit
@@ -68,6 +66,8 @@ The 2-Step structure tests your ability to perform under different conditions an
 
 ## The Mathematical Reality: Why Most Traders Fail Prop Challenges
 
+![Laptop showing candlestick trading chart with technical indicators](https://v3b.fal.media/files/b/0a8eee3f/gJDXjI-XPsLO7tfOlbIu4.png)
+
 Let's talk about the uncomfortable truth. According to [Investopedia's research on prop trading](https://www.investopedia.com/articles/trading/11/becoming-a-professional-trader.asp), the majority of retail traders lose money, and this statistic carries over to prop firm challenges.
 
 But why do so many fail when they might be profitable in their personal accounts?
@@ -75,10 +75,6 @@ But why do so many fail when they might be profitable in their personal accounts
 ### The Psychology of Challenge Trading
 
 When real consequences enter the picture—even if it's "just" losing the challenge fee—traders behave differently. You might:
-
-
-![The Mathematical Reality: Why Most Traders Fail Prop Challenges - How to Pass a Prop Firm Challenge](https://v3b.fal.media/files/b/0a8ea552/8bh6QoDLTMBSiDVfm79eL_image.png)
-
 
 - Overtrade to hit targets quickly
 - Hold losing positions longer, hoping they'll recover
@@ -103,15 +99,13 @@ Understanding this mathematical reality forces you to approach challenges differ
 
 ## Core Principle #1: Risk Management Is Your Foundation
 
+![Trader reviewing risk management dashboard on widescreen monitor](https://v3b.fal.media/files/b/0a8eee3f/uMhPr49_p8b9h4KJZXaNr.png)
+
 If there's one section you read carefully in this guide, make it this one. **Risk management isn't just important for passing prop firm challenges—it's everything.**
 
 ### The 1% Rule (And Why You Should Go Lower)
 
 Most trading education recommends risking 1% per trade. For prop firm challenges, we recommend starting even more conservatively: 0.5% to 0.75% per trade, especially in the beginning.
-
-
-![Core Principle #1: Risk Management Is Your Foundation - How to Pass a Prop Firm Challenge](https://v3b.fal.media/files/b/0a8ea553/gKJ3zYSz9OIm2RxtIDax7_image.png)
-
 
 Here's why:
 
@@ -158,11 +152,9 @@ Build this calculation into your pre-trade routine until it becomes automatic.
 
 ## Core Principle #2: Strategy and Consistency Trump Aggression
 
+![Trading strategy notebook next to laptop with charts on desk](https://v3b.fal.media/files/b/0a8eee3f/N03KUOreCUaG94tS7FCNo.png)
+
 Many traders fail prop firm challenges not because they pick a bad strategy, but because they don't stick to any strategy at all.
-
-
-![Core Principle #2: Strategy and Consistency Trump Aggression - How to Pass a Prop Firm Challenge](https://v3b.fal.media/files/b/0a8ea555/g4oItm84kaTgfl0Owmhys_image.png)
-
 
 ### Choose Your Trading Style Based on Challenge Structure
 
@@ -215,9 +207,7 @@ Before starting any prop firm challenge, you should have at least 50-100 backtes
 
 ## Core Principle #3: Psychology and Discipline Win Challenges
 
-
-![Core Principle #3: Psychology and Discipline Win Challenges - How to Pass a Prop Firm Challenge](https://v3b.fal.media/files/b/0a8ea556/3Lni66L10p9T301GQ3VB5_image.png)
-
+![Focused trader with headphones at dual monitor trading setup](https://v3b.fal.media/files/b/0a8eee43/eTD4Sa2iF1lGw_7U5TaGV.png)
 
 Technical skills get you in the game. Psychology keeps you there.
 

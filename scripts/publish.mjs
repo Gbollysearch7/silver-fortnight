@@ -105,7 +105,8 @@ for (const filePath of files) {
 
     // Save HTML payload
     ensureDir(HTML_DIR);
-    const payload = buildFieldData(frontmatter, styledHtml, thumbnailUrl);
+    const isUpdate = !!frontmatter.webflow_item_id;
+    const payload = buildFieldData(frontmatter, styledHtml, thumbnailUrl, { excludeSlug: isUpdate });
     const payloadPath = resolve(HTML_DIR, `${slug}.json`);
     writeFileSync(payloadPath, JSON.stringify({ fieldData: payload }, null, 2), 'utf-8');
     printSuccess(`HTML payload saved: ${payloadPath}`);
@@ -120,11 +121,17 @@ for (const filePath of files) {
     let itemId = frontmatter.webflow_item_id;
     let result;
 
-    if (itemId && args.update) {
-      // Update existing item
+    if (itemId) {
+      // Update existing item (auto-detect based on webflow_item_id)
       printInfo(`Updating existing item: ${itemId}`);
       result = await updateItem(itemId, payload);
       printSuccess('Webflow item updated');
+
+      // Publish if --live
+      if (args.live) {
+        await publishItems([itemId]);
+        printSuccess('Item published live');
+      }
     } else {
       // Create new item
       const isDraft = !args.live;

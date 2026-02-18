@@ -2,11 +2,11 @@
 
 /**
  * Blog Thumbnail Generator
- * Generates professional blog thumbnails using fal.ai Ideogram v3.
+ * Generates stock-style trading/finance thumbnails using fal.ai Ideogram v3.
  *
- * Style: Professional fintech/trading, dark navy + electric blue (#4250EB)
- * Format: 16:9 landscape (1200x630 for OG images)
- * Model: Ideogram v3 via fal.ai
+ * Style: Photorealistic stock photography — traders, charts, desktops, phones
+ * Format: 16:9 landscape
+ * Model: Ideogram v3 via fal.ai (~$0.04/image)
  *
  * Usage:
  *   node scripts/thumbnail.mjs --file content/drafts/slug.md
@@ -44,60 +44,54 @@ if (!FAL_KEY) {
 }
 
 printHeader('Thumbnail Generator');
-printInfo('Model: Ideogram v3 | Format: 16:9 (1200x630)');
+printInfo('Model: Ideogram v3 | Format: 16:9 landscape');
 printInfo('Cost: ~$0.04 per image\n');
 
 ensureDir(THUMBNAILS_DIR);
 
 // --- Prompt builder ---
 
-const THEME_ELEMENTS = {
-  guide: 'glowing open book icon with light rays, step-by-step pathway visualization',
-  comparison: 'glowing podium with 3D trophy icon, side-by-side comparison layout',
-  technical: 'high-speed data streams and gear icons, circuit board patterns',
-  feature: 'spotlight on a glowing feature card, product showcase',
-  story: 'silhouette of a person at a trading desk, success chart going up',
-  education: 'graduation cap with trading chart, lightbulb icon glowing',
-  country: 'world map with highlighted country, flag elements, global trading network',
-  list: 'numbered ranking podium, stars and badges, leaderboard visualization',
+const SCENE_POOL = {
+  guide: [
+    'Professional trader analyzing multiple monitor screens showing candlestick charts and technical indicators in a modern home office, warm desk lamp lighting, over-the-shoulder perspective',
+    'Close-up of hands on a laptop keyboard with trading platform on screen showing green profit charts, coffee cup nearby, shallow depth of field',
+    'Focused trader studying chart patterns on a widescreen monitor in a clean minimalist workspace, blue screen glow on face, professional photography',
+  ],
+  comparison: [
+    'Split-screen dual monitor setup showing different trading platforms side by side, modern desk, clean workspace, editorial photography style',
+    'Trader reviewing performance metrics on tablet while laptop shows trading dashboard in background, natural window light',
+    'Two smartphones placed on a dark desk each showing different trading apps with charts, overhead flat lay photography',
+  ],
+  list: [
+    'Modern trading desk setup with three monitors displaying financial charts and market data, ambient blue lighting, wide angle shot',
+    'Row of professional trading workstations in a modern prop trading office, shallow depth of field, cinematic lighting',
+    'Smartphone showing trading app with portfolio gains, held in hand against blurred city skyline background',
+  ],
+  story: [
+    'Confident young trader smiling while looking at profitable trade on laptop screen, casual modern office, natural lighting portrait',
+    'Trader celebrating with fist pump at desk with multiple screens showing green charts, authentic candid moment',
+    'Person reviewing trading journal at a coffee shop with laptop showing charts, relaxed productive atmosphere',
+  ],
+  country: [
+    'Trader working on laptop in a modern co-working space with city skyline visible through floor-to-ceiling windows, global trading feel',
+    'Professional at a standing desk with multiple screens showing international market data, modern minimalist office',
+  ],
+  education: [
+    'Notebook with handwritten trading notes next to a laptop showing candlestick chart tutorial, study desk setup, warm lighting',
+    'Person taking notes while watching trading education content on a large monitor, organized desk with textbooks',
+    'Clean desk with trading strategy flowchart on paper next to open laptop with charts, overhead shot, educational feel',
+  ],
+  technical: [
+    'Close-up of trading screen showing detailed technical analysis with moving averages and RSI indicators, dark background, screen glow',
+    'Multiple chart timeframes displayed on ultra-wide monitor with technical indicators highlighted, professional trading setup',
+  ],
 };
 
 function buildPrompt(title, theme = 'guide') {
-  const themeElement = THEME_ELEMENTS[theme] || THEME_ELEMENTS.guide;
+  const scenes = SCENE_POOL[theme] || SCENE_POOL.guide;
+  const scene = scenes[Math.floor(Math.random() * scenes.length)];
 
-  // Extract short display text for the image (max ~4 words)
-  const shortTitle = title
-    .replace(/\[.*?\]/g, '')
-    .replace(/\(.*?\)/g, '')
-    .replace(/\d{4}/g, '')
-    .replace(/[:|–—]/g, '')
-    .trim()
-    .split(/\s+/)
-    .slice(0, 5)
-    .join(' ')
-    .trim();
-
-  // Detailed prompt inspired by TYSEO AGENT approach
-  return `Professional trading and finance themed thumbnail image for "${shortTitle}" blog article.
-
-Style: Modern, clean, professional financial/trading aesthetic with Bloomberg Terminal vibes
-Core Elements:
-- ${themeElement}
-- Trading charts, candlestick patterns, or market data visualizations
-- Professional dark navy gradient background (#0F172A to #1a1a2e)
-- Electric blue (#4250EB) and cyan accent highlights
-- Subtle grid patterns or data overlay
-- Clean geometric shapes for visual interest
-
-Text Elements:
-- Clean white text "${shortTitle}" prominently displayed
-- Modern sans-serif font, high contrast, easily readable
-- Text should integrate naturally with the design
-
-Mood: Trustworthy, professional, sophisticated, modern fintech
-Aspect ratio: 16:9 (widescreen thumbnail, 1200x630 ideal)
-Quality: High resolution, sharp clean edges, ultra crisp, 4K quality
-Important: NO stock photo feel, NO generic clip art, professional Bloomberg/TradingView aesthetic`;
+  return `${scene}. Professional stock photography, sharp focus, high resolution, no text or watermarks, no logos.`;
 }
 
 function detectTheme(frontmatter, content) {
@@ -127,6 +121,7 @@ async function generateImage(prompt) {
       prompt,
       aspect_ratio: '16:9',
       style: 'AUTO',
+      num_images: 1,
     }),
   });
 
