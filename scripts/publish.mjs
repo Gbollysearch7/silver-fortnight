@@ -19,7 +19,7 @@ import {
 import { parseArgs, formatDate, printHeader, printSection, printSuccess, printError, printWarning, printInfo, ensureDir, updateTrackerPost } from '../lib/utils.mjs';
 import { parseFile, updateFrontmatter, toHtml, extractHeadings } from '../lib/markdown.mjs';
 import { styleForWebflow } from '../lib/html-styler.mjs';
-import { createItem, updateItem, publishItems, getCollectionFields, buildFieldData } from '../lib/webflow.mjs';
+import { createItem, updateItem, publishItems, getCollectionFields, buildFieldData, setFeaturedPost } from '../lib/webflow.mjs';
 
 const args = parseArgs();
 
@@ -106,7 +106,7 @@ for (const filePath of files) {
     // Save HTML payload
     ensureDir(HTML_DIR);
     const isUpdate = !!frontmatter.webflow_item_id;
-    const payload = buildFieldData(frontmatter, styledHtml, thumbnailUrl, { excludeSlug: isUpdate });
+    const payload = buildFieldData(frontmatter, styledHtml, thumbnailUrl, { excludeSlug: isUpdate, isFeaturePost: true });
     const payloadPath = resolve(HTML_DIR, `${slug}.json`);
     writeFileSync(payloadPath, JSON.stringify({ fieldData: payload }, null, 2), 'utf-8');
     printSuccess(`HTML payload saved: ${payloadPath}`);
@@ -144,6 +144,16 @@ for (const filePath of files) {
       if (args.live) {
         await publishItems([itemId]);
         printSuccess('Item published live');
+      }
+    }
+
+    // Set this post as the featured post (un-features the previous one)
+    if (args.live) {
+      try {
+        const featResult = await setFeaturedPost(itemId);
+        printSuccess(`Featured post updated (un-featured ${featResult.unfeatured} old post(s))`);
+      } catch (featErr) {
+        printWarning(`Featured post swap failed (non-blocking): ${featErr.message.slice(0, 100)}`);
       }
     }
 
