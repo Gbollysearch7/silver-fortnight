@@ -28,7 +28,7 @@
     "maxKeywordDensity": 0.025,
     "minInternalLinks": 3,
     "minExternalAuthorityLinks": 1,
-    "minSeoScoreToPublish": 70
+    "minSeoScoreToPublish": 85
   },
   "social": {
     "platforms": ["twitter", "linkedin", "instagram"],
