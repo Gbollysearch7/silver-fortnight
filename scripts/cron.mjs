@@ -46,8 +46,21 @@ function saveQueue(data) {
 
 function getNextQueued() {
   const data = loadQueue();
+
+  // Build a set of already-published/failed/generating keywords and slugs
+  // This prevents duplicate processing even if the same keyword appears twice
+  const processedKeywords = new Set();
+  const processedSlugs = new Set();
+  for (const item of data.queue) {
+    if (['published', 'failed', 'generating', 'staged'].includes(item.status)) {
+      processedKeywords.add(item.keyword.toLowerCase());
+      if (item.slug) processedSlugs.add(item.slug.toLowerCase());
+    }
+  }
+
   // Sort by priority (lower = higher priority), then by id
   // CRITICAL: Only pick keywords that have been AI-validated and approved
+  // CRITICAL: Never pick a keyword that's already been published under any entry
   const queued = data.queue
     .filter(item => {
       // Must be queued status
@@ -56,6 +69,18 @@ function getNextQueued() {
       // Must be AI-validated and approved
       if (!item.ai_validated) return false;
       if (item.ai_validation_result !== 'APPROVE') return false;
+
+      // Skip if this keyword was already processed (duplicate protection)
+      if (processedKeywords.has(item.keyword.toLowerCase())) return false;
+
+      // Skip if the slug this would generate was already processed
+      const wouldSlug = item.title
+        .toLowerCase()
+        .replace(/['']/g, '')
+        .replace(/[^a-z0-9]+/g, '-')
+        .replace(/^-+|-+$/g, '')
+        .slice(0, 60);
+      if (processedSlugs.has(wouldSlug)) return false;
 
       return true;
     })

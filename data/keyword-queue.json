@@ -51,7 +51,7 @@
       "ai_validated_at": "2026-02-13T04:07:16.739Z"
     },
     {
-      "id": "001",
+      "id": "001-dup",
       "keyword": "are there prop firms for crypto",
       "title": "Are There Prop Firms For Crypto",
       "template": "how-to",
@@ -60,7 +60,7 @@
       "tier": 0,
       "volume": 10,
       "intent": "Informational",
-      "status": "queued",
+      "status": "published",
       "ai_validated": true,
       "notes": "Tier 0 keyword (10 searches/month). Needs AI validation.",
       "created_at": "2026-02-13T04:06:32.484Z",
