@@ -129,7 +129,7 @@ async function processKeyword(item, dryRun = false, stagingMode = false) {
     const draftPath = resolve(ROOT_DIR, 'content', 'drafts', `${slug}.md`);
 
     // Step 2: Generate thumbnail
-    printInfo('Step 2/4: Generating thumbnail...');
+    printInfo('Step 2/5: Generating thumbnail...');
     if (!dryRun) {
       try {
         execFileSync('node', [
@@ -149,8 +149,29 @@ async function processKeyword(item, dryRun = false, stagingMode = false) {
       printInfo('[DRY RUN] Would generate thumbnail');
     }
 
-    // Step 3: SEO check
-    printInfo('Step 3/4: Running SEO check...');
+    // Step 3: Generate in-article images
+    printInfo('Step 3/5: Generating in-article images...');
+    if (!dryRun) {
+      try {
+        execFileSync('node', [
+          resolve(__dirname, 'add-images.mjs'),
+          '--file', draftPath,
+        ], {
+          encoding: 'utf-8',
+          cwd: ROOT_DIR,
+          timeout: 180000,
+          env: process.env,
+        });
+        printSuccess('In-article images generated');
+      } catch (imgErr) {
+        printWarning(`In-article images failed (non-blocking): ${imgErr.message.slice(0, 100)}`);
+      }
+    } else {
+      printInfo('[DRY RUN] Would generate in-article images');
+    }
+
+    // Step 4: SEO check
+    printInfo('Step 4/5: Running SEO check...');
     if (!dryRun) {
       try {
         execFileSync('node', [
@@ -171,9 +192,9 @@ async function processKeyword(item, dryRun = false, stagingMode = false) {
       printInfo('[DRY RUN] Would run SEO check');
     }
 
-    // Step 4: Publish to Webflow (skip in staging mode)
+    // Step 5: Publish to Webflow (skip in staging mode)
     if (!stagingMode) {
-      printInfo('Step 4/4: Publishing to Webflow...');
+      printInfo('Step 5/5: Publishing to Webflow...');
       if (!dryRun) {
         execFileSync('node', [
           resolve(__dirname, 'publish.mjs'),
