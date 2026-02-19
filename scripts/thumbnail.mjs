@@ -44,7 +44,7 @@ if (!FAL_KEY) {
 }
 
 printHeader('Thumbnail Generator');
-printInfo('Model: Ideogram v3 | Format: 16:9 landscape');
+printInfo('Model: Ideogram v3 | Format: 4:3 landscape');
 printInfo('Cost: ~$0.04 per image\n');
 
 ensureDir(THUMBNAILS_DIR);
@@ -119,7 +119,7 @@ async function generateImage(prompt) {
     },
     body: JSON.stringify({
       prompt,
-      aspect_ratio: '16:9',
+      aspect_ratio: '4:3',
       style: 'AUTO',
       num_images: 1,
     }),

@@ -31,7 +31,7 @@ async function generateImage(prompt) {
     },
     body: JSON.stringify({
       prompt,
-      aspect_ratio: '16:9',
+      aspect_ratio: '4:3',
       style: 'AUTO',
       num_images: 1,
     }),
