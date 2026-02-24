@@ -213,7 +213,7 @@
       "template": "how-to",
       "category": "prop-firm-guides",
       "priority": 4,
-      "status": "queued",
+      "status": "published",
       "notes": "Downloadable resource, high conversion potential",
       "tier": 0,
       "estMonthlySearches": 5,
@@ -226,7 +226,12 @@
       "ai_validation_reasoning": "This keyword is about a tool/resource for traders participating in prop firm challenges. It's educational and generic, helping traders calculate or track their challenge progress. This applies to all prop firms including TradersYard and would be valuable content for traders trying to get funded.",
       "ai_brand_detected": null,
       "ai_target_audience": "traders",
-      "ai_validated_at": "2026-02-13T04:09:12.346Z"
+      "ai_validated_at": "2026-02-13T04:09:12.346Z",
+      "startedAt": "2026-02-22T00:07:21.877Z",
+      "slug": "prop-firm-challenge-calculator-excel-template-free-download",
+      "publishedAt": "2026-02-22T00:11:10.438Z",
+      "stagedAt": null,
+      "duration": "228.6s"
     },
     {
       "id": "510",
@@ -430,7 +435,7 @@
       "template": "listicle",
       "category": "prop-firm-guides",
       "priority": 1,
-      "status": "queued",
+      "status": "published",
       "notes": "Checklist/PDF download",
       "tier": 0,
       "estMonthlySearches": 4,
@@ -443,7 +448,12 @@
       "ai_validation_reasoning": "This keyword is about understanding the rules for funded trading accounts, which is educational content for traders who are in or preparing for prop firm challenges. It's generic and applies to all prop firms including TradersYard. A checklist of rules would help traders avoid violations and succeed in their funded accounts.",
       "ai_brand_detected": null,
       "ai_target_audience": "traders",
-      "ai_validated_at": "2026-02-13T04:11:11.666Z"
+      "ai_validated_at": "2026-02-13T04:11:11.666Z",
+      "startedAt": "2026-02-21T11:24:09.298Z",
+      "slug": "funded-trading-account-rules-checklist-complete-pdf",
+      "publishedAt": "2026-02-21T11:28:52.682Z",
+      "stagedAt": null,
+      "duration": "283.4s"
     },
     {
       "id": "515",
@@ -646,7 +656,7 @@
       "template": "ultimate-guide",
       "category": "prop-firm-guides",
       "priority": 5,
-      "status": "queued",
+      "status": "published",
       "notes": "Rule explanation with examples",
       "tier": 0,
       "estMonthlySearches": 5,
@@ -659,7 +669,12 @@
       "ai_validation_reasoning": "This keyword is about understanding consistency rules in prop firm challenges, which is educational content for traders seeking funding. It's a generic question about prop firm rules that applies to all firms including TradersYard. No specific competitor brand is mentioned.",
       "ai_brand_detected": null,
       "ai_target_audience": "traders",
-      "ai_validated_at": "2026-02-13T04:13:08.993Z"
+      "ai_validated_at": "2026-02-13T04:13:08.993Z",
+      "startedAt": "2026-02-22T00:17:48.668Z",
+      "slug": "funded-trader-consistency-rule-examples-and-how-to-meet-it",
+      "publishedAt": "2026-02-22T00:33:17.065Z",
+      "stagedAt": null,
+      "duration": "928.4s"
     },
     {
       "id": "520",
@@ -863,7 +878,7 @@
       "template": "ultimate-guide",
       "category": "prop-firm-guides",
       "priority": 6,
-      "status": "queued",
+      "status": "published",
       "notes": "FAQ-style article",
       "tier": 0,
       "estMonthlySearches": 5,
@@ -876,7 +891,12 @@
       "ai_validation_reasoning": "This is a generic educational question about prop firm rules regarding weekend holding policies. It's relevant to traders in challenges or evaluating firms, and applies broadly to all prop firms including TradersYard. No specific competitor brand is mentioned.",
       "ai_brand_detected": null,
       "ai_target_audience": "traders",
-      "ai_validated_at": "2026-02-13T04:15:05.526Z"
+      "ai_validated_at": "2026-02-13T04:15:05.526Z",
+      "startedAt": "2026-02-22T00:33:49.075Z",
+      "slug": "is-weekend-holding-allowed-in-prop-firm-challenges",
+      "publishedAt": "2026-02-22T00:39:49.160Z",
+      "stagedAt": null,
+      "duration": "360.1s"
     },
     {
       "id": "525",
@@ -951,7 +971,7 @@
       "template": "comparison",
       "category": "prop-firm-guides",
       "priority": 2,
-      "status": "queued",
+      "status": "published",
       "notes": "Policy comparison",
       "tier": 0,
       "estMonthlySearches": 4,
@@ -964,7 +984,12 @@
       "ai_validation_reasoning": "This keyword is about prop firm policies regarding Expert Advisors (EAs), which is a generic educational topic relevant to traders evaluating firms or participating in challenges. It's asking about rules/policies that apply across prop firms, not focused on a specific competitor.",
       "ai_brand_detected": null,
       "ai_target_audience": "traders",
-      "ai_validated_at": "2026-02-13T04:15:22.830Z"
+      "ai_validated_at": "2026-02-13T04:15:22.830Z",
+      "startedAt": "2026-02-21T11:30:00.405Z",
+      "slug": "prop-firm-ea-allowed-policy-can-you-use-expert-advisors",
+      "publishedAt": "2026-02-21T11:36:10.590Z",
+      "stagedAt": null,
+      "duration": "370.2s"
     },
     {
       "id": "527",
@@ -1168,7 +1193,7 @@
       "template": "comparison",
       "category": "prop-firm-guides",
       "priority": 7,
-      "status": "queued",
+      "status": "published",
       "notes": "Data-driven comparison",
       "tier": 0,
       "estMonthlySearches": 5,
@@ -1181,7 +1206,12 @@
       "ai_validation_reasoning": "This keyword is about comparing leverage offerings across prop firms, which is a generic feature comparison that helps traders evaluate which prop firm to join. It's educational content for traders and can include TradersYard in the comparison table.",
       "ai_brand_detected": null,
       "ai_target_audience": "traders",
-      "ai_validated_at": "2026-02-13T04:17:22.738Z"
+      "ai_validated_at": "2026-02-13T04:17:22.738Z",
+      "startedAt": "2026-02-24T19:37:50.401Z",
+      "slug": "prop-firm-leverage-comparison-table-2026",
+      "publishedAt": "2026-02-24T19:40:42.603Z",
+      "stagedAt": null,
+      "duration": "172.2s"
     },
     {
       "id": "532",
@@ -1340,7 +1370,7 @@
       "template": "comparison",
       "category": "prop-firm-guides",
       "priority": 3,
-      "status": "queued",
+      "status": "published",
       "notes": "Policy analysis",
       "tier": 0,
       "estMonthlySearches": 4,
@@ -1353,7 +1383,12 @@
       "ai_validation_reasoning": "This keyword is about comparing refund policies across prop firms, which is a generic feature comparison that helps traders evaluate which prop firm to join. It's educational content for traders considering multiple firms including TradersYard, and doesn't focus on any specific competitor brand.",
       "ai_brand_detected": null,
       "ai_target_audience": "traders",
-      "ai_validated_at": "2026-02-13T04:43:57.175Z"
+      "ai_validated_at": "2026-02-13T04:43:57.175Z",
+      "startedAt": "2026-02-21T11:47:56.856Z",
+      "slug": "prop-firm-refund-policy-comparison-who-offers-refunds",
+      "publishedAt": "2026-02-21T11:53:42.052Z",
+      "stagedAt": null,
+      "duration": "345.2s"
     },
     {
       "id": "536",

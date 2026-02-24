@@ -135,7 +135,7 @@ async function processKeyword(item, dryRun = false, stagingMode = false) {
       execFileSync('node', genArgs, {
         encoding: 'utf-8',
         cwd: ROOT_DIR,
-        timeout: 180000,
+        timeout: 360000,
         env: process.env,
       });
       printSuccess('Draft generated');
@@ -184,7 +184,7 @@ async function processKeyword(item, dryRun = false, stagingMode = false) {
         ], {
           encoding: 'utf-8',
           cwd: ROOT_DIR,
-          timeout: 180000,
+          timeout: 300000,
           env: process.env,
         });
         printSuccess('In-article images generated');
