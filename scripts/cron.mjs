@@ -27,8 +27,8 @@ const args = parseArgs();
 
 const QUEUE_PATH = resolve(DATA_DIR, 'keyword-queue.json');
 const LOG_PATH = resolve(DATA_DIR, 'cron-log.json');
-const POSTS_PER_DAY = 3;
-const PUBLISH_HOURS_UTC = [8, 12, 16]; // 8 AM, 12 PM, and 4 PM UTC
+const POSTS_PER_DAY = 5;
+const PUBLISH_HOURS_UTC = [6, 9, 12, 15, 18]; // 5 slots to catch up on missed articles
 
 printHeader('Blog Automation Cron');
 printInfo(`Schedule: ${POSTS_PER_DAY} posts/day at ${PUBLISH_HOURS_UTC.join(', ')} UTC`);
@@ -44,6 +44,16 @@ function saveQueue(data) {
   writeJsonFile(QUEUE_PATH, data);
 }
 
+// SEO Avalanche: articles per tier, then advance to next tier
+const ARTICLES_PER_TIER = {
+  0: 60,   // Tier 0: 60 articles (foundation layer)
+  10: 30,
+  20: 30,
+  50: 30,
+  100: 30,
+};
+const TIER_ORDER = [0, 10, 20, 50, 100];
+
 function getNextQueued() {
   const data = loadQueue();
 
@@ -58,9 +68,27 @@ function getNextQueued() {
     }
   }
 
-  // Sort by priority (lower = higher priority), then by id
-  // CRITICAL: Only pick keywords that have been AI-validated and approved
-  // CRITICAL: Never pick a keyword that's already been published under any entry
+  // Count published articles per tier (SEO Avalanche progression)
+  const publishedPerTier = {};
+  for (const item of data.queue) {
+    if (item.status === 'published') {
+      const tier = item.tier ?? 0;
+      publishedPerTier[tier] = (publishedPerTier[tier] || 0) + 1;
+    }
+  }
+
+  // Determine current active tier: first tier that hasn't hit 30 articles
+  let activeTier = TIER_ORDER[TIER_ORDER.length - 1]; // fallback to highest
+  for (const tier of TIER_ORDER) {
+    if ((publishedPerTier[tier] || 0) < (ARTICLES_PER_TIER[tier] || 30)) {
+      activeTier = tier;
+      break;
+    }
+  }
+
+  printInfo(`SEO Avalanche: Active tier = ${activeTier} (published per tier: ${JSON.stringify(publishedPerTier)})`);
+
+  // Filter and sort queued keywords
   const queued = data.queue
     .filter(item => {
       // Must be queued status
@@ -69,6 +97,10 @@ function getNextQueued() {
       // Must be AI-validated and approved
       if (!item.ai_validated) return false;
       if (item.ai_validation_result !== 'APPROVE') return false;
+
+      // SEO Avalanche: only pick keywords at the current active tier
+      const itemTier = item.tier ?? 0;
+      if (itemTier !== activeTier) return false;
 
       // Skip if this keyword was already processed (duplicate protection)
       if (processedKeywords.has(item.keyword.toLowerCase())) return false;
@@ -85,6 +117,11 @@ function getNextQueued() {
       return true;
     })
     .sort((a, b) => (a.priority || 99) - (b.priority || 99) || a.id.localeCompare(b.id));
+
+  if (queued.length === 0 && activeTier < TIER_ORDER[TIER_ORDER.length - 1]) {
+    printWarning(`No queued keywords at Tier ${activeTier}. Import Tier ${activeTier} keywords or advance to next tier.`);
+  }
+
   return queued[0] || null;
 }
 
@@ -123,12 +160,19 @@ async function processKeyword(item, dryRun = false, stagingMode = false) {
   try {
     // Step 1: Generate the draft
     printInfo('Step 1/4: Generating draft...');
+    // Auto-select AI model based on tier:
+    // Tier 0-10: GPT-4o-mini (cheap & fast, $0.0006/article)
+    // Tier 20+: GPT-4o (better quality for competitive keywords)
+    const itemTier = item.tier ?? 0;
+
     const genArgs = [
       resolve(__dirname, 'generate.mjs'),
       '--topic', item.title,
       '--template', item.template || 'how-to',
       '--keyword', item.keyword,
       '--category', item.category || 'trading-education',
+      '--tier', String(itemTier),
+      '--provider', 'openai',
     ];
 
     if (!dryRun) {
@@ -174,25 +218,32 @@ async function processKeyword(item, dryRun = false, stagingMode = false) {
       printInfo('[DRY RUN] Would generate thumbnail');
     }
 
-    // Step 3: Generate in-article images
-    printInfo('Step 3/5: Generating in-article images...');
-    if (!dryRun) {
-      try {
-        execFileSync('node', [
-          resolve(__dirname, 'add-images.mjs'),
-          '--file', draftPath,
-        ], {
-          encoding: 'utf-8',
-          cwd: ROOT_DIR,
-          timeout: 300000,
-          env: process.env,
-        });
-        printSuccess('In-article images generated');
-      } catch (imgErr) {
-        printWarning(`In-article images failed (non-blocking): ${imgErr.message.slice(0, 100)}`);
+    // Step 3: Generate in-article images (skip for Tier 0 — thumbnail only)
+    if (itemTier > 0) {
+      printInfo('Step 3/5: Generating in-article images...');
+      if (!dryRun) {
+        try {
+          const imgArgs = [
+            resolve(__dirname, 'add-images.mjs'),
+            '--file', draftPath,
+          ];
+          if (itemTier <= 10) imgArgs.push('--max-images', '2');
+
+          execFileSync('node', imgArgs, {
+            encoding: 'utf-8',
+            cwd: ROOT_DIR,
+            timeout: 300000,
+            env: process.env,
+          });
+          printSuccess('In-article images generated');
+        } catch (imgErr) {
+          printWarning(`In-article images failed (non-blocking): ${imgErr.message.slice(0, 100)}`);
+        }
+      } else {
+        printInfo('[DRY RUN] Would generate in-article images');
       }
     } else {
-      printInfo('[DRY RUN] Would generate in-article images');
+      printInfo('Step 3/5: Skipping in-article images (Tier 0 — thumbnail only)');
     }
 
     // Step 4: SEO check
@@ -357,6 +408,30 @@ if (stagingMode) {
   printWarning('Content will be generated but NOT published to Webflow');
   printWarning('Files saved to content/approved/ ready for future bulk publish');
   console.log('');
+}
+
+if (args.batch) {
+  // Batch mode: process N articles in a row (catch-up mode)
+  const count = parseInt(args.batch, 10) || 10;
+  printInfo(`BATCH MODE: Processing up to ${count} articles...\n`);
+  let success = 0;
+  let failed = 0;
+  for (let i = 0; i < count; i++) {
+    const item = getNextQueued();
+    if (!item) {
+      printWarning('No more keywords in queue');
+      break;
+    }
+    printInfo(`\n━━━ Article ${i + 1}/${count} ━━━`);
+    const result = await processKeyword(item, args['dry-run'], stagingMode);
+    if (result.success) success++;
+    else failed++;
+    // Small delay between articles to avoid rate limits
+    if (i < count - 1) await new Promise(r => setTimeout(r, 2000));
+  }
+  printSection('Batch Complete');
+  printInfo(`Success: ${success} | Failed: ${failed} | Total: ${success + failed}/${count}`);
+  process.exit(0);
 }
 
 if (args.once) {

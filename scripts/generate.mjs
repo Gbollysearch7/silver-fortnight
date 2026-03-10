@@ -53,6 +53,7 @@ const scaffoldOnly = args.scaffold || false;
 const skipResearch = args['no-research'] || false;
 const provider = args.provider || 'claude';  // Default to Claude
 const compareMode = args.compare || false;
+const tier = parseInt(args.tier, 10) || 0;
 
 printHeader('Blog Post Generator');
 
@@ -119,12 +120,8 @@ if (scaffoldOnly || !hasAI) {
         printInfo(`Common themes: ${researchData.insights.commonThemes.slice(0, 5).map(t => t.theme).join(', ')}`);
       }
       if (researchData.factCheckResult) {
-        const verified = researchData.factCheckResult.verifiedData;
-        if (verified.tradersyard) {
-          printSuccess('TradersYard data verified from Supabase');
-        }
-        if (verified.propFirms.length > 0) {
-          printSuccess(`${verified.propFirms.length} prop firms verified`);
+        if (researchData.factCheckResult.verifiedData.propFirms.length > 0) {
+          printSuccess(`${researchData.factCheckResult.verifiedData.propFirms.length} prop firms verified`);
         }
         if (researchData.factCheckResult.warnings.length > 0) {
           printWarning(`Fact-check warnings: ${researchData.factCheckResult.warnings.length}`);
@@ -152,6 +149,7 @@ if (scaffoldOnly || !hasAI) {
         category,
         research: researchData,
         templateContent,
+        tier
       });
 
       // Use the better result (or Claude if both succeeded)
@@ -171,7 +169,8 @@ if (scaffoldOnly || !hasAI) {
       printSuccess(`Using ${aiProvider} result: ${bestResult.wordCount} words, $${aiCost.toFixed(4)}`);
     } catch (err) {
       printError(`AI comparison failed: ${err.message}`);
-      printWarning('Falling back to template scaffold');
+      printError('ABORTING — refusing to publish template scaffold as a real article');
+      process.exit(1);
     }
   } else {
     // Normal mode: Single provider
@@ -185,7 +184,8 @@ if (scaffoldOnly || !hasAI) {
         category,
         research: researchData,
         templateContent,
-        provider
+        provider,
+        tier
       });
 
       articleContent = result.content;
@@ -196,7 +196,8 @@ if (scaffoldOnly || !hasAI) {
       printSuccess(`Article generated: ${result.wordCount} words, $${aiCost.toFixed(4)} (${aiProvider})`);
     } catch (err) {
       printError(`AI generation failed: ${err.message}`);
-      printWarning('Falling back to template scaffold');
+      printError('ABORTING — refusing to publish template scaffold as a real article');
+      process.exit(1);
     }
   }
 }

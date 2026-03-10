@@ -17,7 +17,9 @@
 import { existsSync, createWriteStream, readdirSync } from 'fs';
 import { resolve, basename } from 'path';
 import { get as httpsGet } from 'https';
+import OpenAI from 'openai';
 import { ROOT_DIR, FAL_KEY, TRACKER_PATH, DRAFTS_DIR, PUBLISHED_DIR, APPROVED_DIR, REVIEW_DIR } from '../lib/config.mjs';
+import { config } from '../lib/config.mjs';
 import { parseArgs, printHeader, printSection, printSuccess, printError, printInfo, ensureDir, updateTrackerPost, formatDate } from '../lib/utils.mjs';
 import { parseFile, updateFrontmatter } from '../lib/markdown.mjs';
 
@@ -44,68 +46,51 @@ if (!FAL_KEY) {
 }
 
 printHeader('Thumbnail Generator');
-printInfo('Model: Ideogram v3 | Format: 4:3 landscape');
+printInfo('Model: Ideogram v3 | Format: 16:9 landscape');
 printInfo('Cost: ~$0.04 per image\n');
 
 ensureDir(THUMBNAILS_DIR);
 
-// --- Prompt builder ---
+// --- AI-powered prompt builder ---
 
-const SCENE_POOL = {
-  guide: [
-    'Professional trader analyzing multiple monitor screens showing candlestick charts and technical indicators in a modern home office, warm desk lamp lighting, over-the-shoulder perspective',
-    'Close-up of hands on a laptop keyboard with trading platform on screen showing green profit charts, coffee cup nearby, shallow depth of field',
-    'Focused trader studying chart patterns on a widescreen monitor in a clean minimalist workspace, blue screen glow on face, professional photography',
-  ],
-  comparison: [
-    'Split-screen dual monitor setup showing different trading platforms side by side, modern desk, clean workspace, editorial photography style',
-    'Trader reviewing performance metrics on tablet while laptop shows trading dashboard in background, natural window light',
-    'Two smartphones placed on a dark desk each showing different trading apps with charts, overhead flat lay photography',
-  ],
-  list: [
-    'Modern trading desk setup with three monitors displaying financial charts and market data, ambient blue lighting, wide angle shot',
-    'Row of professional trading workstations in a modern prop trading office, shallow depth of field, cinematic lighting',
-    'Smartphone showing trading app with portfolio gains, held in hand against blurred city skyline background',
-  ],
-  story: [
-    'Confident young trader smiling while looking at profitable trade on laptop screen, casual modern office, natural lighting portrait',
-    'Trader celebrating with fist pump at desk with multiple screens showing green charts, authentic candid moment',
-    'Person reviewing trading journal at a coffee shop with laptop showing charts, relaxed productive atmosphere',
-  ],
-  country: [
-    'Trader working on laptop in a modern co-working space with city skyline visible through floor-to-ceiling windows, global trading feel',
-    'Professional at a standing desk with multiple screens showing international market data, modern minimalist office',
-  ],
-  education: [
-    'Notebook with handwritten trading notes next to a laptop showing candlestick chart tutorial, study desk setup, warm lighting',
-    'Person taking notes while watching trading education content on a large monitor, organized desk with textbooks',
-    'Clean desk with trading strategy flowchart on paper next to open laptop with charts, overhead shot, educational feel',
-  ],
-  technical: [
-    'Close-up of trading screen showing detailed technical analysis with moving averages and RSI indicators, dark background, screen glow',
-    'Multiple chart timeframes displayed on ultra-wide monitor with technical indicators highlighted, professional trading setup',
-  ],
-};
+const openaiClient = config.env.OPENAI_API_KEY ? new OpenAI({
+  apiKey: config.env.OPENAI_API_KEY,
+}) : null;
 
-function buildPrompt(title, theme = 'guide') {
-  const scenes = SCENE_POOL[theme] || SCENE_POOL.guide;
-  const scene = scenes[Math.floor(Math.random() * scenes.length)];
+async function buildPromptWithAI(title) {
+  if (!openaiClient) {
+    // Fallback if no OpenAI key
+    return `A creative, visually striking editorial photograph related to "${title}" in the finance and trading industry. Unique composition, cinematic lighting, professional stock photography, sharp focus, high resolution, no text or watermarks, no logos.`;
+  }
 
-  return `${scene}. Professional stock photography, sharp focus, high resolution, no text or watermarks, no logos.`;
-}
+  try {
+    const completion = await openaiClient.chat.completions.create({
+      model: 'gpt-4o-mini',
+      max_tokens: 200,
+      messages: [{
+        role: 'user',
+        content: `You are a creative director for a trading/finance blog. Generate a unique, vivid image prompt for a blog thumbnail.
 
-function detectTheme(frontmatter, content) {
-  const title = (frontmatter.title || '').toLowerCase();
-  const category = (frontmatter.category || '').toLowerCase();
-  const template = (frontmatter.template || '').toLowerCase();
+Article title: "${title}"
 
-  if (template === 'comparison' || title.includes(' vs ')) return 'comparison';
-  if (template === 'listicle' || title.includes('best ') || title.includes('top ')) return 'list';
-  if (template === 'success-story') return 'story';
-  if (category.includes('country') || /\bin [a-z]+(?!\s*\d)/.test(title)) return 'country';
-  if (title.includes('how to') || template === 'how-to') return 'guide';
-  if (title.includes('what is') || category.includes('education')) return 'education';
-  return 'guide';
+Rules:
+- Describe ONE specific, creative scene that visually represents this article's topic
+- DO NOT default to "person staring at monitor screens" — be more creative and varied
+- Use diverse compositions: overhead flat-lays, close-up details, conceptual still life, architectural shots, hands-on action shots, abstract financial concepts made visual
+- Vary the setting: coffee shops, outdoor terraces, libraries, modern offices, home desks, co-working spaces, airports, city streets
+- Include specific visual details: props, lighting direction, color palette, camera angle, depth of field
+- Make each image feel DIFFERENT — avoid repetitive monitor-and-charts scenes
+- Keep it to 2-3 sentences max
+- End with: Professional editorial photography, sharp focus, high resolution, no text or watermarks, no logos.
+
+Write ONLY the image prompt, nothing else.`
+      }],
+    });
+    return completion.choices[0].message.content.trim();
+  } catch (err) {
+    console.log(`  AI prompt generation failed, using fallback: ${err.message}`);
+    return `A creative, visually striking editorial photograph related to "${title}" in the finance and trading industry. Unique composition, cinematic lighting, professional stock photography, sharp focus, high resolution, no text or watermarks, no logos.`;
+  }
 }
 
 // --- fal.ai Ideogram v3 API ---
@@ -119,7 +104,7 @@ async function generateImage(prompt) {
     },
     body: JSON.stringify({
       prompt,
-      aspect_ratio: '4:3',
+      aspect_ratio: '16:9',
       style: 'AUTO',
       num_images: 1,
     }),
@@ -165,20 +150,19 @@ if (args.file) {
     printError(`File not found: ${filePath}`);
     process.exit(1);
   }
-  const { frontmatter, content } = parseFile(filePath);
+  const { frontmatter } = parseFile(filePath);
   const slug = frontmatter.slug || basename(filePath, '.md');
-  const theme = args.theme || detectTheme(frontmatter, content);
-  const prompt = args.prompt || buildPrompt(frontmatter.title || slug, theme);
+  const title = frontmatter.title || slug.replace(/-/g, ' ');
+  const prompt = args.prompt || await buildPromptWithAI(title);
 
-  jobs.push({ slug, title: frontmatter.title, theme, prompt, filePath });
+  jobs.push({ slug, title, prompt, filePath });
 
 } else if (args.slug) {
   const slug = args.slug;
   const title = args.title || slug.replace(/-/g, ' ');
-  const theme = args.theme || 'guide';
-  const prompt = args.prompt || buildPrompt(title, theme);
+  const prompt = args.prompt || await buildPromptWithAI(title);
 
-  jobs.push({ slug, title, theme, prompt, filePath: null });
+  jobs.push({ slug, title, prompt, filePath: null });
 
 } else if (args['all-missing']) {
   // Find all posts without thumbnails
@@ -187,7 +171,7 @@ if (args.file) {
     if (!existsSync(dir)) continue;
     for (const file of readdirSync(dir).filter(f => f.endsWith('.md'))) {
       const filePath = resolve(dir, file);
-      const { frontmatter, content } = parseFile(filePath);
+      const { frontmatter } = parseFile(filePath);
       const slug = frontmatter.slug || basename(file, '.md');
 
       // Check if thumbnail already exists
@@ -197,9 +181,9 @@ if (args.file) {
       // Check if featured image URL is already set
       if (frontmatter.featured_image?.url) continue;
 
-      const theme = detectTheme(frontmatter, content);
-      const prompt = buildPrompt(frontmatter.title || slug, theme);
-      jobs.push({ slug, title: frontmatter.title, theme, prompt, filePath });
+      const title = frontmatter.title || slug.replace(/-/g, ' ');
+      // Defer prompt generation to processing loop to avoid rate limits
+      jobs.push({ slug, title, prompt: null, filePath });
     }
   }
 }
@@ -219,9 +203,14 @@ let failed = 0;
 
 for (let i = 0; i < jobs.length; i++) {
   const job = jobs[i];
+
+  // Generate AI prompt if not already set (deferred for --all-missing)
+  if (!job.prompt) {
+    job.prompt = await buildPromptWithAI(job.title);
+  }
+
   printSection(`[${i + 1}/${jobs.length}] ${job.slug}`);
   printInfo(`Title: ${job.title}`);
-  printInfo(`Theme: ${job.theme}`);
   printInfo(`Prompt: ${job.prompt.slice(0, 100)}...`);
 
   if (args['dry-run']) {
