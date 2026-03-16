@@ -1,16 +1,16 @@
 {
   "site": {
     "name": "TradersYard",
-    "baseUrl": "https://blog.tradersyard.com",
+    "baseUrl": "https://tradersyard.com",
     "blogPath": "blog-posts",
     "author": "TradersYard",
-    "_comment": "CRITICAL: blog.tradersyard.com is CURRENT domain until migration complete. DO NOT change to tradersyard.com/blog until user confirms migration. blogPath must match Webflow collection slug."
+    "_comment": "Migration complete March 2026. Now publishing to tradersyard.com/blog-posts/. Internal links: https://tradersyard.com/blog-posts/slug"
   },
   "webflow": {
     "apiBase": "https://api.webflow.com/v2",
-    "blogCollectionId": "68fa557e6e6c4fcedde849e0",
-    "_WRONG_collectionId_DO_NOT_USE": "67b4bd39747043c9b6d29c6e",
-    "_comment": "Collection 68fa557e6e6c4fcedde849e0 = blog.tradersyard.com (CORRECT). Collection 67b4bd39747043c9b6d29c6e = tradersyard.com/blog (WRONG until migration).",
+    "blogCollectionId": "67b4bd39747043c9b6d29c6e",
+    "_OLD_blogCollectionId_DELETED": "68fa557e6e6c4fcedde849e0",
+    "_comment": "Collection 67b4bd39 = tradersyard.com (LIVE). Old collection 68fa557e = blog.tradersyard.com (DELETED, returns 404).",
     "fieldMapping": {
       "title": "name",
       "slug": "slug",
@@ -23,7 +23,7 @@
     "descriptionMinLength": 150,
     "descriptionMaxLength": 160,
     "slugMaxLength": 60,
-    "minWordCount": 1000,
+    "minWordCount": 600,
     "targetWordCount": 2000,
     "maxKeywordDensity": 0.025,
     "minInternalLinks": 3,

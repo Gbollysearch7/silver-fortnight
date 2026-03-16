@@ -174,7 +174,7 @@
       "tier": 0,
       "volume": 10,
       "intent": "Informational",
-      "status": "queued",
+      "status": "published",
       "ai_validated": true,
       "notes": "Tier 0 keyword (10 searches/month). Needs AI validation.",
       "created_at": "2026-02-13T04:06:32.484Z",
@@ -183,7 +183,8 @@
       "ai_validation_reasoning": "This is a generic educational keyword about passing prop firm challenges. It applies to all prop firms including TradersYard and targets traders who are in or preparing for evaluation challenges. No specific competitor brand mentioned.",
       "ai_brand_detected": null,
       "ai_target_audience": "traders",
-      "ai_validated_at": "2026-02-13T04:08:07.544Z"
+      "ai_validated_at": "2026-02-13T04:08:07.544Z",
+      "publishedAt": "2026-02-25T12:56:56.695Z"
     },
     {
       "id": "509",
@@ -213,7 +214,7 @@
       "template": "how-to",
       "category": "prop-firm-guides",
       "priority": 4,
-      "status": "published",
+      "status": "queued",
       "notes": "Downloadable resource, high conversion potential",
       "tier": 0,
       "estMonthlySearches": 5,
@@ -229,9 +230,9 @@
       "ai_validated_at": "2026-02-13T04:09:12.346Z",
       "startedAt": "2026-02-22T00:07:21.877Z",
       "slug": "prop-firm-challenge-calculator-excel-template-free-download",
-      "publishedAt": "2026-02-22T00:11:10.438Z",
       "stagedAt": null,
-      "duration": "228.6s"
+      "duration": "228.6s",
+      "_ghost_reset": true
     },
     {
       "id": "510",
@@ -274,7 +275,12 @@
       "ai_validation_reasoning": "This keyword is about traders who are already funded or evaluating funding opportunities wanting to calculate their profit splits. This is a practical tool/resource for traders in or considering prop firm programs, which is directly relevant to TradersYard's target audience.",
       "ai_brand_detected": null,
       "ai_target_audience": "traders",
-      "ai_validated_at": "2026-02-13T04:09:20.680Z"
+      "ai_validated_at": "2026-02-13T04:09:20.680Z",
+      "startedAt": "2026-03-09T20:39:53.785Z",
+      "slug": "funded-trader-profit-split-calculator-calculate-your-earning",
+      "stagedAt": null,
+      "duration": "51.9s",
+      "_ghost_reset": true
     },
     {
       "id": "511",
@@ -304,7 +310,7 @@
       "template": "ultimate-guide",
       "category": "trading-education",
       "priority": 9,
-      "status": "queued",
+      "status": "published",
       "notes": "Educational deep-dive",
       "tier": 0,
       "estMonthlySearches": 6,
@@ -317,7 +323,8 @@
       "ai_validation_reasoning": "This keyword is about understanding drawdown calculation formulas in prop firms, which is educational content that helps traders understand prop firm rules and risk management. This is generic information applicable to all prop firms including TradersYard, and would help traders in challenges or evaluating firms.",
       "ai_brand_detected": null,
       "ai_target_audience": "traders",
-      "ai_validated_at": "2026-02-13T04:09:28.487Z"
+      "ai_validated_at": "2026-02-13T04:09:28.487Z",
+      "publishedAt": "2026-02-26T01:31:57.170Z"
     },
     {
       "id": "512",
@@ -329,7 +336,7 @@
       "tier": 0,
       "volume": 10,
       "intent": "Informational",
-      "status": "queued",
+      "status": "published",
       "ai_validated": true,
       "notes": "Tier 0 keyword (10 searches/month). Needs AI validation.",
       "created_at": "2026-02-13T04:06:32.484Z",
@@ -338,7 +345,8 @@
       "ai_validation_reasoning": "This is a generic educational question that traders ask when evaluating whether to join prop firms. It addresses trader concerns about the viability and profitability of the prop firm model, which helps them make informed decisions about getting funded. This applies to all prop firms including TradersYard.",
       "ai_brand_detected": null,
       "ai_target_audience": "traders",
-      "ai_validated_at": "2026-02-13T04:09:32.403Z"
+      "ai_validated_at": "2026-02-13T04:09:32.403Z",
+      "publishedAt": "2026-02-25T12:56:56.695Z"
     },
     {
       "id": "009",
@@ -404,7 +412,12 @@
       "ai_validation_reasoning": "This is a generic educational keyword about understanding how daily loss limits work in prop firm challenges. It's relevant to traders who are in or preparing for prop firm challenges and need to understand risk management rules. This applies to all prop firms including TradersYard.",
       "ai_brand_detected": null,
       "ai_target_audience": "traders",
-      "ai_validated_at": "2026-02-13T04:10:11.024Z"
+      "ai_validated_at": "2026-02-13T04:10:11.024Z",
+      "startedAt": "2026-03-09T20:35:36.974Z",
+      "slug": "prop-firm-daily-loss-limit-how-to-calculate-and-manage-it",
+      "stagedAt": null,
+      "duration": "79.5s",
+      "_ghost_reset": true
     },
     {
       "id": "514",
@@ -435,7 +448,7 @@
       "template": "listicle",
       "category": "prop-firm-guides",
       "priority": 1,
-      "status": "published",
+      "status": "queued",
       "notes": "Checklist/PDF download",
       "tier": 0,
       "estMonthlySearches": 4,
@@ -451,9 +464,9 @@
       "ai_validated_at": "2026-02-13T04:11:11.666Z",
       "startedAt": "2026-02-21T11:24:09.298Z",
       "slug": "funded-trading-account-rules-checklist-complete-pdf",
-      "publishedAt": "2026-02-21T11:28:52.682Z",
       "stagedAt": null,
-      "duration": "283.4s"
+      "duration": "283.4s",
+      "_ghost_reset": true
     },
     {
       "id": "515",
@@ -496,7 +509,12 @@
       "ai_validation_reasoning": "This keyword is about traders seeking tips to pass the evaluation phase of prop firm challenges. It's educational, generic, and applies to all prop firms including TradersYard. This is exactly the type of content that would help traders get funded.",
       "ai_brand_detected": null,
       "ai_target_audience": "traders",
-      "ai_validated_at": "2026-02-13T04:11:19.600Z"
+      "ai_validated_at": "2026-02-13T04:11:19.600Z",
+      "startedAt": "2026-03-09T20:40:02.390Z",
+      "slug": "10-essential-prop-firm-evaluation-phase-tips-to-pass-first-t",
+      "stagedAt": null,
+      "duration": "58.1s",
+      "_ghost_reset": true
     },
     {
       "id": "516",
@@ -526,7 +544,7 @@
       "template": "how-to",
       "category": "trading-education",
       "priority": 10,
-      "status": "queued",
+      "status": "published",
       "notes": "Formula breakdown",
       "tier": 0,
       "estMonthlySearches": 6,
@@ -539,7 +557,8 @@
       "ai_validation_reasoning": "This keyword is about understanding profit target formulas in trading challenges, which is educational content for traders participating in or evaluating prop firm challenges. It's generic and applies to all prop firms including TradersYard.",
       "ai_brand_detected": null,
       "ai_target_audience": "traders",
-      "ai_validated_at": "2026-02-13T04:11:27.036Z"
+      "ai_validated_at": "2026-02-13T04:11:27.036Z",
+      "publishedAt": "2026-02-26T01:31:57.182Z"
     },
     {
       "id": "517",
@@ -582,7 +601,12 @@
       "ai_validation_reasoning": "This is a generic educational keyword about a common prop firm rule (trailing drawdown) that applies to all prop firms including TradersYard. It's clearly targeted at traders who want to understand prop firm rules and requirements, which helps them succeed in challenges.",
       "ai_brand_detected": null,
       "ai_target_audience": "traders",
-      "ai_validated_at": "2026-02-13T04:12:05.835Z"
+      "ai_validated_at": "2026-02-13T04:12:05.835Z",
+      "startedAt": "2026-03-09T20:42:54.177Z",
+      "slug": "prop-firm-trailing-drawdown-explained-with-examples",
+      "stagedAt": null,
+      "duration": "63.0s",
+      "_ghost_reset": true
     },
     {
       "id": "518",
@@ -626,7 +650,12 @@
       "ai_validation_reasoning": "This is a generic educational question about understanding max drawdown calculations in prop firm challenges. It's relevant to traders who are in or preparing for prop firm evaluations and applies to all prop firms including TradersYard. No specific competitor brand is mentioned.",
       "ai_brand_detected": null,
       "ai_target_audience": "traders",
-      "ai_validated_at": "2026-02-13T04:12:13.492Z"
+      "ai_validated_at": "2026-02-13T04:12:13.492Z",
+      "startedAt": "2026-03-09T20:36:22.610Z",
+      "slug": "how-to-calculate-max-drawdown-for-prop-firm-challenges",
+      "stagedAt": null,
+      "duration": "75.3s",
+      "_ghost_reset": true
     },
     {
       "id": "519",
@@ -656,7 +685,7 @@
       "template": "ultimate-guide",
       "category": "prop-firm-guides",
       "priority": 5,
-      "status": "published",
+      "status": "queued",
       "notes": "Rule explanation with examples",
       "tier": 0,
       "estMonthlySearches": 5,
@@ -672,9 +701,9 @@
       "ai_validated_at": "2026-02-13T04:13:08.993Z",
       "startedAt": "2026-02-22T00:17:48.668Z",
       "slug": "funded-trader-consistency-rule-examples-and-how-to-meet-it",
-      "publishedAt": "2026-02-22T00:33:17.065Z",
       "stagedAt": null,
-      "duration": "928.4s"
+      "duration": "928.4s",
+      "_ghost_reset": true
     },
     {
       "id": "520",
@@ -717,7 +746,12 @@
       "ai_validation_reasoning": "This keyword is about traders looking for tools to help them track and manage their prop firm challenge. It's educational/practical content that helps traders pass challenges, which applies to all prop firms including TradersYard. No specific competitor brand is mentioned.",
       "ai_brand_detected": null,
       "ai_target_audience": "traders",
-      "ai_validated_at": "2026-02-13T04:13:17.698Z"
+      "ai_validated_at": "2026-02-13T04:13:17.698Z",
+      "startedAt": "2026-03-09T20:40:47.705Z",
+      "slug": "prop-firm-challenge-spreadsheet-template-free-download",
+      "stagedAt": null,
+      "duration": "70.9s",
+      "_ghost_reset": true
     },
     {
       "id": "521",
@@ -791,7 +825,7 @@
       "template": "comparison",
       "category": "prop-firm-guides",
       "priority": 11,
-      "status": "queued",
+      "status": "published",
       "notes": "Decision-making guide",
       "tier": 0,
       "estMonthlySearches": 6,
@@ -804,7 +838,8 @@
       "ai_validation_reasoning": "This keyword is about helping traders choose the right account size when joining a prop firm. It's educational content that applies generically to all prop firms including TradersYard, and directly serves traders who are evaluating their options during the signup/selection process.",
       "ai_brand_detected": null,
       "ai_target_audience": "traders",
-      "ai_validated_at": "2026-02-13T04:14:10.944Z"
+      "ai_validated_at": "2026-02-13T04:14:10.944Z",
+      "publishedAt": "2026-02-26T01:31:57.182Z"
     },
     {
       "id": "523",
@@ -848,7 +883,12 @@
       "ai_validation_reasoning": "This keyword is about a generic prop firm rule (minimum trading days requirement) that applies across multiple prop firms. It's educational content for traders who are in or evaluating prop firm challenges. This is valuable information for TradersYard's target audience of traders seeking funding.",
       "ai_brand_detected": null,
       "ai_target_audience": "traders",
-      "ai_validated_at": "2026-02-13T04:14:19.955Z"
+      "ai_validated_at": "2026-02-13T04:14:19.955Z",
+      "startedAt": "2026-03-09T20:36:58.495Z",
+      "slug": "funded-trading-minimum-days-rule-what-you-need-to-know",
+      "stagedAt": null,
+      "duration": "62.5s",
+      "_ghost_reset": true
     },
     {
       "id": "524",
@@ -878,7 +918,7 @@
       "template": "ultimate-guide",
       "category": "prop-firm-guides",
       "priority": 6,
-      "status": "published",
+      "status": "queued",
       "notes": "FAQ-style article",
       "tier": 0,
       "estMonthlySearches": 5,
@@ -894,9 +934,9 @@
       "ai_validated_at": "2026-02-13T04:15:05.526Z",
       "startedAt": "2026-02-22T00:33:49.075Z",
       "slug": "is-weekend-holding-allowed-in-prop-firm-challenges",
-      "publishedAt": "2026-02-22T00:39:49.160Z",
       "stagedAt": null,
-      "duration": "360.1s"
+      "duration": "360.1s",
+      "_ghost_reset": true
     },
     {
       "id": "525",
@@ -927,7 +967,7 @@
       "template": "ultimate-guide",
       "category": "prop-firm-guides",
       "priority": 12,
-      "status": "queued",
+      "status": "failed",
       "notes": "Rule comparison",
       "tier": 0,
       "estMonthlySearches": 6,
@@ -940,7 +980,10 @@
       "ai_validation_reasoning": "This keyword is about news trading rules within prop firm trading challenges, which is educational content for traders going through evaluations. It's a generic topic about challenge rules that applies to all prop firms including TradersYard.",
       "ai_brand_detected": null,
       "ai_target_audience": "traders",
-      "ai_validated_at": "2026-02-13T04:15:14.741Z"
+      "ai_validated_at": "2026-02-13T04:15:14.741Z",
+      "startedAt": "2026-02-26T13:31:41.003Z",
+      "error": "Command failed: node /Users/gbolahan/Documents/Active-2026/2026-projects/TY Blog Automation/scripts/generate.mjs --topic Trading Challenge News Trading Rules: What's Allowed? --template ultimate-guide",
+      "failedAt": "2026-02-26T13:31:45.794Z"
     },
     {
       "id": "526",
@@ -971,7 +1014,7 @@
       "template": "comparison",
       "category": "prop-firm-guides",
       "priority": 2,
-      "status": "published",
+      "status": "queued",
       "notes": "Policy comparison",
       "tier": 0,
       "estMonthlySearches": 4,
@@ -987,9 +1030,9 @@
       "ai_validated_at": "2026-02-13T04:15:22.830Z",
       "startedAt": "2026-02-21T11:30:00.405Z",
       "slug": "prop-firm-ea-allowed-policy-can-you-use-expert-advisors",
-      "publishedAt": "2026-02-21T11:36:10.590Z",
       "stagedAt": null,
-      "duration": "370.2s"
+      "duration": "370.2s",
+      "_ghost_reset": true
     },
     {
       "id": "527",
@@ -1032,7 +1075,12 @@
       "ai_validation_reasoning": "This keyword is about scaling plan strategies for funded traders, which is directly relevant to traders who have passed prop firm challenges and are managing funded accounts. This is educational content about prop firm rules and strategies that applies generically to all prop firms including TradersYard.",
       "ai_brand_detected": null,
       "ai_target_audience": "traders",
-      "ai_validated_at": "2026-02-13T04:16:12.186Z"
+      "ai_validated_at": "2026-02-13T04:16:12.186Z",
+      "startedAt": "2026-03-09T20:41:02.543Z",
+      "slug": "funded-trader-scaling-plan-strategy-how-to-grow-your-account",
+      "stagedAt": null,
+      "duration": "56.7s",
+      "_ghost_reset": true
     },
     {
       "id": "528",
@@ -1044,7 +1092,7 @@
       "tier": 0,
       "volume": 10,
       "intent": "Informational",
-      "status": "queued",
+      "status": "published",
       "ai_validated": true,
       "notes": "Tier 0 keyword (10 searches/month). Needs AI validation.",
       "created_at": "2026-02-13T04:06:32.484Z",
@@ -1053,7 +1101,8 @@
       "ai_validation_reasoning": "This keyword is about traders seeking to get funded by prop firms without upfront costs. It's educational content about accessing prop firm accounts, which is directly relevant to traders evaluating funding options. This is a generic question that applies to all prop firms including TradersYard.",
       "ai_brand_detected": null,
       "ai_target_audience": "traders",
-      "ai_validated_at": "2026-02-13T04:16:15.975Z"
+      "ai_validated_at": "2026-02-13T04:16:15.975Z",
+      "publishedAt": "2026-02-25T12:56:56.696Z"
     },
     {
       "id": "025",
@@ -1075,7 +1124,12 @@
       "ai_validation_reasoning": "This keyword is about understanding payout schedules and timelines at prop firms, which is valuable information for traders who are funded or evaluating prop firms. It's a generic educational topic that applies to all prop firms including TradersYard, and helps traders understand what to expect regarding payment processes.",
       "ai_brand_detected": null,
       "ai_target_audience": "traders",
-      "ai_validated_at": "2026-02-13T04:16:21.503Z"
+      "ai_validated_at": "2026-02-13T04:16:21.503Z",
+      "startedAt": "2026-03-09T20:37:39.879Z",
+      "slug": "prop-firm-payout-schedule-timeline-when-do-you-get-paid",
+      "stagedAt": null,
+      "duration": "70.2s",
+      "_ghost_reset": true
     },
     {
       "id": "529",
@@ -1119,7 +1173,12 @@
       "ai_validation_reasoning": "This keyword is about traders looking for tools to help them pass prop firm challenges. A challenge journal template is a practical resource for traders actively participating in or preparing for prop firm evaluations. This is educational content that helps traders succeed in challenges, which aligns with TradersYard's target audience.",
       "ai_brand_detected": null,
       "ai_target_audience": "traders",
-      "ai_validated_at": "2026-02-13T04:17:06.403Z"
+      "ai_validated_at": "2026-02-13T04:17:06.403Z",
+      "startedAt": "2026-03-09T20:34:46.557Z",
+      "slug": "prop-firm-challenge-journal-template-free-trading-log",
+      "stagedAt": null,
+      "duration": "48.4s",
+      "_ghost_reset": true
     },
     {
       "id": "530",
@@ -1193,7 +1252,7 @@
       "template": "comparison",
       "category": "prop-firm-guides",
       "priority": 7,
-      "status": "published",
+      "status": "queued",
       "notes": "Data-driven comparison",
       "tier": 0,
       "estMonthlySearches": 5,
@@ -1209,9 +1268,9 @@
       "ai_validated_at": "2026-02-13T04:17:22.738Z",
       "startedAt": "2026-02-24T19:37:50.401Z",
       "slug": "prop-firm-leverage-comparison-table-2026",
-      "publishedAt": "2026-02-24T19:40:42.603Z",
       "stagedAt": null,
-      "duration": "172.2s"
+      "duration": "172.2s",
+      "_ghost_reset": true
     },
     {
       "id": "532",
@@ -1254,7 +1313,12 @@
       "ai_validation_reasoning": "This keyword is about a tool/resource for funded traders to calculate maximum lot sizes, which is directly relevant to traders in prop firm challenges or already funded. It's educational content about risk management and position sizing that applies generically to all prop firms including TradersYard.",
       "ai_brand_detected": null,
       "ai_target_audience": "traders",
-      "ai_validated_at": "2026-02-13T04:18:08.000Z"
+      "ai_validated_at": "2026-02-13T04:18:08.000Z",
+      "startedAt": "2026-03-09T20:38:03.005Z",
+      "slug": "funded-trader-max-lot-size-calculator-for-prop-firms",
+      "stagedAt": null,
+      "duration": "68.9s",
+      "_ghost_reset": true
     },
     {
       "id": "533",
@@ -1297,7 +1361,12 @@
       "ai_validation_reasoning": "This keyword is about traders who have failed a prop firm challenge and are looking for guidance on next steps. It's educational content that applies generically to all prop firms including TradersYard. This is highly relevant for traders in or considering prop firm challenges.",
       "ai_brand_detected": null,
       "ai_target_audience": "traders",
-      "ai_validated_at": "2026-02-13T04:18:16.810Z"
+      "ai_validated_at": "2026-02-13T04:18:16.810Z",
+      "startedAt": "2026-03-09T20:43:59.175Z",
+      "slug": "prop-firm-challenge-failed-heres-what-to-do-next",
+      "stagedAt": null,
+      "duration": "50.6s",
+      "_ghost_reset": true
     },
     {
       "id": "534",
@@ -1340,7 +1409,12 @@
       "ai_validation_reasoning": "This keyword is about risk management strategies for traders participating in prop firm challenges. It's educational content that helps traders pass their evaluations, which is directly relevant to TradersYard's target audience. No specific competitor brand is mentioned.",
       "ai_brand_detected": null,
       "ai_target_audience": "traders",
-      "ai_validated_at": "2026-02-13T04:34:06.557Z"
+      "ai_validated_at": "2026-02-13T04:34:06.557Z",
+      "startedAt": "2026-03-09T20:29:24.256Z",
+      "slug": "trading-challenge-risk-management-checklist-pdf",
+      "stagedAt": null,
+      "duration": "73.7s",
+      "_ghost_reset": true
     },
     {
       "id": "535",
@@ -1370,7 +1444,7 @@
       "template": "comparison",
       "category": "prop-firm-guides",
       "priority": 3,
-      "status": "published",
+      "status": "queued",
       "notes": "Policy analysis",
       "tier": 0,
       "estMonthlySearches": 4,
@@ -1386,9 +1460,9 @@
       "ai_validated_at": "2026-02-13T04:43:57.175Z",
       "startedAt": "2026-02-21T11:47:56.856Z",
       "slug": "prop-firm-refund-policy-comparison-who-offers-refunds",
-      "publishedAt": "2026-02-21T11:53:42.052Z",
       "stagedAt": null,
-      "duration": "345.2s"
+      "duration": "345.2s",
+      "_ghost_reset": true
     },
     {
       "id": "536",
@@ -1431,7 +1505,12 @@
       "ai_validation_reasoning": "This keyword is about understanding the verification process that traders go through after passing a prop firm challenge to get their funded account. It's educational content for traders seeking funding, applies generically to all prop firms including TradersYard, and helps traders understand what to expect in their funding journey.",
       "ai_brand_detected": null,
       "ai_target_audience": "traders",
-      "ai_validated_at": "2026-02-13T04:44:06.011Z"
+      "ai_validated_at": "2026-02-13T04:44:06.011Z",
+      "startedAt": "2026-03-09T20:42:00.646Z",
+      "slug": "funded-account-verification-process-step-by-step-guide",
+      "stagedAt": null,
+      "duration": "51.5s",
+      "_ghost_reset": true
     },
     {
       "id": "537",
@@ -1474,7 +1553,12 @@
       "ai_validation_reasoning": "This keyword targets traders looking for discount codes to join prop firm challenges. While it could attract deal-seekers, it's clearly from the trader perspective wanting to get funded at a lower cost. This is a generic query that applies to all prop firms including TradersYard, and we could write content about challenge pricing, available discounts, and how to find legitimate offers.",
       "ai_brand_detected": null,
       "ai_target_audience": "traders",
-      "ai_validated_at": "2026-02-13T04:44:15.859Z"
+      "ai_validated_at": "2026-02-13T04:44:15.859Z",
+      "startedAt": "2026-03-09T20:38:52.106Z",
+      "slug": "prop-firm-challenge-discount-codes-2026-active-deals",
+      "stagedAt": null,
+      "duration": "59.7s",
+      "_ghost_reset": true
     },
     {
       "id": "538",
@@ -1560,7 +1644,12 @@
       "ai_validation_reasoning": "This keyword is about the withdrawal process for funded traders, which is a critical concern for traders who have passed prop firm challenges and are evaluating or using prop firms. It's educational content about how prop firms work and directly relevant to traders seeking funding.",
       "ai_brand_detected": null,
       "ai_target_audience": "traders",
-      "ai_validated_at": "2026-02-13T04:59:35.710Z"
+      "ai_validated_at": "2026-02-13T04:59:35.710Z",
+      "startedAt": "2026-03-09T20:30:39.925Z",
+      "slug": "funded-trader-withdrawal-process-how-long-does-it-take",
+      "stagedAt": null,
+      "duration": "58.0s",
+      "_ghost_reset": true
     },
     {
       "id": "540",
@@ -1572,7 +1661,7 @@
       "tier": 0,
       "volume": 10,
       "intent": "Informational",
-      "status": "queued",
+      "status": "published",
       "ai_validated": true,
       "notes": "Tier 0 keyword (10 searches/month). Needs AI validation.",
       "created_at": "2026-02-13T04:06:32.484Z",
@@ -1581,7 +1670,8 @@
       "ai_validation_reasoning": "This is a generic comparison question about prop firm features (HFT allowance) that traders would ask when evaluating which prop firm to join. It's educational and helps traders understand rules across different firms, including TradersYard. No specific competitor brand is mentioned.",
       "ai_brand_detected": null,
       "ai_target_audience": "traders",
-      "ai_validated_at": "2026-02-13T04:59:39.837Z"
+      "ai_validated_at": "2026-02-13T04:59:39.837Z",
+      "publishedAt": "2026-02-25T12:56:56.696Z"
     },
     {
       "id": "037",
@@ -1603,7 +1693,12 @@
       "ai_validation_reasoning": "This keyword is about traders wanting to practice with demo accounts before or during prop firm challenges. It's educational content about prop firm features that applies generically to all prop firms including TradersYard. This is relevant for traders evaluating firms or preparing for challenges.",
       "ai_brand_detected": null,
       "ai_target_audience": "traders",
-      "ai_validated_at": "2026-02-13T04:59:44.334Z"
+      "ai_validated_at": "2026-02-13T04:59:44.334Z",
+      "startedAt": "2026-02-25T12:34:43.445Z",
+      "slug": "prop-firm-demo-account-practice-best-platforms",
+      "stagedAt": null,
+      "duration": "278.5s",
+      "_ghost_reset": true
     },
     {
       "id": "541",
@@ -1646,7 +1741,12 @@
       "ai_validation_reasoning": "This keyword is about helping traders avoid common mistakes during prop firm trading challenges. It's educational content that directly benefits traders going through evaluation phases, which is core to TradersYard's target audience.",
       "ai_brand_detected": null,
       "ai_target_audience": "traders",
-      "ai_validated_at": "2026-02-13T04:59:52.917Z"
+      "ai_validated_at": "2026-02-13T04:59:52.917Z",
+      "startedAt": "2026-03-09T20:42:01.261Z",
+      "slug": "15-trading-challenge-common-mistakes-to-avoid",
+      "stagedAt": null,
+      "duration": "57.4s",
+      "_ghost_reset": true
     },
     {
       "id": "542",
@@ -1690,7 +1790,12 @@
       "ai_validation_reasoning": "This keyword is about KYC (Know Your Customer) requirements and documents that traders need to provide to prop firms. It's educational content that helps traders understand what documentation they'll need when joining or getting funded by prop firms like TradersYard. This is generic information applicable to all prop firms and directly relevant to traders going through the onboarding/funding process.",
       "ai_brand_detected": null,
       "ai_target_audience": "traders",
-      "ai_validated_at": "2026-02-13T05:01:07.571Z"
+      "ai_validated_at": "2026-02-13T05:01:07.571Z",
+      "startedAt": "2026-03-09T20:39:13.938Z",
+      "slug": "prop-firm-kyc-requirements-what-documents-do-you-need",
+      "stagedAt": null,
+      "duration": "46.4s",
+      "_ghost_reset": true
     },
     {
       "id": "543",
@@ -1852,7 +1957,7 @@
       "tier": 0,
       "volume": 10,
       "intent": "Informational",
-      "status": "queued",
+      "status": "published",
       "ai_validated": true,
       "notes": "Tier 0 keyword (10 searches/month). Needs AI validation.",
       "created_at": "2026-02-13T04:06:32.484Z",
@@ -1861,7 +1966,8 @@
       "ai_validation_reasoning": "This is a comparison question about prop firm features (spreads) that applies generically across the industry. Traders evaluating which prop firm to join would search this. TradersYard can be included in this comparison alongside competitors.",
       "ai_brand_detected": null,
       "ai_target_audience": "traders",
-      "ai_validated_at": "2026-02-13T05:02:07.559Z"
+      "ai_validated_at": "2026-02-13T05:02:07.559Z",
+      "publishedAt": "2026-02-25T12:56:56.696Z"
     },
     {
       "id": "046",
@@ -8145,7 +8251,7 @@
       "tier": 0,
       "volume": 10,
       "intent": "Informational",
-      "status": "queued",
+      "status": "published",
       "ai_validated": true,
       "notes": "Tier 0 keyword (10 searches/month). Needs AI validation.",
       "created_at": "2026-02-13T04:06:32.485Z",
@@ -8154,7 +8260,8 @@
       "ai_validation_reasoning": "This is a comparison/evaluation keyword where traders in Malaysia are looking for the best prop firms to join. It's a generic search that allows us to include TradersYard in the comparison alongside other firms. The geographic qualifier (Malaysia) doesn't change that this is traders evaluating which prop firm to join.",
       "ai_brand_detected": null,
       "ai_target_audience": "traders",
-      "ai_validated_at": "2026-02-13T11:12:23.366Z"
+      "ai_validated_at": "2026-02-13T11:12:23.366Z",
+      "publishedAt": "2026-02-25T12:56:56.696Z"
     },
     {
       "id": "340",
@@ -8856,7 +8963,7 @@
       "tier": 0,
       "volume": 0,
       "intent": "Informational",
-      "status": "queued",
+      "status": "published",
       "ai_validated": true,
       "notes": "Tier 0 keyword (0 searches/month). Needs AI validation.",
       "created_at": "2026-02-13T04:06:32.485Z",
@@ -8865,7 +8972,8 @@
       "ai_validation_reasoning": "This keyword is about expert advisors (EAs/automated trading bots) in the context of prop firms, which is relevant for traders in challenges or evaluating firms. Traders often want to know if they can use EAs, which EAs work best for prop firm rules, or strategies for using automated trading in funded accounts. This is generic prop firm education for traders.",
       "ai_brand_detected": null,
       "ai_target_audience": "traders",
-      "ai_validated_at": "2026-02-13T11:19:14.603Z"
+      "ai_validated_at": "2026-02-13T11:19:14.603Z",
+      "publishedAt": "2026-02-25T12:56:56.696Z"
     },
     {
       "id": "373",
@@ -10652,7 +10760,7 @@
       "tier": 20,
       "volume": 30,
       "intent": "Informational",
-      "status": "queued",
+      "status": "published",
       "ai_validated": true,
       "notes": "Tier 20 keyword (30 searches/month). Needs AI validation.",
       "created_at": "2026-02-13T04:06:32.485Z",
@@ -10661,7 +10769,8 @@
       "ai_validation_reasoning": "This keyword is about traders searching for prop firms with a specific feature (no trailing drawdown). It's a generic comparison/evaluation query that helps traders choose which prop firm to join based on rules and features. This is educational content that can position TradersYard as an option.",
       "ai_brand_detected": null,
       "ai_target_audience": "traders",
-      "ai_validated_at": "2026-02-13T11:36:10.506Z"
+      "ai_validated_at": "2026-02-13T11:36:10.506Z",
+      "publishedAt": "2026-02-25T12:56:56.696Z"
     },
     {
       "id": "458",
