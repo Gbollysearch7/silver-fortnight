@@ -56,5 +56,8 @@ output/reports/*.md
 # Claude Code
 .claude/
 
+# Claude Project setup (contains API keys)
+claude-project-setup/
+
 # Image comparison output (dev only)
 output/image-comparison/

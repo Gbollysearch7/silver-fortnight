@@ -106,7 +106,7 @@ keyword,volume,kd,tier,intent,cpc,density,source
 "best prop firm for ea",10,1,0,,1,0,unknown
 "best prop firm for forex traders",10,1,0,,0,0.5,unknown
 "best prop firm in the philippines",10,0.33,0,,0,0,unknown
-"best prop firm in us redditr",10,0,0,,0,0,unknown
+"best prop firm in us ",10,0,0,,0,0,unknown
 "best prop firm rules",10,1,0,,0,0,unknown
 "best prop firm spreads",10,1,0,,0,0,unknown
 "best prop firm to invest",10,0,0,,0,0,unknown
@@ -131,10 +131,6 @@ keyword,volume,kd,tier,intent,cpc,density,source
 "cheapest prop firm in south africa",10,1,0,,0,0,unknown
 "cheapest prop firm malaysia",10,1,0,,0,0,unknown
 "concept trading prop firm",10,0,0,,0,0,unknown
-"consummate traders prop firm",10,0,0,,0,0,unknown
-"corp equity capital prop firm",10,0,0,,1,1,unknown
-"cost to start a prop firm",10,0,0,,1,0,unknown
-"cove funded prop firm",10,0,0,,0,1,unknown
 "crypto edge prop firm",10,0,0,,0,0,unknown
 "crypto fund prop firm",10,1,0,,1,0,unknown
 "crypto spot prop firm",10,0.5,0,,0,0,unknown
@@ -143,8 +139,6 @@ keyword,volume,kd,tier,intent,cpc,density,source
 "day one payout prop firm",10,1,0,,1,0,unknown
 "daytraders.com prop firm review",10,1,0,,0,0,unknown
 "dei funded prop firm",10,0,0,,0,1,unknown
-"demo konto prop firm",10,1,0,,1,0.5,unknown
-"deriv synthetic indices prop firm",10,0,0,,0,0,unknown
 "disadvantages of prop firm",10,1,0,,0,0,unknown
 "discount code prop firm",10,0,0,,0,0,unknown
 "dna funded prop firm reviews",10,1,0,,0,0,unknown
@@ -152,8 +146,6 @@ keyword,volume,kd,tier,intent,cpc,density,source
 "enterprise prop firm crm",10,0,0,,1,0,unknown
 "find trader prop firm",10,0,0,,0,0,unknown
 "first class prop firm",10,1,0,,1,1,unknown
-"flash funding prop firm",10,1,0,,1,0,unknown
-"flex trade prop firm",10,1,0,,1,1,unknown
 "forex competition prop firm",10,0,0,,1,0,unknown
 "forex factory prop firm",10,0,0,,0.5,0.5,unknown
 "forex prop firm bot",10,0,0,,0,0,unknown
