@@ -16,6 +16,8 @@ content/review/*
 output/html/*
 output/reports/*
 output/thumbnails/*.png
+output/in-article-images/*.png
+content/published/*
 data/cron-log.json
 .claude/
 .vscode/

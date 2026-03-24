@@ -31,7 +31,7 @@ async function generateImage(prompt) {
     },
     body: JSON.stringify({
       prompt,
-      aspect_ratio: '4:3',
+      aspect_ratio: '3:2',
       style: 'AUTO',
       num_images: 1,
     }),
@@ -110,8 +110,9 @@ function extractSections(content) {
     });
   }
 
-  // Limit to 3-5 images
-  const maxImages = Math.min(5, Math.max(3, Math.floor(sections.length / 2)));
+  // Limit images — use --max-images flag if provided, otherwise 3-5 based on section count
+  const maxFromArgs = parseInt(args['max-images'], 10);
+  const maxImages = maxFromArgs > 0 ? maxFromArgs : Math.min(5, Math.max(3, Math.floor(sections.length / 2)));
   return sections.slice(0, maxImages);
 }
 
