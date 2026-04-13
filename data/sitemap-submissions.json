@@ -6,6 +6,13 @@
       "siteUrl": "sc-domain:tradersyard.com",
       "status": "success",
       "httpStatus": 204
+    },
+    {
+      "timestamp": "2026-03-24T17:00:45.565Z",
+      "sitemapUrl": "https://tradersyard.com/sitemap.xml",
+      "siteUrl": "sc-domain:tradersyard.com",
+      "status": "success",
+      "httpStatus": 204
     }
   ]
 }

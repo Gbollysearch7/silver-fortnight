@@ -10,16 +10,16 @@ author: TradersYard
 template: comparison
 status: published
 created_at: "2026-02-25T12:18:19.541Z"
-updated_at: "2026-02-25T12:21:56.673Z"
+updated_at: "2026-04-13T16:10:56.103Z"
 scheduled_date: null
-published_at: "2026-02-25T12:21:56.673Z"
+published_at: "2026-04-13T16:10:56.103Z"
 meta_title: Prop Firm Leverage Comparison Table 2026 | TradersYard
 meta_description: "prop firm leverage comparison table: Leverage can make or break your trading career. When you're evaluating proprietary trading firms, understanding how each pl"
 seo_score: null
 featured_image:
   url: null
   alt: Prop Firm Leverage Comparison Table 2026 - TradersYard guide
-webflow_item_id: 699ee96029b0af9be8ddf540
+webflow_item_id: 69dd158d365cdefd5c298f6c
 webflow_published: true
 related_posts:
   - ""

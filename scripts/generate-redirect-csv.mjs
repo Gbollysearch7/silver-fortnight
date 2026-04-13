@@ -96,10 +96,10 @@ async function generateRedirectCSV() {
     }
 
     // Old URL (subdomain)
-    const oldUrl = `https://blog.tradersyard.com/${slug}`;
+    const oldUrl = `https://blog.tradersyard.com/blog-posts/${slug}`;
 
-    // New URL (subdirectory)
-    const newUrl = `https://tradersyard.com/blog/${slug}`;
+    // New URL (main domain)
+    const newUrl = `https://tradersyard.com/blog-posts/${slug}`;
 
     // Status code (301 = permanent redirect)
     const statusCode = '301';
@@ -114,10 +114,10 @@ async function generateRedirectCSV() {
   }
 
   // Add homepage redirect
-  csv += `"https://blog.tradersyard.com","https://tradersyard.com/blog",301,"Blog homepage"\n`;
+  csv += `"https://blog.tradersyard.com","https://tradersyard.com/blog-posts",301,"Blog homepage"\n`;
 
   // Add blog index/archive redirect
-  csv += `"https://blog.tradersyard.com/blog","https://tradersyard.com/blog",301,"Blog archive"\n`;
+  csv += `"https://blog.tradersyard.com/blog-posts","https://tradersyard.com/blog-posts",301,"Blog archive"\n`;
 
   // Write CSV file
   import('fs').then(fs => {
