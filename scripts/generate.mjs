@@ -57,6 +57,42 @@ const tier = parseInt(args.tier, 10) || 0;
 
 printHeader('Blog Post Generator');
 
+// --- TOPIC FILTER GATE ---
+// Reject topics that fail the three-question test BEFORE touching any AI credits.
+// Based on: lib/blog-writer-agent.md Step 0 — Topic Filtering
+if (!scaffoldOnly && !args['skip-filter']) {
+  const topicLower = (topic + ' ' + keyword).toLowerCase();
+
+  // Patterns that signal jargon, non-commercial, or zero-search-volume topics
+  const REJECT_PATTERNS = [
+    // Competitor-only navigational — we can't win these
+    /\bis\s+\w+\s+(legit|scam|real|safe|trusted)\b/,
+    // Hacked / negative sentiment — no purchase path
+    /\b(got hacked|data breach|fraud|lawsuit)\b/,
+    // HFT / institutional — wrong audience
+    /\b(high.?frequency|hft|algorithmic trading firm|institutional prop)\b/,
+    // PR/marketing phrasing — nobody searches this
+    /\b(enhance trader experience|contribute to financial education|address slippage|technology.{0,20}prop firm)\b/,
+    // Geographic trivia with no commercial intent
+    /\b(does [a-z]+ allow prop|prop firms? in [a-z]+ legal|prop firms? banned in)\b/,
+    // Platform brand jargon with no commercial intent
+    /\b(rithmic feed|tradelocker|fpfx drawdown model|eod trailing rule)\b/,
+    // "Do prop firms have X" academic curiosity questions
+    /\bdo prop (trading )?firms have (investors|owners|employees|offices)\b/,
+  ];
+
+  const rejectedPattern = REJECT_PATTERNS.find(p => p.test(topicLower));
+  if (rejectedPattern) {
+    printError(`TOPIC REJECTED: "${topic}"`);
+    printError(`Matched reject pattern: ${rejectedPattern}`);
+    printError('This topic is jargon, non-commercial, or has no real trader searching for it.');
+    printError('It would waste AI credits and publish content nobody reads.');
+    printError('Fix: Remove this keyword from the queue or replace with a real commercial question.');
+    printError('Examples of good topics: "best prop firm for beginners", "how to pass prop firm challenge", "cheapest prop firm with fast payouts"');
+    process.exit(1);
+  }
+}
+
 // Load template content
 const templatePath = resolve(TEMPLATES_DIR, `${template}.md`);
 let templateContent = '';
