@@ -93,11 +93,19 @@ let aiProvider = null;
 // Check if any AI provider is available
 const hasAI = CLAUDE_API_KEY || OPENAI_API_KEY;
 
-if (scaffoldOnly || !hasAI) {
-  // Scaffold mode — old behavior
-  if (!hasAI && !scaffoldOnly) {
-    printWarning('No AI API keys set (CLAUDE_API_KEY or OPENAI_API_KEY) — falling back to scaffold mode');
-  }
+// HARD GATE: If no AI key and not explicitly in scaffold mode, ABORT.
+// NEVER allow a blank template to be published as a real article.
+if (!hasAI && !scaffoldOnly) {
+  printError('FATAL: No AI API key available (OPENAI_API_KEY or CLAUDE_API_KEY).');
+  printError('Refusing to generate a blank template scaffold that would be published as a real article.');
+  printError('This would destroy SEO and publish empty placeholder content to the live site.');
+  printError('Fix: Add OPENAI_API_KEY or CLAUDE_API_KEY to your environment variables.');
+  process.exit(1);
+}
+
+if (scaffoldOnly) {
+  printWarning('SCAFFOLD MODE — this file will NOT be published by the cron pipeline.');
+  printWarning('Scaffold mode is for manual drafting only. Never run pipeline.mjs on a scaffold output.');
   printInfo('Mode: Template scaffold (no AI generation)');
 } else {
   // AI generation mode
@@ -200,6 +208,38 @@ if (scaffoldOnly || !hasAI) {
       process.exit(1);
     }
   }
+}
+
+// CONTENT VALIDATION GATE — final check before writing to disk
+// If the content still has unresolved template placeholders, it means
+// AI generation silently failed or returned the raw template. HARD ABORT.
+const SCAFFOLD_MARKERS = [
+  '[Prerequisite 1]',
+  '[Action-Oriented First Step]',
+  'Step 1: [',
+  '[Mistake 1]',
+  '[Question]',
+  '[Answer]',
+  '[Tip 1]',
+  '[Specific advice]',
+  '[First Step]',
+  '[Second Step]',
+];
+const foundMarker = SCAFFOLD_MARKERS.find(m => articleContent.includes(m));
+if (foundMarker && !scaffoldOnly) {
+  printError(`FATAL: Generated content contains unresolved template placeholder: "${foundMarker}"`);
+  printError('This means AI generation failed silently and returned a raw scaffold.');
+  printError('ABORTING — this file will NOT be written to disk or published.');
+  process.exit(1);
+}
+
+// Word count gate — real articles must have substance
+const wordCountCheck = articleContent.split(/\s+/).filter(w => w.length > 0).length;
+if (!scaffoldOnly && wordCountCheck < 400) {
+  printError(`FATAL: Generated content is only ${wordCountCheck} words — suspiciously short.`);
+  printError('Minimum is 400 words. AI may have returned an error message or empty response.');
+  printError('ABORTING — refusing to publish thin content.');
+  process.exit(1);
 }
 
 // Build frontmatter

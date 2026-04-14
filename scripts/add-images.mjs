@@ -34,6 +34,8 @@ async function generateImage(prompt) {
       aspect_ratio: '3:2',
       style: 'AUTO',
       num_images: 1,
+      rendering_speed: 'SLOW',  // SLOW = highest quality at standard 1K resolution (not 4K)
+      resolution: 'RESOLUTION_1024_682',  // 3:2 at 1K — not 4K bloat
     }),
   });
 
