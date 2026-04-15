@@ -447,6 +447,13 @@ printInfo('Checking every 5 minutes for publish windows\n');
 
 async function tick() {
   try {
+    // PUBLISHING PAUSED — manual hold while content quality audit is in progress
+    // Remove this block when ready to resume: delete the 4 lines below
+    if (process.env.PAUSE_PUBLISHING === 'true') {
+      printWarning('PUBLISHING PAUSED (PAUSE_PUBLISHING=true). Set to false in Railway to resume.');
+      return;
+    }
+
     const todayCount = await hasPublishedToday();
 
     if (todayCount >= POSTS_PER_DAY) {
