@@ -19,7 +19,7 @@
 import { existsSync, readdirSync } from 'fs';
 import { resolve, basename } from 'path';
 import { ROOT_DIR } from '../lib/config.mjs';
-import { listItems, updateItem } from '../lib/webflow.mjs';
+import { listItems, updateItem, publishItems } from '../lib/webflow.mjs';
 import { parseArgs, printHeader, printSection, printSuccess, printError, printInfo } from '../lib/utils.mjs';
 
 const args = parseArgs();
@@ -92,17 +92,19 @@ for (const slug of targets) {
     await updateItem(item.id, {
       'feature-image': { url, alt: `${item.fieldData.name || slug} — TradersYard` },
     });
-    printSuccess(`updated: ${item.fieldData.slug}`);
+    // Publish the item so the change goes LIVE (CMS edits alone stay in staging).
+    await publishItems([item.id]);
+    printSuccess(`updated + published: ${item.fieldData.slug}`);
     updated++;
   } catch (err) {
     printError(`failed ${item.fieldData.slug}: ${err.message}`);
     failed++;
   }
-  await new Promise(r => setTimeout(r, 600)); // rate-limit courtesy
+  await new Promise(r => setTimeout(r, 700)); // rate-limit courtesy
 }
 
 printSection('Summary');
-printInfo(`Matched: ${matched} | Updated: ${updated} | Skipped(existing): ${skipped} | No match: ${missing}`);
+printInfo(`Matched: ${matched} | Updated+Published: ${updated} | Skipped(existing): ${skipped} | No match: ${missing}`);
 if (failed) printError(`Failed: ${failed}`);
 if (args['dry-run']) printInfo('DRY RUN — no live changes made.');
 console.log('');

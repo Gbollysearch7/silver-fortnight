@@ -60,9 +60,37 @@ function inferCategory(slug = '', title = '') {
   return 'prop-firm-guides';
 }
 
+// Strip the " | TradersYard" tail Webflow names carry.
+function cleanName(name = '') {
+  return name.replace(/\s*\|\s*TradersYard.*$/i, '').trim();
+}
+
 // --- Gather jobs ---
 const jobs = [];
-if (args.all) {
+if (args['from-webflow']) {
+  // Render a thumbnail for EVERY live Webflow blog item (the real source of truth).
+  const { listItems } = await import('../lib/webflow.mjs');
+  let items = [];
+  for (let offset = 0; ; offset += 100) {
+    const { items: page } = await listItems({ limit: 100, offset });
+    items.push(...page);
+    if (!page || page.length < 100) break;
+  }
+  printInfo(`Pulled ${items.length} live Webflow items`);
+  for (const it of items) {
+    const f = it.fieldData || {};
+    const slug = f.slug;
+    if (!slug) continue;
+    if (args['missing-only']) {
+      const fi = f['feature-image'];
+      const isOurs = fi?.url && /jsdelivr|-[a-z0-9]+\.(jpe?g)$/i.test(fi.url) && !/[A-Z0-9]{8,}\.png/.test(fi.url || '');
+      if (isOurs) continue; // already has our image
+    }
+    const title = cleanName(f.name) || titleFromSlug(slug);
+    const category = inferCategory(slug, title);
+    jobs.push({ slug, title, category, readTime: f['read-time'] });
+  }
+} else if (args.all) {
   const tracker = JSON.parse(readFileSync(TRACKER_PATH, 'utf8'));
   const posts = tracker.posts || tracker;
   const arr = Array.isArray(posts) ? posts : Object.values(posts);
