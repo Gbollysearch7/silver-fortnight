@@ -1,0 +1,51 @@
+# TradersYard Docs
+
+## English
+
+- [Welcome to the Yard](https://docs.tradersyard.com/traderchallenge/welcome-to-the-yard.md): TradersYard Challenges & Tournaments
+- [Quick Start Guides](https://docs.tradersyard.com/traderchallenge/quick-start-guides.md)
+- [Start your first Challenge](https://docs.tradersyard.com/traderchallenge/quick-start-guides/start-your-first-challenge.md)
+- [The Challenge Dashboard](https://docs.tradersyard.com/traderchallenge/quick-start-guides/the-challenge-dashboard.md)
+- [Connect your Challenge or Tournament to the TradersYard Web Platform](https://docs.tradersyard.com/traderchallenge/quick-start-guides/connect-your-challenge-or-tournament-to-the-tradersyard-web-platform.md)
+- [Rules](https://docs.tradersyard.com/traderchallenge/rules.md)
+- [Build Your Yard Configurator](https://docs.tradersyard.com/traderchallenge/build-your-yard-configurator.md): The configurator lets you build a challenge that matches your trading style, instead of adjusting yourself to fixed rules
+- [Account Scaling](https://docs.tradersyard.com/traderchallenge/account-scaling.md)
+- [Payout Requests](https://docs.tradersyard.com/traderchallenge/payout-requests.md)
+- [Account Reset](https://docs.tradersyard.com/traderchallenge/account-reset.md)
+- [Affiliate Program](https://docs.tradersyard.com/traderchallenge/affiliate-program.md)
+- [Available Futures](https://docs.tradersyard.com/traderchallenge/available-futures.md)
+- [FAQs](https://docs.tradersyard.com/traderchallenge/faqs.md)
+- [Overview](https://docs.tradersyard.com/tournament/overview.md)
+- [How to enter](https://docs.tradersyard.com/how-to-enter.md)
+- [Tournament Rules](https://docs.tradersyard.com/tournament-rules.md)
+- [Start trading](https://docs.tradersyard.com/start-trading.md): You can start trading by using one of our trading platforms:
+- [Connect to a TradersYard Challenge](https://docs.tradersyard.com/yard-platform/connect-to-a-tradersyard-challenge.md)
+- [Connecting with Multiple Accounts](https://docs.tradersyard.com/yard-platform/connecting-with-multiple-accounts.md): When you have multiple TradersYard Challenge accounts, WebTrader enables you to connect to any of them according to your preference.
+- [Placing an Order](https://docs.tradersyard.com/yard-platform/placing-an-order.md)
+- [Adding Stop Loss & Take Profit Orders](https://docs.tradersyard.com/yard-platform/adding-stop-loss-and-take-profit-orders.md)
+- [Modifying Orders](https://docs.tradersyard.com/yard-platform/modifying-orders.md)
+- [Enable Bid & Ask Lines to See the Spread](https://docs.tradersyard.com/yard-platform/enable-bid-and-ask-lines-to-see-the-spread.md)
+- [Adding multiple Charts](https://docs.tradersyard.com/yard-platform/adding-multiple-charts.md)
+- [Creating Favorite Watchlist](https://docs.tradersyard.com/yard-platform/creating-favorite-watchlist.md)
+- [Using Filter Time Range In Trading Tab](https://docs.tradersyard.com/yard-platform/using-filter-time-range-in-trading-tab.md)
+- [FAQs (Platform)](https://docs.tradersyard.com/yard-platform/faqs.md)
+- [Connect to a TradersYard Challenge (Mobile)](https://docs.tradersyard.com/mobile-trader/connect-to-a-tradersyard-challenge.md)
+- [Selecting Watchlist (Mobile)](https://docs.tradersyard.com/mobile-trader/selecting-watchlist.md)
+- [Placing an Order (Mobile)](https://docs.tradersyard.com/mobile-trader/placing-an-order.md)
+- [Closing a Position/Order (Mobile)](https://docs.tradersyard.com/mobile-trader/closing-a-position-order.md)
+- [Order Modification (Mobile)](https://docs.tradersyard.com/mobile-trader/order-modification.md)
+
+---
+
+# Agent Instructions
+This documentation is published with GitBook. Both humans and AI agents can read, navigate, and reason over it.
+
+## Querying This Documentation
+Query any docs page dynamically by appending `?ask=<question>` to its `.md` URL:
+```
+GET https://docs.tradersyard.com/traderchallenge/faqs.md?ask=Does TradersYard allow copy trading?
+```
+The response contains a direct answer plus relevant excerpts and sources.
+
+---
+Saved 2026-06-21 from https://docs.tradersyard.com/llms.txt

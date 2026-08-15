@@ -1,0 +1,146 @@
+{
+ "note": "COMPLETE union of all dedup kill lists (rounds 1-3). publishItems in lib/webflow.mjs refuses these IDs. NEVER publish without removing from this list. History: 23 Jun banner batch resurrected round-1/2 kills; 02 Jul author/H1 batches resurrected 4 more because the first keepout only had round 3. This file must stay the union of ALL rounds. CONFLICT RULE: where round-2 and round-3 disagree on a pair, round 3 (02 Jul, fresh GSC) wins; stale round-2 kill entries for round-3 keepers were removed 02 Jul.",
+ "updatedAt": "2026-07-02T11:49:16.712Z",
+ "items": [
+  {
+   "id": "69f22bf86988545170ed53d9",
+   "slug": "drawdown-calculation-formula-for-prop-firm-challenges-522af",
+   "source": "dedup-round3"
+  },
+  {
+   "id": "69f1f3b3f65268105d90cb08",
+   "slug": "prop-firm-demo-account-practice-best-platforms-5c35b",
+   "source": "dedup-round3"
+  },
+  {
+   "id": "69f0da9cba0f25db33371892",
+   "slug": "how-prop-firms-manage-risk-for-funded-traders-3e4e4",
+   "source": "dedup-round3"
+  },
+  {
+   "id": "69edff3bfbe8c43acc247bc3",
+   "slug": "are-prop-firms-profitable-9be29",
+   "source": "dedup-round3"
+  },
+  {
+   "id": "69edc6fdd259fd0524b11f3c",
+   "slug": "how-many-people-fail-prop-firm-challenges-01012",
+   "source": "dedup-round2"
+  },
+  {
+   "id": "69ec7594153afb3026f82cb0",
+   "slug": "how-to-pass-forex-prop-firm-challenge-21ab2",
+   "source": "dedup-round2"
+  },
+  {
+   "id": "69eb23a34e6fafa1a98f93bb",
+   "slug": "are-funded-account-profit-targets-realistic-truth-revealed-f8deb",
+   "source": "dedup-round3"
+  },
+  {
+   "id": "69e9d204c2c60f3b1e9fed3e",
+   "slug": "prop-firm-trailing-drawdown-explained-with-examples-26816",
+   "source": "dedup-round3"
+  },
+  {
+   "id": "69e8807df04af87fa8ec6ad5",
+   "slug": "funded-trader-scaling-plan-strategy-how-to-grow-your-account-fdd1f",
+   "source": "dedup-round3"
+  },
+  {
+   "id": "69e79f601afd9e7f0a37645b",
+   "slug": "prop-firm-challenge-spreadsheet-template-free-download-ef45c",
+   "source": "dedup-round3"
+  },
+  {
+   "id": "69e7672b511cba44b648f0fd",
+   "slug": "10-essential-prop-firm-evaluation-phase-tips-to-pass-first-t-3efc0",
+   "source": "dedup-round3"
+  },
+  {
+   "id": "69e72ee4b1cae35b93d478e3",
+   "slug": "funded-trader-profit-split-calculator-calculate-your-earning-2c346",
+   "source": "dedup-round2"
+  },
+  {
+   "id": "69e48ba53c699e48fe56859d",
+   "slug": "how-to-calculate-max-drawdown-for-prop-firm-challenges-2ff24",
+   "source": "dedup-round3"
+  },
+  {
+   "id": "69ef187b4e6b5a64ecaed71a",
+   "slug": "are-futures-prop-firms-recommended-and-legal-18a0a",
+   "source": "dedup-round3"
+  },
+  {
+   "id": "69ecad8095024dbadec6a7d5",
+   "slug": "what-is-activation-fee-in-prop-firm-6beba",
+   "source": "dedup-round3"
+  },
+  {
+   "id": "69eb942f2aae0713f7cf6923",
+   "slug": "what-is-a-consistency-rule-in-prop-firms-03806",
+   "source": "dedup-round3"
+  },
+  {
+   "id": "69ea0a64a02d986ad7efd93f",
+   "slug": "prop-firm-challenge-failed-heres-what-to-do-next-02e7d",
+   "source": "dedup-round2"
+  },
+  {
+   "id": "69e8f0fcafd91e59a31c7e79",
+   "slug": "15-trading-challenge-common-mistakes-to-avoid-48947",
+   "source": "dedup-round3"
+  },
+  {
+   "id": "69e8b8afbdaf01cd6a439791",
+   "slug": "funded-account-verification-process-step-by-step-guide-a683c",
+   "source": "dedup-round3"
+  },
+  {
+   "id": "69e64db8fc498a9eae343823",
+   "slug": "prop-firm-kyc-requirements-what-documents-do-you-need-01a75",
+   "source": "dedup-round3"
+  },
+  {
+   "id": "69e615b3482f579298c16c3f",
+   "slug": "prop-firm-challenge-discount-codes-2026-active-deals-568fc",
+   "source": "dedup-round3"
+  },
+  {
+   "id": "69e5dd3c6648fd1734a791c3",
+   "slug": "funded-trader-max-lot-size-calculator-for-prop-firms-a1d2c",
+   "source": "dedup-round3"
+  },
+  {
+   "id": "69e4fc21e39d7f15c4eaffdb",
+   "slug": "prop-firm-payout-schedule-timeline-when-do-you-get-paid-82413",
+   "source": "dedup-round3"
+  },
+  {
+   "id": "69e4c3e4eee8aa2a8e41dcc5",
+   "slug": "funded-trading-minimum-days-rule-what-you-need-to-know-dc54e",
+   "source": "dedup-round3"
+  },
+  {
+   "id": "69ee3775f103877ea65f3c74",
+   "slug": "can-you-swing-trade-on-prop-firms-40bab",
+   "source": "dedup-round3"
+  },
+  {
+   "id": "69ece5ca035720829422bee4",
+   "slug": "how-many-people-get-payouts-from-prop-firms-a8fe0",
+   "source": "dedup-round3"
+  },
+  {
+   "id": "69eb5be457d26d2220447bba",
+   "slug": "what-are-futures-prop-firms-7655a",
+   "source": "dedup-round3"
+  },
+  {
+   "id": "69ea42b465adba0a532613d8",
+   "slug": "how-to-prepare-for-a-prop-firm-challenge-30-day-plan-968c6",
+   "source": "dedup-round3"
+  }
+ ]
+}

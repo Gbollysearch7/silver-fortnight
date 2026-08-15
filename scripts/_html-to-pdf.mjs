@@ -1,0 +1,11 @@
+import puppeteer from 'puppeteer';
+import { resolve } from 'path';
+const inFile = process.argv[2];
+const outFile = process.argv[3];
+const browser = await puppeteer.launch({ headless:'new', args:['--no-sandbox','--disable-setuid-sandbox'] });
+const page = await browser.newPage();
+await page.goto('file://'+resolve(inFile), { waitUntil:'networkidle0' });
+await page.evaluate(async()=>{await document.fonts.ready;});
+await page.pdf({ path: outFile, format:'A4', printBackground:true, margin:{top:'14mm',bottom:'14mm',left:'12mm',right:'12mm'} });
+await browser.close();
+console.log('PDF written:', outFile);

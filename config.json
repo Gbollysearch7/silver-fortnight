@@ -8,9 +8,11 @@
   },
   "webflow": {
     "apiBase": "https://api.webflow.com/v2",
-    "blogCollectionId": "67b4bd39747043c9b6d29c6e",
-    "_OLD_blogCollectionId_DELETED": "68fa557e6e6c4fcedde849e0",
-    "_comment": "Collection 67b4bd39 = tradersyard.com (LIVE). Old collection 68fa557e = blog.tradersyard.com (DELETED, returns 404).",
+    "siteId": "68fa557c6e6c4fcedde84957",
+    "blogCollectionId": "68fa557e6e6c4fcedde849e0",
+    "_DELETED_siteId": "67ab7daa3b6ce91e28128436",
+    "_DELETED_blogCollectionId": "67b4bd39747043c9b6d29c6e",
+    "_comment": "ACTIVE Webflow site = blog.tradersyard.com (68fa557c). API probe May 19 2026 confirmed: old 67ab7daa site returns HTTP 404 (deleted). Live blog content is served from BOTH blog.tradersyard.com (direct Webflow) AND tradersyard.com/blog-posts/* (Nuxt mirror); fixing the Webflow source updates both.",
     "fieldMapping": {
       "title": "name",
       "slug": "slug",

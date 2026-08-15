@@ -38,7 +38,7 @@ if (args.url) {
 } else if (args.file) {
   const filePath = resolve(args.file);
   const { frontmatter } = parseFile(filePath);
-  urls.push(`${blogConfig.site.baseUrl}${blogConfig.site.blogPath}/${frontmatter.slug}`);
+  urls.push(`${blogConfig.site.baseUrl}/${blogConfig.site.blogPath}/${frontmatter.slug}`);
 } else if (args['all-recent']) {
   if (existsSync(PUBLISHED_DIR)) {
     const cutoff = Date.now() - (7 * 24 * 60 * 60 * 1000);
@@ -48,7 +48,7 @@ if (args.url) {
       const { frontmatter } = parseFile(filePath);
       const publishedAt = frontmatter.published_at ? new Date(frontmatter.published_at).getTime() : 0;
       if (publishedAt >= cutoff) {
-        urls.push(`${blogConfig.site.baseUrl}${blogConfig.site.blogPath}/${frontmatter.slug}`);
+        urls.push(`${blogConfig.site.baseUrl}/${blogConfig.site.blogPath}/${frontmatter.slug}`);
       }
     }
   }

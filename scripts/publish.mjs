@@ -90,7 +90,39 @@ for (const filePath of files) {
     // Parse markdown
     const { frontmatter, content } = parseFile(filePath);
     printInfo(`Title: ${frontmatter.title}`);
-    printInfo(`Words: ${content.split(/\s+/).length}`);
+    const wordCount = content.split(/\s+/).filter(w => w.length > 0).length;
+    printInfo(`Words: ${wordCount}`);
+
+    // SCAFFOLD GUARD — hard abort before any Webflow call
+    const SCAFFOLD_MARKERS = [
+      '[Prerequisite 1]',
+      '[Action-Oriented First Step]',
+      'Step 1: [',
+      '[Mistake 1]',
+      '[Question]',
+      '[Answer]',
+      '[Tip 1]',
+      '[Specific advice]',
+      '[First Step]',
+      '[Second Step]',
+    ];
+    const foundMarker = SCAFFOLD_MARKERS.find(m => content.includes(m));
+    if (foundMarker) {
+      printError(`SCAFFOLD DETECTED: "${foundMarker}" found in content.`);
+      printError('This file is an unfilled template — it has never been through AI generation.');
+      printError('ABORTING — refusing to publish empty scaffold to Webflow.');
+      printError(`File: ${filePath}`);
+      failed++;
+      continue;
+    }
+
+    if (wordCount < 600) {
+      printError(`THIN CONTENT: Only ${wordCount} words in ${slug}.`);
+      printError('Minimum is 600 words. This looks like a scaffold or broken generation.');
+      printError('ABORTING — refusing to publish thin content to Webflow.');
+      failed++;
+      continue;
+    }
 
     // Convert to HTML
     const rawHtml = toHtml(content);

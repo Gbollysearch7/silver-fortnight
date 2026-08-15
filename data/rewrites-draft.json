@@ -1,0 +1,96 @@
+{
+  "generated": "2026-08-15",
+  "note": "Loop 1 batch 1 — drafts pending content-gate review. Angles chosen from top-impression GSC queries per ticket.",
+  "rewrites": [
+    {
+      "page": "https://tradersyard.com/blog-posts/prop-firm-demo-account-practice-best-platforms",
+      "old_title": "Prop Firm Demo Accounts: Free Practice & Funded Demos 2026",
+      "new_title": "Prop Firm Demo Accounts: Practice Free Before You Pay",
+      "new_meta_title": "Prop Firm Demo Accounts: Practice Free Before You Pay | TY",
+      "new_meta_description": "How prop firm demo accounts really work, where to practice free before you buy a challenge, and how a funded demo account differs from the real thing.",
+      "angle": "outcome device: 'practice free before you pay' speaks to buyer hesitation behind 'prop firm demo account' queries",
+      "ctr_before": 0.55
+    },
+    {
+      "page": "https://tradersyard.com/blog-posts/prop-firm-copy-trading",
+      "old_title": "Prop Firm Copy Trading: Which Firms Allow It (2026)",
+      "new_title": "Copy Trading Between Your Own Prop Firm Accounts: Rules",
+      "new_meta_title": "Copy Trading Between Your Own Prop Firm Accounts | TY",
+      "new_meta_description": "Copy trading between your own prop firm accounts sounds harmless. Why most firms ban it anyway, how they detect copiers, and what it costs your funding.",
+      "angle": "specificity upgrade: top queries all ask about copying between YOUR OWN accounts; current title misses that intent entirely",
+      "ctr_before": 0.29
+    },
+    {
+      "page": "https://tradersyard.com/blog-posts/how-many-people-get-payouts-from-prop-firms",
+      "old_title": "Do Prop Firms Actually Pay Out? The Real Numbers (2026)",
+      "new_title": "What Percentage of Prop Firm Traders Get a Payout?",
+      "new_meta_title": "What Percentage of Prop Firm Traders Get a Payout? | TY",
+      "new_meta_description": "What percentage of prop firm traders actually get a payout? The honest picture behind pass and payout rates, and what separates traders who get paid.",
+      "angle": "query-mirror: the percentage phrasing dominates impressions; previous angle (do they pay out) already had its shot",
+      "ctr_before": 0.96
+    },
+    {
+      "page": "https://tradersyard.com/blog-posts/which-prop-firm-gives-real-account",
+      "old_title": "Which Prop Firms Give Real Capital? Real vs Demo Accounts",
+      "new_title": "Do Prop Firms Use Real Money? The Truth About Sim Accounts",
+      "new_meta_title": "Do Prop Firms Use Real Money? Sim Accounts Explained | TY",
+      "new_meta_description": "Do prop firms use real money or simulated accounts? What your funded account really is, why payouts are still real, and the test that exposes a simulator.",
+      "angle": "question-mirror + truth device: 'do prop firms use real money / are accounts simulated' are the rising queries",
+      "ctr_before": 0.56
+    },
+    {
+      "page": "https://tradersyard.com/blog-posts/what-is-prop-firm-hedging",
+      "old_title": "Why Prop Firms Ban Hedging (And the Rules to Follow)",
+      "new_title": "Is Hedging Illegal? Prop Firm Hedging Rules Explained",
+      "new_meta_title": "Is Hedging Illegal? Prop Firm Hedging Rules Explained | TY",
+      "new_meta_description": "Is hedging illegal? Not in most markets, but prop firms ban specific types. Which hedging breaks prop firm rules, how firms detect it, and what is safe.",
+      "angle": "query-mirror: 'is hedging illegal' is the top query and the current title never answers it",
+      "ctr_before": 0.38
+    },
+    {
+      "page": "https://tradersyard.com/blog-posts/how-many-people-fail-prop-firm-challenges",
+      "old_title": "Prop Firm Challenge Failure Rate: What the Data Says",
+      "new_title": "What Percentage of Traders Pass Prop Firm Challenges?",
+      "new_meta_title": "What % of Traders Pass Prop Firm Challenges? | TY",
+      "new_meta_description": "What percentage of traders pass prop firm challenges? The honest pass-rate picture, the rules that end most attempts, and what passers do differently.",
+      "angle": "polarity flip: searchers ask the PASS question, the page answers with failure framing; mirror the positive phrasing",
+      "ctr_before": 0.66
+    },
+    {
+      "page": "https://tradersyard.com/blog-posts/best-prop-firms-for-day-trading-in-2026",
+      "old_title": "Best Prop Firms for Day Traders in 2026: Ranked & Reviewed",
+      "new_title": "Day Trading Prop Firms: How to Pick Yours in 2026",
+      "new_meta_title": "Day Trading Prop Firms: How to Pick Yours in 2026 | TY",
+      "new_meta_description": "Day trading prop firms compared honestly: the rules that matter for day traders, no minimum trading days, fast payouts, and how to pick the right firm.",
+      "angle": "query-mirror: 'day trading prop firms' (pos 18) is the real head query; leading with it exactly may lift that ranking too",
+      "ctr_before": 0.33
+    },
+    {
+      "page": "https://tradersyard.com/blog-posts/which-prop-firms-allow-options-trading",
+      "old_title": "Which Prop Firms Allow Options Trading? The 2026 Reality",
+      "new_title": "Funded Options Trading Accounts: Which Firms Allow It",
+      "new_meta_title": "Funded Options Trading Accounts: Who Allows It | TY",
+      "new_meta_description": "Funded options trading accounts are rare. Which prop firms allow options trading, the rules that come with it, and honest alternatives for options traders.",
+      "angle": "query-mirror: 'funded options trading account' carries big impressions at pos 38; title now serves that phrasing",
+      "ctr_before": 0.78
+    },
+    {
+      "page": "https://tradersyard.com/blog-posts/are-prop-firm-fees-tax-deductible",
+      "old_title": "Are Prop Firm Challenge Fees Tax Deductible? (US 2026)",
+      "new_title": "Can You Write Off Prop Firm Fees? US Tax Rules 2026",
+      "new_meta_title": "Can You Write Off Prop Firm Fees? US Tax Rules 2026 | TY",
+      "new_meta_description": "Can you write off prop firm fees on US taxes? When challenge fees count as a business expense, when they do not, and how to document every fee correctly.",
+      "angle": "query-mirror: 'can you write off prop firm fees' is the top query verbatim; hedged phrasing preserved (when they do not)",
+      "ctr_before": 1.43
+    },
+    {
+      "page": "https://tradersyard.com/blog-posts/options-trading-prop-firms",
+      "old_title": "Best Options Trading Prop Firms [2026 Guide]",
+      "new_title": "Options Funding: How Prop Firms Fund Options Traders",
+      "new_meta_title": "Options Funding: How Prop Firms Fund Options Traders | TY",
+      "new_meta_description": "Options funding explained: how options prop firms work, what funded options traders actually get, and how to compare programs before paying an entry fee.",
+      "angle": "query-mirror: 'options funding' is 201 of 880 impressions at pos 8.2; also de-overlaps this page from its sibling (which-prop-firms-allow-options-trading)",
+      "ctr_before": 1.02
+    }
+  ]
+}

@@ -1,0 +1,601 @@
+{
+  "generated": "2026-08-12",
+  "window": {
+    "start": "2026-07-16",
+    "end": "2026-08-12"
+  },
+  "guardrails": {
+    "cooldown_days": 42,
+    "max_attempts": 3,
+    "improvement_threshold": 0.2
+  },
+  "tickets": [
+    {
+      "page": "https://tradersyard.com/blog-posts/prop-firm-demo-account-practice-best-platforms",
+      "attempt": 1,
+      "clicks": 52,
+      "impressions": 9520,
+      "ctr": 0.55,
+      "position": 8.2,
+      "benchmark_ctr": 0.015,
+      "est_monthly_clicks_at_benchmark": 143,
+      "top_queries": [
+        {
+          "query": "prop firm demo account",
+          "clicks": 3,
+          "impressions": 163,
+          "position": 7.5
+        },
+        {
+          "query": "demo funded account",
+          "clicks": 0,
+          "impressions": 148,
+          "position": 9.4
+        },
+        {
+          "query": "prop firm demo account",
+          "clicks": 0,
+          "impressions": 127,
+          "position": 7.6
+        },
+        {
+          "query": "prop firm demo account",
+          "clicks": 0,
+          "impressions": 127,
+          "position": 7.6
+        },
+        {
+          "query": "prop firm demo account",
+          "clicks": 0,
+          "impressions": 127,
+          "position": 7.6
+        },
+        {
+          "query": "demo funded account",
+          "clicks": 0,
+          "impressions": 101,
+          "position": 8.9
+        },
+        {
+          "query": "demo funded account",
+          "clicks": 0,
+          "impressions": 101,
+          "position": 8.9
+        },
+        {
+          "query": "demo funded account",
+          "clicks": 0,
+          "impressions": 101,
+          "position": 8.9
+        }
+      ],
+      "prior_rewrites": []
+    },
+    {
+      "page": "https://tradersyard.com/blog-posts/prop-firm-copy-trading",
+      "attempt": 1,
+      "clicks": 20,
+      "impressions": 6898,
+      "ctr": 0.29,
+      "position": 7.6,
+      "benchmark_ctr": 0.025,
+      "est_monthly_clicks_at_benchmark": 172,
+      "top_queries": [
+        {
+          "query": "maven trading prop firm copy trading between own accounts allowed",
+          "clicks": 0,
+          "impressions": 32,
+          "position": 10
+        },
+        {
+          "query": "maventrading copy trading between your own accounts allowed",
+          "clicks": 0,
+          "impressions": 27,
+          "position": 10.6
+        },
+        {
+          "query": "what is copy trading in prop firm",
+          "clicks": 0,
+          "impressions": 26,
+          "position": 8.8
+        },
+        {
+          "query": "maven trading prop firm copy trading allowed between accounts",
+          "clicks": 0,
+          "impressions": 16,
+          "position": 10.3
+        },
+        {
+          "query": "maven trading prop firm copy trading rules trade copier multiple accounts",
+          "clicks": 0,
+          "impressions": 16,
+          "position": 10.5
+        },
+        {
+          "query": "maven trading prohibited practices trade copier multiple accounts",
+          "clicks": 0,
+          "impressions": 15,
+          "position": 8.1
+        },
+        {
+          "query": "which prop trading firm has the best copy trading rules?",
+          "clicks": 0,
+          "impressions": 15,
+          "position": 8.4
+        },
+        {
+          "query": "do prop firms copy your trades",
+          "clicks": 0,
+          "impressions": 13,
+          "position": 7.8
+        }
+      ],
+      "prior_rewrites": []
+    },
+    {
+      "page": "https://tradersyard.com/blog-posts/how-many-people-get-payouts-from-prop-firms",
+      "attempt": 1,
+      "clicks": 55,
+      "impressions": 5752,
+      "ctr": 0.96,
+      "position": 6.3,
+      "benchmark_ctr": 0.025,
+      "est_monthly_clicks_at_benchmark": 144,
+      "top_queries": [
+        {
+          "query": "do prop firms actually payout",
+          "clicks": 0,
+          "impressions": 80,
+          "position": 5.6
+        },
+        {
+          "query": "what percentage of prop firm traders get a payout",
+          "clicks": 0,
+          "impressions": 48,
+          "position": 6.1
+        },
+        {
+          "query": "how many prop",
+          "clicks": 0,
+          "impressions": 43,
+          "position": 9
+        },
+        {
+          "query": "what percent of traders get a payout",
+          "clicks": 0,
+          "impressions": 37,
+          "position": 7.3
+        },
+        {
+          "query": "what percentage of traders get a payout from prop firms",
+          "clicks": 2,
+          "impressions": 35,
+          "position": 6.2
+        },
+        {
+          "query": "what percentage of traders get funded",
+          "clicks": 0,
+          "impressions": 32,
+          "position": 5.5
+        },
+        {
+          "query": "what percentage of traders get a payout",
+          "clicks": 1,
+          "impressions": 28,
+          "position": 7.8
+        },
+        {
+          "query": "what percentage of people get a payout from prop firms",
+          "clicks": 0,
+          "impressions": 28,
+          "position": 5.4
+        }
+      ],
+      "prior_rewrites": []
+    },
+    {
+      "page": "https://tradersyard.com/blog-posts/which-prop-firm-gives-real-account",
+      "attempt": 1,
+      "clicks": 28,
+      "impressions": 5041,
+      "ctr": 0.56,
+      "position": 6.6,
+      "benchmark_ctr": 0.025,
+      "est_monthly_clicks_at_benchmark": 126,
+      "top_queries": [
+        {
+          "query": "prop firm real capital",
+          "clicks": 1,
+          "impressions": 57,
+          "position": 9.5
+        },
+        {
+          "query": "are prop firm accounts simulated",
+          "clicks": 0,
+          "impressions": 35,
+          "position": 10.6
+        },
+        {
+          "query": "real capital prop firm",
+          "clicks": 0,
+          "impressions": 32,
+          "position": 7.1
+        },
+        {
+          "query": "prop firms with real capital",
+          "clicks": 0,
+          "impressions": 25,
+          "position": 10.5
+        },
+        {
+          "query": "do prop firms use real money",
+          "clicks": 0,
+          "impressions": 20,
+          "position": 15.8
+        },
+        {
+          "query": "prop firms with real broker accounts",
+          "clicks": 0,
+          "impressions": 18,
+          "position": 11.9
+        },
+        {
+          "query": "solo cash prop firm",
+          "clicks": 0,
+          "impressions": 17,
+          "position": 8.4
+        },
+        {
+          "query": "i'm a profitable trader looking to scale my capital without risking my own money. what are the best proprietary trading firms that offer funded accounts and quick payouts?",
+          "clicks": 0,
+          "impressions": 15,
+          "position": 10.1
+        }
+      ],
+      "prior_rewrites": []
+    },
+    {
+      "page": "https://tradersyard.com/blog-posts/what-is-prop-firm-hedging",
+      "attempt": 1,
+      "clicks": 10,
+      "impressions": 2658,
+      "ctr": 0.38,
+      "position": 7.4,
+      "benchmark_ctr": 0.025,
+      "est_monthly_clicks_at_benchmark": 66,
+      "top_queries": [
+        {
+          "query": "is hedging illegal",
+          "clicks": 0,
+          "impressions": 35,
+          "position": 11
+        },
+        {
+          "query": "prop firm hedging",
+          "clicks": 1,
+          "impressions": 27,
+          "position": 13.5
+        },
+        {
+          "query": "prop firm hedging strategy",
+          "clicks": 0,
+          "impressions": 25,
+          "position": 14.4
+        },
+        {
+          "query": "why is hedging illegal",
+          "clicks": 0,
+          "impressions": 10,
+          "position": 7.9
+        },
+        {
+          "query": "what is hedging in prop firms",
+          "clicks": 0,
+          "impressions": 8,
+          "position": 8.5
+        },
+        {
+          "query": "hedging prop firms",
+          "clicks": 0,
+          "impressions": 7,
+          "position": 12.1
+        },
+        {
+          "query": "prop firm funded account hedging liquidity providers",
+          "clicks": 0,
+          "impressions": 7,
+          "position": 18.4
+        },
+        {
+          "query": "can you hedge prop firms",
+          "clicks": 1,
+          "impressions": 6,
+          "position": 9.5
+        }
+      ],
+      "prior_rewrites": []
+    },
+    {
+      "page": "https://tradersyard.com/blog-posts/how-many-people-fail-prop-firm-challenges",
+      "attempt": 1,
+      "clicks": 15,
+      "impressions": 2285,
+      "ctr": 0.66,
+      "position": 5.7,
+      "benchmark_ctr": 0.025,
+      "est_monthly_clicks_at_benchmark": 57,
+      "top_queries": [
+        {
+          "query": "how many people pass prop firm challenges",
+          "clicks": 1,
+          "impressions": 54,
+          "position": 6.1
+        },
+        {
+          "query": "what percentage of traders pass prop firm challenges",
+          "clicks": 0,
+          "impressions": 53,
+          "position": 13.7
+        },
+        {
+          "query": "what percentage of people pass prop firm challenges",
+          "clicks": 0,
+          "impressions": 42,
+          "position": 8.2
+        },
+        {
+          "query": "how many traders pass prop firm challenge",
+          "clicks": 0,
+          "impressions": 21,
+          "position": 9.3
+        },
+        {
+          "query": "funding rock review",
+          "clicks": 0,
+          "impressions": 11,
+          "position": 3.2
+        },
+        {
+          "query": "prop firm challenge success rate statistics",
+          "clicks": 0,
+          "impressions": 7,
+          "position": 5.7
+        },
+        {
+          "query": "how many traders pass crypto prop evaluations?",
+          "clicks": 0,
+          "impressions": 5,
+          "position": 3.4
+        },
+        {
+          "query": "prop firm statistics",
+          "clicks": 0,
+          "impressions": 5,
+          "position": 1
+        }
+      ],
+      "prior_rewrites": []
+    },
+    {
+      "page": "https://tradersyard.com/blog-posts/best-prop-firms-for-day-trading-in-2026",
+      "attempt": 1,
+      "clicks": 6,
+      "impressions": 1833,
+      "ctr": 0.33,
+      "position": 8.2,
+      "benchmark_ctr": 0.015,
+      "est_monthly_clicks_at_benchmark": 27,
+      "top_queries": [
+        {
+          "query": "tradersyard prop firm",
+          "clicks": 0,
+          "impressions": 111,
+          "position": 1
+        },
+        {
+          "query": "day trading prop firms",
+          "clicks": 0,
+          "impressions": 77,
+          "position": 18.2
+        },
+        {
+          "query": "day trading prop firm",
+          "clicks": 0,
+          "impressions": 39,
+          "position": 16.9
+        },
+        {
+          "query": "traders yard",
+          "clicks": 0,
+          "impressions": 30,
+          "position": 4.3
+        },
+        {
+          "query": "best prop firm for day traders",
+          "clicks": 0,
+          "impressions": 29,
+          "position": 8.5
+        },
+        {
+          "query": "day trader prop firm",
+          "clicks": 0,
+          "impressions": 28,
+          "position": 16.7
+        },
+        {
+          "query": "i'm comparing prop firms for my day trading business. which ones have the best combination of low daily loss limits, fast payouts, and no restrictions on trade frequency?",
+          "clicks": 0,
+          "impressions": 26,
+          "position": 5.7
+        },
+        {
+          "query": "i'm an experienced trader looking for a prop firm evaluation that matches my aggressive trading style. which challenges allow high-frequency trading and large position sizes?",
+          "clicks": 0,
+          "impressions": 22,
+          "position": 7.1
+        }
+      ],
+      "prior_rewrites": []
+    },
+    {
+      "page": "https://tradersyard.com/blog-posts/which-prop-firms-allow-options-trading",
+      "attempt": 1,
+      "clicks": 9,
+      "impressions": 1153,
+      "ctr": 0.78,
+      "position": 11.4,
+      "benchmark_ctr": 0.01,
+      "est_monthly_clicks_at_benchmark": 12,
+      "top_queries": [
+        {
+          "query": "best prop trading options with clear rules",
+          "clicks": 0,
+          "impressions": 32,
+          "position": 5.5
+        },
+        {
+          "query": "funded options trading account",
+          "clicks": 0,
+          "impressions": 21,
+          "position": 38.7
+        },
+        {
+          "query": "prop firms that allow options trading",
+          "clicks": 0,
+          "impressions": 17,
+          "position": 21.7
+        },
+        {
+          "query": "options trading funded account",
+          "clicks": 0,
+          "impressions": 15,
+          "position": 40.2
+        },
+        {
+          "query": "options funded account",
+          "clicks": 0,
+          "impressions": 11,
+          "position": 31.7
+        },
+        {
+          "query": "can you trade options with prop firms",
+          "clicks": 0,
+          "impressions": 10,
+          "position": 8.4
+        },
+        {
+          "query": "prop firm for optionstop prop firms",
+          "clicks": 0,
+          "impressions": 10,
+          "position": 18.9
+        },
+        {
+          "query": "prop firms for options trading",
+          "clicks": 0,
+          "impressions": 10,
+          "position": 8.1
+        }
+      ],
+      "prior_rewrites": []
+    },
+    {
+      "page": "https://tradersyard.com/blog-posts/are-prop-firm-fees-tax-deductible",
+      "attempt": 1,
+      "clicks": 14,
+      "impressions": 978,
+      "ctr": 1.43,
+      "position": 7.4,
+      "benchmark_ctr": 0.025,
+      "est_monthly_clicks_at_benchmark": 24,
+      "top_queries": [
+        {
+          "query": "can you write off prop firm fees",
+          "clicks": 0,
+          "impressions": 10,
+          "position": 6.1
+        },
+        {
+          "query": "are prop firm fees tax deductible",
+          "clicks": 0,
+          "impressions": 4,
+          "position": 8.3
+        },
+        {
+          "query": "ambos",
+          "clicks": 0,
+          "impressions": 1,
+          "position": 11
+        },
+        {
+          "query": "how to determine valid and invalid trade deductions",
+          "clicks": 0,
+          "impressions": 1,
+          "position": 91
+        }
+      ],
+      "prior_rewrites": []
+    },
+    {
+      "page": "https://tradersyard.com/blog-posts/options-trading-prop-firms",
+      "attempt": 1,
+      "clicks": 9,
+      "impressions": 880,
+      "ctr": 1.02,
+      "position": 9.9,
+      "benchmark_ctr": 0.015,
+      "est_monthly_clicks_at_benchmark": 13,
+      "top_queries": [
+        {
+          "query": "options funding",
+          "clicks": 1,
+          "impressions": 201,
+          "position": 8.2
+        },
+        {
+          "query": "prop firm for optionstop prop firms",
+          "clicks": 0,
+          "impressions": 37,
+          "position": 16.9
+        },
+        {
+          "query": "options prop firms",
+          "clicks": 0,
+          "impressions": 19,
+          "position": 10.6
+        },
+        {
+          "query": "option funding prop firm",
+          "clicks": 0,
+          "impressions": 17,
+          "position": 9.1
+        },
+        {
+          "query": "funder trading options prop firm",
+          "clicks": 0,
+          "impressions": 16,
+          "position": 8.1
+        },
+        {
+          "query": "option trading prop firm",
+          "clicks": 0,
+          "impressions": 14,
+          "position": 12.1
+        },
+        {
+          "query": "options prop firm",
+          "clicks": 0,
+          "impressions": 13,
+          "position": 13.3
+        },
+        {
+          "query": "prop firm for options trading",
+          "clicks": 0,
+          "impressions": 12,
+          "position": 19.4
+        }
+      ],
+      "prior_rewrites": []
+    }
+  ],
+  "overflow": 31
+}

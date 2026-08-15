@@ -61,3 +61,21 @@ claude-project-setup/
 
 # Image comparison output (dev only)
 output/image-comparison/
+
+# Internal analytics & strategy (public repo — do not expose)
+/*.html
+/*.docx
+/*.xlsx
+/*.md
+!README.md
+data/gsc-snapshots/
+data/gsc-*.json
+data/ahrefs-*/
+data/seo issues - ahref/
+data/seo-fixes/
+data/blog-corpus/
+output/reports/
+output/qa-review/
+output/inarticle-samples/
+output/style-lab/
+pandoc-*.pkg

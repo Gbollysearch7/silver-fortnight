@@ -1,0 +1,1298 @@
+{
+  "generated": "2026-08-15",
+  "totals": {
+    "live_posts": 240,
+    "orphans": 93,
+    "underlinked": 37,
+    "outbound_light": 80
+  },
+  "pillar_inlinks": [
+    {
+      "slug": "best-prop-firms",
+      "inbound": 37,
+      "target": "15-30+"
+    },
+    {
+      "slug": "what-is-a-prop-firm",
+      "inbound": 11,
+      "target": "15-30+"
+    },
+    {
+      "slug": "futures-prop-firms",
+      "inbound": 8,
+      "target": "15-30+"
+    },
+    {
+      "slug": "prop-firm-payouts-profit-split-withdrawals",
+      "inbound": 3,
+      "target": "15-30+"
+    }
+  ],
+  "orphans": [
+    {
+      "slug": "how-to-get-prop-firm-account-for-free",
+      "name": "How to Get a Prop Firm Account for Free [2026 Guide]",
+      "in": 0,
+      "out": 0
+    },
+    {
+      "slug": "which-prop-firm-is-best",
+      "name": "Which Prop Firm Is Best for You? A Decision Framework",
+      "in": 0,
+      "out": 0
+    },
+    {
+      "slug": "will-prop-firms-last",
+      "name": "Will Prop Firms Last? Industry Future and Sustainability ...",
+      "in": 0,
+      "out": 0
+    },
+    {
+      "slug": "top-prop-firm-malaysia",
+      "name": "Best Prop Firms Malaysia [2025]",
+      "in": 0,
+      "out": 0
+    },
+    {
+      "slug": "fundamental-analysis-prop-trading",
+      "name": "Using Fundamental Analysis in Prop Trading",
+      "in": 0,
+      "out": 0
+    },
+    {
+      "slug": "multi-timeframe-strategies-traders",
+      "name": "Top 5 Multi-Timeframe Strategies for Traders",
+      "in": 0,
+      "out": 0
+    },
+    {
+      "slug": "tools-prop-trading-analytics",
+      "name": "Best Tools for Prop Trading Analytics",
+      "in": 0,
+      "out": 0
+    },
+    {
+      "slug": "what-is-activation-fee-in-prop-firm-6beba",
+      "name": "What Is an Activation Fee in Prop Firms? 2026",
+      "in": 0,
+      "out": 1
+    },
+    {
+      "slug": "what-is-a-consistency-rule-in-prop-firms-03806",
+      "name": "What Is a Consistency Rule in Prop Firms? 2026",
+      "in": 0,
+      "out": 1
+    },
+    {
+      "slug": "prop-firm-trailing-drawdown-explained-with-examples-26816",
+      "name": "Prop Firm Trailing Drawdown Explained 2026",
+      "in": 0,
+      "out": 1
+    },
+    {
+      "slug": "how-to-trade-forex-with-a-prop-firm",
+      "name": "How To Trade Forex With A Prop Firm",
+      "in": 0,
+      "out": 1
+    },
+    {
+      "slug": "prop-trading-companies",
+      "name": "Prop Trading Companies: How to Choose the Right One",
+      "in": 0,
+      "out": 2
+    },
+    {
+      "slug": "drawdown-calculation-formula-for-prop-firm-challenges-522af",
+      "name": "Drawdown Calculation Formula for Prop Firms 2026",
+      "in": 0,
+      "out": 2
+    },
+    {
+      "slug": "prop-firm-demo-account-practice-best-platforms-5c35b",
+      "name": "Prop Firm Demo Account Practice: Best Platforms 2026",
+      "in": 0,
+      "out": 2
+    },
+    {
+      "slug": "are-prop-firms-profitable-9be29",
+      "name": "Are Prop Firms Profitable? The Honest Numbers 2026",
+      "in": 0,
+      "out": 2
+    },
+    {
+      "slug": "what-are-futures-prop-firms-7655a",
+      "name": "What Are Futures Prop Firms? How They Work 2026",
+      "in": 0,
+      "out": 2
+    },
+    {
+      "slug": "are-funded-account-profit-targets-realistic-truth-revealed-f8deb",
+      "name": "Are Funded Account Profit Targets Realistic? 2026",
+      "in": 0,
+      "out": 2
+    },
+    {
+      "slug": "funded-trader-scaling-plan-strategy-how-to-grow-your-account-fdd1f",
+      "name": "Funded Trader Scaling Plan Strategy 2026",
+      "in": 0,
+      "out": 2
+    },
+    {
+      "slug": "prop-firm-kyc-requirements-what-documents-do-you-need-01a75",
+      "name": "Prop Firm KYC Requirements: Documents Needed 2026",
+      "in": 0,
+      "out": 2
+    },
+    {
+      "slug": "how-to-calculate-max-drawdown-for-prop-firm-challenges-2ff24",
+      "name": "How to Calculate Max Drawdown for Prop Firms 2026",
+      "in": 0,
+      "out": 2
+    },
+    {
+      "slug": "set-stop-loss-levels-prop-trading",
+      "name": "How to Set Stop-Loss Levels in Prop Trading",
+      "in": 0,
+      "out": 2
+    },
+    {
+      "slug": "one-step-prop-firm-challenge",
+      "name": "One-Step Prop Firm Challenge Explained: 2026 Trader Guide",
+      "in": 0,
+      "out": 3
+    },
+    {
+      "slug": "proprietary-trading-firms",
+      "name": "Proprietary Trading Firms: Complete Guide for 2026",
+      "in": 0,
+      "out": 3
+    },
+    {
+      "slug": "how-prop-firms-manage-risk-for-funded-traders-3e4e4",
+      "name": "How Prop Firms Manage Risk for Funded Traders 2026",
+      "in": 0,
+      "out": 3
+    },
+    {
+      "slug": "are-futures-prop-firms-recommended-and-legal-18a0a",
+      "name": "Are Futures Prop Firms Legit and Legal? 2026",
+      "in": 0,
+      "out": 3
+    },
+    {
+      "slug": "funded-account-verification-process-step-by-step-guide-a683c",
+      "name": "Funded Account Verification Process Step-by-Step 2026",
+      "in": 0,
+      "out": 3
+    },
+    {
+      "slug": "prop-firm-challenge-discount-codes-2026-active-deals-568fc",
+      "name": "Prop Firm Challenge Discount Codes 2026: How to Save",
+      "in": 0,
+      "out": 3
+    },
+    {
+      "slug": "funded-trader-max-lot-size-calculator-for-prop-firms-a1d2c",
+      "name": "Funded Trader Max Lot Size Calculator 2026",
+      "in": 0,
+      "out": 3
+    },
+    {
+      "slug": "prop-firm-payout-schedule-timeline-when-do-you-get-paid-82413",
+      "name": "Prop Firm Payout Schedule: When Do You Get Paid?",
+      "in": 0,
+      "out": 3
+    },
+    {
+      "slug": "funded-trading-minimum-days-rule-what-you-need-to-know-dc54e",
+      "name": "Funded Trading Minimum Days Rule Explained 2026",
+      "in": 0,
+      "out": 3
+    },
+    {
+      "slug": "how-to-find-prop-firms-with-low-execution-delay",
+      "name": "How to Find Prop Firms With Low Execution Delay",
+      "in": 0,
+      "out": 3
+    },
+    {
+      "slug": "prop-firm-challenge-discount-codes-2026-active-deals",
+      "name": "Prop Firm Challenge Discount Codes 2026 (Active Deals)",
+      "in": 0,
+      "out": 3
+    },
+    {
+      "slug": "prop-firm-taxes-guide",
+      "name": "Prop Firm Taxes: Complete Tax Guide for Funded Traders [2...",
+      "in": 0,
+      "out": 3
+    },
+    {
+      "slug": "why-your-trading-strategy-fails-and-the-5-step-fix-every-pro-uses-z3l7z",
+      "name": "Why Your Trading Strategy Fails (And the 5-Step Fix Every...",
+      "in": 0,
+      "out": 3
+    },
+    {
+      "slug": "trading-performance-analyzer",
+      "name": "Trading Performance Analyzer | Free Tool",
+      "in": 0,
+      "out": 3
+    },
+    {
+      "slug": "trading-journal-template",
+      "name": "Free Trading Journal Template",
+      "in": 0,
+      "out": 3
+    },
+    {
+      "slug": "the-power-of-collaboration-in-trading",
+      "name": "The Power of Collaboration in Prop Trading",
+      "in": 0,
+      "out": 3
+    },
+    {
+      "slug": "pip-value-converter",
+      "name": "Pip Value Converter | Free Forex Tool",
+      "in": 0,
+      "out": 3
+    },
+    {
+      "slug": "tradersyard-education",
+      "name": "Learning to Trade With TradersYard: Education & Resources",
+      "in": 0,
+      "out": 3
+    },
+    {
+      "slug": "interview-with-moss-from-struggles-to-success-in-the-crypto-cup",
+      "name": "Interview with Moss: From Struggles to Success in the Cry...",
+      "in": 0,
+      "out": 3
+    },
+    {
+      "slug": "prop-firms-in-uk",
+      "name": "Prop Firms in UK - A Complete Guide for British Traders",
+      "in": 0,
+      "out": 3
+    },
+    {
+      "slug": "how-to-trade-multiple-prop-firms",
+      "name": "How to Trade Multiple Prop Firms the Right Way | TY",
+      "in": 0,
+      "out": 4
+    },
+    {
+      "slug": "swing-trading-futures-prop-firms",
+      "name": "Swing Trading With Futures Prop Firms: Rules | TY",
+      "in": 0,
+      "out": 4
+    },
+    {
+      "slug": "why-do-futures-prop-firms-charge-monthly-fees",
+      "name": "Why Do Futures Prop Firms Charge Monthly Fees? | TradersYard",
+      "in": 0,
+      "out": 4
+    },
+    {
+      "slug": "are-prop-firms-cfd-what-you-actually-trade",
+      "name": "Are Prop Firms CFD? What You Actually Trade | TY",
+      "in": 0,
+      "out": 4
+    },
+    {
+      "slug": "what-prop-firms-use-dxtrade",
+      "name": "What Prop Firms Use DXtrade? How to Check in 2026 | TY",
+      "in": 0,
+      "out": 4
+    },
+    {
+      "slug": "tradovate-prop-firms",
+      "name": "Tradovate Prop Firms: 2026 Trader Guide | TradersYard",
+      "in": 0,
+      "out": 4
+    },
+    {
+      "slug": "best-prop-firms-in-new-zealand",
+      "name": "Best Prop Firms in New Zealand: 2026 Guide | TY",
+      "in": 0,
+      "out": 4
+    },
+    {
+      "slug": "prop-firms-accepting-us-clients",
+      "name": "Prop Firms Accepting US Clients: Check Before You Pay | TY",
+      "in": 0,
+      "out": 4
+    },
+    {
+      "slug": "stocks-prop-firms",
+      "name": "Stocks Prop Firm: Two Very Different Models Explained | TY",
+      "in": 0,
+      "out": 4
+    },
+    {
+      "slug": "which-prop-firms-use-metatrader",
+      "name": "Which Prop Firms Use MetaTrader? The 2026 Reality | TY",
+      "in": 0,
+      "out": 4
+    },
+    {
+      "slug": "cheapest-futures-prop-firm",
+      "name": "How to Find the Cheapest Futures Prop Firm in 2026 | TY",
+      "in": 0,
+      "out": 4
+    },
+    {
+      "slug": "project-x-prop-firms",
+      "name": "Project X Prop Firm Guide 2026: What Changed and Why | TY",
+      "in": 0,
+      "out": 4
+    },
+    {
+      "slug": "which-prop-firms-use-tradingview",
+      "name": "Which Prop Firms Use TradingView? How to Check | TY",
+      "in": 0,
+      "out": 4
+    },
+    {
+      "slug": "best-mql5-strategies-for-prop-firm-challenges",
+      "name": "Best MQL5 Strategies for Prop Firm Challenges | TradersYard",
+      "in": 0,
+      "out": 4
+    },
+    {
+      "slug": "prop-firm-competitions-how-trading-tournaments-work",
+      "name": "Prop Firm Competitions: How Tournaments Work | TY",
+      "in": 0,
+      "out": 4
+    },
+    {
+      "slug": "daily-payout-prop-firms-what-they-really-offer",
+      "name": "Daily Payout Prop Firms: What They Really Offer | TY",
+      "in": 0,
+      "out": 4
+    },
+    {
+      "slug": "can-you-swing-trade-on-prop-firms-40bab",
+      "name": "Can You Swing Trade on Prop Firms? 2026",
+      "in": 0,
+      "out": 4
+    },
+    {
+      "slug": "how-many-people-get-payouts-from-prop-firms-a8fe0",
+      "name": "How Many People Get Payouts From Prop Firms? 2026",
+      "in": 0,
+      "out": 4
+    },
+    {
+      "slug": "prop-firm-challenge-spreadsheet-template-free-download-ef45c",
+      "name": "Prop Firm Challenge Spreadsheet Template (Free 2026)",
+      "in": 0,
+      "out": 4
+    },
+    {
+      "slug": "prop-firm-largest-drawdown",
+      "name": "Prop Firm with the Largest Drawdown: Complete Comparison ...",
+      "in": 0,
+      "out": 4
+    },
+    {
+      "slug": "which-prop-firms-use-ctrader",
+      "name": "Which Prop Firms Use cTrader? Best Picks for 2026 Compared",
+      "in": 0,
+      "out": 4
+    },
+    {
+      "slug": "are-prop-firms-legal-guide",
+      "name": "Are Prop Firms Legal? Country-by-Country Guide [2025]",
+      "in": 0,
+      "out": 4
+    },
+    {
+      "slug": "are-prop-firms-real",
+      "name": "Are Prop Firms Real? How to Verify Legitimacy [2025 Guide]",
+      "in": 0,
+      "out": 4
+    },
+    {
+      "slug": "why-prop-trading-is-better-than-trading-with-your-own-money",
+      "name": "Why Prop Trading Is Better Than Trading With Your Own Money",
+      "in": 0,
+      "out": 4
+    },
+    {
+      "slug": "drawdown-control-guide-traders",
+      "name": "Ultimate Guide to Drawdown Control for Traders",
+      "in": 0,
+      "out": 4
+    },
+    {
+      "slug": "empowering-traders-with-social-trading",
+      "name": "Empowering Traders With Social Trading at TradersYard",
+      "in": 0,
+      "out": 4
+    },
+    {
+      "slug": "prop-firm-demo-practice-real-accounts",
+      "name": "Prop Firm Demo Account: Practice & Real Accounts Guide",
+      "in": 0,
+      "out": 5
+    },
+    {
+      "slug": "forex-prop-firms",
+      "name": "The Complete Forex Prop Firm Guide: How They Work in 2026",
+      "in": 0,
+      "out": 5
+    },
+    {
+      "slug": "how-to-prepare-for-a-prop-firm-challenge-30-day-plan-968c6",
+      "name": "Prepare for a Prop Firm Challenge: 30-Day Plan 2026",
+      "in": 0,
+      "out": 5
+    },
+    {
+      "slug": "10-essential-prop-firm-evaluation-phase-tips-to-pass-first-t-3efc0",
+      "name": "10 Prop Firm Evaluation Tips to Pass First Try 2026",
+      "in": 0,
+      "out": 5
+    },
+    {
+      "slug": "best-prop-firms-in-sweden",
+      "name": "Best Prop Firms in Sweden in 2026",
+      "in": 0,
+      "out": 5
+    },
+    {
+      "slug": "best-prop-firms-in-switzerland",
+      "name": "Best Prop Firms in Switzerland in 2026",
+      "in": 0,
+      "out": 5
+    },
+    {
+      "slug": "best-prop-firms-in-austria",
+      "name": "Best Prop Firms for Trading in Austria 2026: Ranked",
+      "in": 0,
+      "out": 5
+    },
+    {
+      "slug": "best-prop-firms-in-belgium",
+      "name": "Best Prop Firms in Belgium 2026: Fees & Payouts Ranked",
+      "in": 0,
+      "out": 5
+    },
+    {
+      "slug": "best-prop-firms-in-portugal",
+      "name": "Best Prop Firms in Portugal in 2026",
+      "in": 0,
+      "out": 5
+    },
+    {
+      "slug": "best-prop-firms-in-uae",
+      "name": "Best Prop Firms in UAE & Dubai [2026 Guide]",
+      "in": 0,
+      "out": 5
+    },
+    {
+      "slug": "best-prop-firms-in-singapore",
+      "name": "Best Prop Firms in Singapore in 2026",
+      "in": 0,
+      "out": 5
+    },
+    {
+      "slug": "best-prop-firms-in-malaysia",
+      "name": "Best Prop Firms in Malaysia [2026 Ranked]",
+      "in": 0,
+      "out": 5
+    },
+    {
+      "slug": "best-prop-firms-in-india",
+      "name": "Best Prop Firms for Indian Traders [2026]",
+      "in": 0,
+      "out": 5
+    },
+    {
+      "slug": "best-prop-firms-in-south-africa",
+      "name": "Best Prop Firms in South Africa [2026 Guide]",
+      "in": 0,
+      "out": 5
+    },
+    {
+      "slug": "best-prop-firms-in-nigeria",
+      "name": "Best Prop Firms in Nigeria 2026: Naira, Crypto & Payouts",
+      "in": 0,
+      "out": 5
+    },
+    {
+      "slug": "best-prop-firms-in-poland",
+      "name": "Best Prop Firms in Poland [2026 Comparison]",
+      "in": 0,
+      "out": 5
+    },
+    {
+      "slug": "best-prop-firms-in-italy",
+      "name": "Best Prop Firms in Italy in 2026",
+      "in": 0,
+      "out": 5
+    },
+    {
+      "slug": "best-prop-firms-in-spain",
+      "name": "Best Prop Firms in Spain in 2026",
+      "in": 0,
+      "out": 5
+    },
+    {
+      "slug": "best-prop-firms-in-germany",
+      "name": "Best Prop Firms in Germany in 2026",
+      "in": 0,
+      "out": 5
+    },
+    {
+      "slug": "prop-trading-france",
+      "name": "Prop Trading France: Which Prop Firms Accept You in 2026",
+      "in": 0,
+      "out": 5
+    },
+    {
+      "slug": "five-pro-moves-to-help-you-join-the-top-10-of-investors",
+      "name": "Five Pro Moves to Help You Join the Top 10% of Investors",
+      "in": 0,
+      "out": 5
+    },
+    {
+      "slug": "best-prop-firms-united-kingdom",
+      "name": "Best Prop Firms in the UK [2026 Comparison]",
+      "in": 0,
+      "out": 5
+    },
+    {
+      "slug": "15-trading-challenge-common-mistakes-to-avoid-48947",
+      "name": "15 Trading Challenge Mistakes to Avoid 2026",
+      "in": 0,
+      "out": 6
+    },
+    {
+      "slug": "futures-trading-guide-beginners",
+      "name": "Complete Guide to Futures Trading for Beginners",
+      "in": 0,
+      "out": 6
+    },
+    {
+      "slug": "options-prop-firms",
+      "name": "Options Prop Firms: The Complete Guide for Traders (2026)",
+      "in": 0,
+      "out": 8
+    },
+    {
+      "slug": "prop-trading-as-a-career",
+      "name": "Prop Trader Salary & How to Become a Prop Trader (2026)",
+      "in": 0,
+      "out": 10
+    }
+  ],
+  "underlinked": [
+    {
+      "slug": "prop-trader-salary",
+      "name": "Prop Trader Salary: What Funded Traders Actually Earn",
+      "in": 1,
+      "out": 3
+    },
+    {
+      "slug": "instant-funding-prop-firms",
+      "name": "Instant Funding Prop Firms Explained: How It Works (2026)",
+      "in": 1,
+      "out": 3
+    },
+    {
+      "slug": "are-prop-firms-legit-profitable-halal",
+      "name": "Are Prop Firms Legit, Profitable and Halal? Full Guide",
+      "in": 1,
+      "out": 11
+    },
+    {
+      "slug": "where-can-i-find-the-best-fast-payout-prop-firm",
+      "name": "Fast Payout Prop Firms: Where to Find the Best in 2026",
+      "in": 1,
+      "out": 2
+    },
+    {
+      "slug": "what-prop-firm-allows-crypto-trading",
+      "name": "What Prop Firm Allows Crypto Trading in 2026?",
+      "in": 1,
+      "out": 3
+    },
+    {
+      "slug": "is-there-an-option-prop-firm",
+      "name": "Is There An Option Prop Firm",
+      "in": 1,
+      "out": 3
+    },
+    {
+      "slug": "is-it-best-futures-prop-firms-trusted-by-professional-trader",
+      "name": "Best Futures Prop Firms Trusted By Professional Traders in 2026",
+      "in": 1,
+      "out": 2
+    },
+    {
+      "slug": "how-to-prepare-for-a-prop-firm-challenge-30-day-plan",
+      "name": "How to Prepare for a Prop Firm Challenge: 30-Day Plan",
+      "in": 1,
+      "out": 2
+    },
+    {
+      "slug": "prop-firm-account-size-selection-guide-for-beginners",
+      "name": "Prop Firm Account Size Selection Guide for Beginners",
+      "in": 1,
+      "out": 3
+    },
+    {
+      "slug": "trading-challenge-profit-target-formula-explained",
+      "name": "Trading Challenge Profit Target Formula Explained",
+      "in": 1,
+      "out": 5
+    },
+    {
+      "slug": "which-prop-firm-has-the-best-spreads",
+      "name": "Which Prop Firm Has the Best Spreads in 2026?",
+      "in": 1,
+      "out": 3
+    },
+    {
+      "slug": "what-prop-firms-allow-hft",
+      "name": "Best HFT Prop Firms 2026: Which Ones Actually Allow It",
+      "in": 1,
+      "out": 0
+    },
+    {
+      "slug": "best-prop-firms-in-australia",
+      "name": "Best Prop Firms in Australia in 2026",
+      "in": 1,
+      "out": 5
+    },
+    {
+      "slug": "best-prop-firms-in-france",
+      "name": "Best Prop Firms in France in 2026",
+      "in": 1,
+      "out": 5
+    },
+    {
+      "slug": "how-many-prop-firms-are-there",
+      "name": "How Many Prop Firms Are There? Complete Industry Overview...",
+      "in": 1,
+      "out": 3
+    },
+    {
+      "slug": "do-prop-firms-allow-scalping",
+      "name": "Do Prop Firms Allow Scalping? Yes, But Mind the Rules 2026",
+      "in": 1,
+      "out": 6
+    },
+    {
+      "slug": "are-prop-firm-fees-tax-deductible",
+      "name": "Are Prop Firm Challenge Fees Tax Deductible? (US 2026)",
+      "in": 1,
+      "out": 1
+    },
+    {
+      "slug": "prop-firm-expert-advisor",
+      "name": "Which Prop Firms Allow Expert Advisors? (EA Guide 2026)",
+      "in": 1,
+      "out": 1
+    },
+    {
+      "slug": "how-to-get-funding-for-forex-trading",
+      "name": "How to Get Forex Funding [2025 Guide]",
+      "in": 1,
+      "out": 3
+    },
+    {
+      "slug": "are-prop-firms-halal",
+      "name": "Are Prop Firms Haram? The Halal Verdict for 2026",
+      "in": 1,
+      "out": 3
+    },
+    {
+      "slug": "prop-firms-south-africa",
+      "name": "Prop Firms South Africa: Complete Guide for SA Traders [2...",
+      "in": 1,
+      "out": 3
+    },
+    {
+      "slug": "prop-firms-italy",
+      "name": "Prop Firms Italy: Complete Guide for Italian Traders [2025]",
+      "in": 1,
+      "out": 3
+    },
+    {
+      "slug": "prop-firms-in-europe-complete-guide",
+      "name": "Prop Firms in Europe: Complete 2025 Guide for EU Traders",
+      "in": 1,
+      "out": 5
+    },
+    {
+      "slug": "trading-profit-calculator",
+      "name": "Trading Profit Calculator | Free Tool",
+      "in": 1,
+      "out": 2
+    },
+    {
+      "slug": "prop-trading-vs-day-trading",
+      "name": "Prop Trading vs Day Trading: Key Differences in 2026",
+      "in": 1,
+      "out": 1
+    },
+    {
+      "slug": "steve-henris-claims-victory-in-the-forex-grand-prix",
+      "name": "Steve Henris Claims Victory in the Forex Grand Prix",
+      "in": 1,
+      "out": 3
+    },
+    {
+      "slug": "risk-management-calculator",
+      "name": "Risk Management Calculator | Free Tool",
+      "in": 1,
+      "out": 3
+    },
+    {
+      "slug": "prop-trading-myths-busted-what-you-really-need-to-know",
+      "name": "Prop Trading Myths Busted: What You Really Need to Know",
+      "in": 1,
+      "out": 6
+    },
+    {
+      "slug": "cfd-trading-step-by-step-guide",
+      "name": "How to Start CFD Trading: Step-by-Step Guide",
+      "in": 1,
+      "out": 3
+    },
+    {
+      "slug": "prop-traders-handle-market-shifts",
+      "name": "How Prop Traders Handle Market Shifts",
+      "in": 1,
+      "out": 1
+    },
+    {
+      "slug": "how-to-analyze-a-stock-in-just-two-hours-a-practical-guide-for-tradersyard-members",
+      "name": "Stock Analysis in 2 Hours - Guide",
+      "in": 1,
+      "out": 3
+    },
+    {
+      "slug": "forex-lot-size-calculator",
+      "name": "Forex Lot Size Calculator | Free Tool",
+      "in": 1,
+      "out": 2
+    },
+    {
+      "slug": "falconx-otc-crypto-options-trading-platform",
+      "name": "FalconX Unveils 24/7 OTC Crypto Options Trading Platform",
+      "in": 1,
+      "out": 3
+    },
+    {
+      "slug": "from-chart-mastery-to-iphone-victory-ritik-dominates-the-iphone-hunt-tournament",
+      "name": "Ritik Wins iPhone Hunt Tournament",
+      "in": 1,
+      "out": 2
+    },
+    {
+      "slug": "scaling-prop-trading-accounts-checklist",
+      "name": "Checklist for Scaling Prop Trading Accounts",
+      "in": 1,
+      "out": 3
+    },
+    {
+      "slug": "managing-risk-earnings-season",
+      "name": "Case Study: Managing Risk During Earnings Season",
+      "in": 1,
+      "out": 0
+    },
+    {
+      "slug": "regulatory-compliance-prop-trading-practices",
+      "name": "Best Practices for Regulatory Compliance in Prop Trading",
+      "in": 1,
+      "out": 1
+    }
+  ],
+  "outbound_light": [
+    {
+      "slug": "prop-trading-companies",
+      "name": "Prop Trading Companies: How to Choose the Right One",
+      "in": 0,
+      "out": 2
+    },
+    {
+      "slug": "drawdown-calculation-formula-for-prop-firm-challenges-522af",
+      "name": "Drawdown Calculation Formula for Prop Firms 2026",
+      "in": 0,
+      "out": 2
+    },
+    {
+      "slug": "prop-firm-demo-account-practice-best-platforms-5c35b",
+      "name": "Prop Firm Demo Account Practice: Best Platforms 2026",
+      "in": 0,
+      "out": 2
+    },
+    {
+      "slug": "are-prop-firms-profitable-9be29",
+      "name": "Are Prop Firms Profitable? The Honest Numbers 2026",
+      "in": 0,
+      "out": 2
+    },
+    {
+      "slug": "what-is-activation-fee-in-prop-firm-6beba",
+      "name": "What Is an Activation Fee in Prop Firms? 2026",
+      "in": 0,
+      "out": 1
+    },
+    {
+      "slug": "what-is-a-consistency-rule-in-prop-firms-03806",
+      "name": "What Is a Consistency Rule in Prop Firms? 2026",
+      "in": 0,
+      "out": 1
+    },
+    {
+      "slug": "what-are-futures-prop-firms-7655a",
+      "name": "What Are Futures Prop Firms? How They Work 2026",
+      "in": 0,
+      "out": 2
+    },
+    {
+      "slug": "are-funded-account-profit-targets-realistic-truth-revealed-f8deb",
+      "name": "Are Funded Account Profit Targets Realistic? 2026",
+      "in": 0,
+      "out": 2
+    },
+    {
+      "slug": "prop-firm-trailing-drawdown-explained-with-examples-26816",
+      "name": "Prop Firm Trailing Drawdown Explained 2026",
+      "in": 0,
+      "out": 1
+    },
+    {
+      "slug": "funded-trader-scaling-plan-strategy-how-to-grow-your-account-fdd1f",
+      "name": "Funded Trader Scaling Plan Strategy 2026",
+      "in": 0,
+      "out": 2
+    },
+    {
+      "slug": "prop-firm-kyc-requirements-what-documents-do-you-need-01a75",
+      "name": "Prop Firm KYC Requirements: Documents Needed 2026",
+      "in": 0,
+      "out": 2
+    },
+    {
+      "slug": "how-to-calculate-max-drawdown-for-prop-firm-challenges-2ff24",
+      "name": "How to Calculate Max Drawdown for Prop Firms 2026",
+      "in": 0,
+      "out": 2
+    },
+    {
+      "slug": "which-prop-trading-firms-offer-direct-funding",
+      "name": "Which Prop Trading Firms Offer Direct Funding",
+      "in": 6,
+      "out": 2
+    },
+    {
+      "slug": "which-prop-firms-are-regulated",
+      "name": "Which Prop Firms Are Regulated in 2026",
+      "in": 3,
+      "out": 2
+    },
+    {
+      "slug": "which-prop-firms-allow-options-trading",
+      "name": "Which Prop Firms Allow Options Trading? The 2026 Reality",
+      "in": 5,
+      "out": 2
+    },
+    {
+      "slug": "which-prop-firm-is-1-for-forex-traders",
+      "name": "Which Prop Firm Is #1 For Forex Traders in 2026",
+      "in": 5,
+      "out": 2
+    },
+    {
+      "slug": "which-prop-firm-gives-real-account",
+      "name": "Which Prop Firms Give Real Capital? Real vs Demo Accounts",
+      "in": 11,
+      "out": 1
+    },
+    {
+      "slug": "which-futures-prop-trading-firm-offers-the-fastest-payout",
+      "name": "Which Futures Prop Firm Pays Out the Fastest in 2026?",
+      "in": 8,
+      "out": 2
+    },
+    {
+      "slug": "where-can-i-find-the-best-fast-payout-prop-firm",
+      "name": "Fast Payout Prop Firms: Where to Find the Best in 2026",
+      "in": 1,
+      "out": 2
+    },
+    {
+      "slug": "what-is-prop-firm-account-in-forex",
+      "name": "What Is Prop Firm Account In Forex",
+      "in": 3,
+      "out": 2
+    },
+    {
+      "slug": "is-there-any-sheikh-that-says-prop-firms-are-halal",
+      "name": "Is Prop Firm Trading Halal? What Islamic Scholars Say",
+      "in": 2,
+      "out": 0
+    },
+    {
+      "slug": "is-it-best-futures-prop-firms-trusted-by-professional-trader",
+      "name": "Best Futures Prop Firms Trusted By Professional Traders in 2026",
+      "in": 1,
+      "out": 2
+    },
+    {
+      "slug": "is-forex-prop-firm-legit",
+      "name": "Is Forex Prop Firm Legit",
+      "in": 2,
+      "out": 1
+    },
+    {
+      "slug": "how-to-trade-forex-with-a-prop-firm",
+      "name": "How To Trade Forex With A Prop Firm",
+      "in": 0,
+      "out": 1
+    },
+    {
+      "slug": "how-prop-firms-manage-risk-for-funded-traders",
+      "name": "How Prop Firms Manage Risk for Funded Traders",
+      "in": 25,
+      "out": 2
+    },
+    {
+      "slug": "how-prop-firms-manage-risk",
+      "name": "How Do Prop Firms Manage Risk? Drawdown Rules Explained",
+      "in": 3,
+      "out": 1
+    },
+    {
+      "slug": "are-futures-prop-firms-recommended-and-legal",
+      "name": "Are Futures Prop Firms Legit? Which Ones Actually Pay",
+      "in": 20,
+      "out": 1
+    },
+    {
+      "slug": "can-you-swing-trade-on-prop-firms",
+      "name": "Can You Swing Trade on Prop Firms? Rules & Best Firms",
+      "in": 2,
+      "out": 2
+    },
+    {
+      "slug": "how-many-people-fail-prop-firm-challenges",
+      "name": "Prop Firm Challenge Failure Rate: What the Data Says",
+      "in": 4,
+      "out": 2
+    },
+    {
+      "slug": "how-many-people-get-payouts-from-prop-firms",
+      "name": "Do Prop Firms Actually Pay Out? The Real Numbers (2026)",
+      "in": 14,
+      "out": 2
+    },
+    {
+      "slug": "what-is-activation-fee-in-prop-firm",
+      "name": "What Is a Prop Firm Activation Fee? (And Do You Pay?)",
+      "in": 7,
+      "out": 2
+    },
+    {
+      "slug": "what-is-a-consistency-rule-in-prop-firms",
+      "name": "What Is A Consistency Rule In Prop Firms",
+      "in": 13,
+      "out": 2
+    },
+    {
+      "slug": "are-funded-account-profit-targets-realistic-truth-revealed",
+      "name": "Are Funded Account Profit Targets Realistic? The Real Math",
+      "in": 4,
+      "out": 1
+    },
+    {
+      "slug": "how-to-prepare-for-a-prop-firm-challenge-30-day-plan",
+      "name": "How to Prepare for a Prop Firm Challenge: 30-Day Plan",
+      "in": 1,
+      "out": 2
+    },
+    {
+      "slug": "prop-firm-challenge-spreadsheet-template-free-download",
+      "name": "Prop Firm Challenge Spreadsheet Template (Free Download)",
+      "in": 4,
+      "out": 2
+    },
+    {
+      "slug": "funded-trader-profit-split-calculator-calculate-your-earning",
+      "name": "Funded Trader Profit Split Calculator: Calculate Your Earnings",
+      "in": 18,
+      "out": 2
+    },
+    {
+      "slug": "funded-trader-max-lot-size-calculator-for-prop-firms",
+      "name": "Max Lot Size Calculator for Funded Traders (Free Tool)",
+      "in": 6,
+      "out": 2
+    },
+    {
+      "slug": "prop-firm-challenge-journal-template-free-trading-log",
+      "name": "Prop Firm Challenge Journal Template (Free Trading Log)",
+      "in": 4,
+      "out": 2
+    },
+    {
+      "slug": "prop-firm-demo-account-practice-best-platforms",
+      "name": "Prop Firm Demo Accounts: Free Practice & Funded Demos 2026",
+      "in": 13,
+      "out": 2
+    },
+    {
+      "slug": "prop-firm-challenge-calculator-excel-template-free-download",
+      "name": "Prop Firm Challenge Calculator (Free Excel)",
+      "in": 2,
+      "out": 2
+    },
+    {
+      "slug": "how-to-pass-a-prop-firm-challenge",
+      "name": "How to Pass a Prop Firm Challenge",
+      "in": 37,
+      "out": 2
+    },
+    {
+      "slug": "forex-vs-futures-prop-firms",
+      "name": "Forex vs Futures Prop Firms: Complete Comparison [2026]",
+      "in": 7,
+      "out": 1
+    },
+    {
+      "slug": "options-trading-prop-firms",
+      "name": "Best Options Trading Prop Firms [2026 Guide]",
+      "in": 4,
+      "out": 0
+    },
+    {
+      "slug": "prop-firm-profit-split-comparison",
+      "name": "Prop Firm Profit Splits Compared: Who Pays 95% (2026)",
+      "in": 3,
+      "out": 0
+    },
+    {
+      "slug": "what-prop-firms-allow-hft",
+      "name": "Best HFT Prop Firms 2026: Which Ones Actually Allow It",
+      "in": 1,
+      "out": 0
+    },
+    {
+      "slug": "how-to-get-prop-firm-account-for-free",
+      "name": "How to Get a Prop Firm Account for Free [2026 Guide]",
+      "in": 0,
+      "out": 0
+    },
+    {
+      "slug": "which-prop-firm-is-best",
+      "name": "Which Prop Firm Is Best for You? A Decision Framework",
+      "in": 0,
+      "out": 0
+    },
+    {
+      "slug": "fast-payout-prop-firms-guide",
+      "name": "Fast Payout Prop Firms: Quick Withdrawals Explained 2026",
+      "in": 3,
+      "out": 1
+    },
+    {
+      "slug": "prop-firm-rules-explained",
+      "name": "Prop Firm Rules Explained: Understand Prop Trading Restri...",
+      "in": 8,
+      "out": 0
+    },
+    {
+      "slug": "how-to-pass-prop-firm-challenge",
+      "name": "How to Pass Prop Firm Challenge: Proven Strategies for Su...",
+      "in": 3,
+      "out": 2
+    },
+    {
+      "slug": "what-is-prop-firm-challenge",
+      "name": "What Is a Prop Firm Challenge? Phases, Rules & Costs 2026",
+      "in": 8,
+      "out": 1
+    },
+    {
+      "slug": "prop-firm-copy-trading",
+      "name": "Prop Firm Copy Trading: Which Firms Allow It (2026)",
+      "in": 5,
+      "out": 1
+    },
+    {
+      "slug": "are-prop-firm-fees-tax-deductible",
+      "name": "Are Prop Firm Challenge Fees Tax Deductible? (US 2026)",
+      "in": 1,
+      "out": 1
+    },
+    {
+      "slug": "prop-firm-expert-advisor",
+      "name": "Which Prop Firms Allow Expert Advisors? (EA Guide 2026)",
+      "in": 1,
+      "out": 1
+    },
+    {
+      "slug": "will-prop-firms-last",
+      "name": "Will Prop Firms Last? Industry Future and Sustainability ...",
+      "in": 0,
+      "out": 0
+    },
+    {
+      "slug": "prop-firm-regulation",
+      "name": "Are Prop Firms Regulated? [2025 Guide]",
+      "in": 2,
+      "out": 1
+    },
+    {
+      "slug": "top-prop-firm-malaysia",
+      "name": "Best Prop Firms Malaysia [2025]",
+      "in": 0,
+      "out": 0
+    },
+    {
+      "slug": "prop-trading-for-beginners",
+      "name": "Prop Trading for Beginners: Complete Guide 2025",
+      "in": 2,
+      "out": 0
+    },
+    {
+      "slug": "how-do-prop-traders-manage-stress",
+      "name": "How Do Prop Traders Manage Stress? Proven Strategies for ...",
+      "in": 2,
+      "out": 2
+    },
+    {
+      "slug": "how-to-pass-forex-prop-firm-challenge",
+      "name": "How to Pass Forex Prop Firm Challenge: Proven Strategy [2...",
+      "in": 14,
+      "out": 2
+    },
+    {
+      "slug": "mental-resilience-importance-prop-trading",
+      "name": "Why Mental Resilience Matters in Prop Trading",
+      "in": 2,
+      "out": 1
+    },
+    {
+      "slug": "what-is-prop-trading-questions-answered",
+      "name": "What Is Prop Trading? Common Questions Answered",
+      "in": 7,
+      "out": 2
+    },
+    {
+      "slug": "fundamental-analysis-prop-trading",
+      "name": "Using Fundamental Analysis in Prop Trading",
+      "in": 0,
+      "out": 0
+    },
+    {
+      "slug": "drawdown-profit-splits-guide",
+      "name": "Ultimate Guide to Drawdown and Profit Splits",
+      "in": 2,
+      "out": 1
+    },
+    {
+      "slug": "guide-prop-trading-profit-splits",
+      "name": "Ultimate Guide to Prop Trading Profit Splits",
+      "in": 3,
+      "out": 1
+    },
+    {
+      "slug": "trading-profit-calculator",
+      "name": "Trading Profit Calculator | Free Tool",
+      "in": 1,
+      "out": 2
+    },
+    {
+      "slug": "trading-position-size-calculator",
+      "name": "Trading Position Size Calculator",
+      "in": 2,
+      "out": 2
+    },
+    {
+      "slug": "multi-timeframe-strategies-traders",
+      "name": "Top 5 Multi-Timeframe Strategies for Traders",
+      "in": 0,
+      "out": 0
+    },
+    {
+      "slug": "prop-trading-vs-day-trading",
+      "name": "Prop Trading vs Day Trading: Key Differences in 2026",
+      "in": 1,
+      "out": 1
+    },
+    {
+      "slug": "prop-trading-rules-checklist-success",
+      "name": "Prop Trading Rules: Complete Checklist for Success",
+      "in": 7,
+      "out": 0
+    },
+    {
+      "slug": "position-sizing-prop-traders-tips",
+      "name": "Position Sizing for Prop Traders: Key Tips",
+      "in": 3,
+      "out": 1
+    },
+    {
+      "slug": "set-stop-loss-levels-prop-trading",
+      "name": "How to Set Stop-Loss Levels in Prop Trading",
+      "in": 0,
+      "out": 2
+    },
+    {
+      "slug": "manage-drawdown-prop-trading-accounts",
+      "name": "How to Manage Drawdown in Prop Trading Accounts",
+      "in": 7,
+      "out": 0
+    },
+    {
+      "slug": "prop-traders-handle-market-shifts",
+      "name": "How Prop Traders Handle Market Shifts",
+      "in": 1,
+      "out": 1
+    },
+    {
+      "slug": "forex-lot-size-calculator",
+      "name": "Forex Lot Size Calculator | Free Tool",
+      "in": 1,
+      "out": 2
+    },
+    {
+      "slug": "daily-loss-limits-vs-trailing-drawdowns",
+      "name": "Daily Loss Limits vs. Trailing Drawdowns",
+      "in": 3,
+      "out": 2
+    },
+    {
+      "slug": "from-chart-mastery-to-iphone-victory-ritik-dominates-the-iphone-hunt-tournament",
+      "name": "Ritik Wins iPhone Hunt Tournament",
+      "in": 1,
+      "out": 2
+    },
+    {
+      "slug": "managing-risk-earnings-season",
+      "name": "Case Study: Managing Risk During Earnings Season",
+      "in": 1,
+      "out": 0
+    },
+    {
+      "slug": "tools-prop-trading-analytics",
+      "name": "Best Tools for Prop Trading Analytics",
+      "in": 0,
+      "out": 0
+    },
+    {
+      "slug": "regulatory-compliance-prop-trading-practices",
+      "name": "Best Practices for Regulatory Compliance in Prop Trading",
+      "in": 1,
+      "out": 1
+    }
+  ],
+  "playbook": "Agent: for each orphan pick 2-4 topically-related live posts and insert a natural anchor link (target keyword as anchor, links flow UP supporting→hub→pillar). Route inserts through content gate → apply with backup → publish → verify. Never link competitor firms; never link blog.tradersyard.com."
+}

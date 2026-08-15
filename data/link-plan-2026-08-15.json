@@ -1,0 +1,118 @@
+{
+  "generated": "2026-08-15",
+  "note": "Loop 4 run 1 \u2014 capped at 15 hosts. Priorities: payouts pillar in-links, first inbound links for new posts. Anchors = target keyword. Links flow UP or hub\u2192member only. TRIMMED: 4 targets were unpublished drafts; their host links move to the publish-wave playbook (add inbound links when the draft goes live).",
+  "inserts": [
+    {
+      "host": "fast-payout-prop-firms-guide",
+      "links": [
+        {
+          "target": "prop-firm-payouts-profit-split-withdrawals",
+          "anchor": "Prop Firm Payouts, Profit Splits and Withdrawals"
+        }
+      ]
+    },
+    {
+      "host": "funded-trader-withdrawal-process-how-long-does-it-take",
+      "links": [
+        {
+          "target": "prop-firm-payouts-profit-split-withdrawals",
+          "anchor": "Prop Firm Payouts, Profit Splits and Withdrawals"
+        }
+      ]
+    },
+    {
+      "host": "how-many-people-get-payouts-from-prop-firms",
+      "links": [
+        {
+          "target": "prop-firm-payouts-profit-split-withdrawals",
+          "anchor": "Prop Firm Payouts, Profit Splits and Withdrawals"
+        }
+      ]
+    },
+    {
+      "host": "prop-firm-ea-allowed-policy-can-you-use-expert-advisors",
+      "links": [
+        {
+          "target": "best-mql5-strategies-for-prop-firm-challenges",
+          "anchor": "Best MQL5 Strategies for Prop Firm Challenges"
+        }
+      ]
+    },
+    {
+      "host": "can-you-swing-trade-on-prop-firms",
+      "links": [
+        {
+          "target": "swing-trading-futures-prop-firms",
+          "anchor": "Swing Trading With Futures Prop Firms"
+        }
+      ]
+    },
+    {
+      "host": "which-prop-firm-is-the-cheapest",
+      "links": [
+        {
+          "target": "cheapest-futures-prop-firm",
+          "anchor": "How to Find the Cheapest Futures Prop Firm"
+        }
+      ]
+    },
+    {
+      "host": "what-is-activation-fee-in-prop-firm",
+      "links": [
+        {
+          "target": "why-do-futures-prop-firms-charge-monthly-fees",
+          "anchor": "Why Futures Prop Firms Charge Monthly Fees"
+        }
+      ]
+    },
+    {
+      "host": "futures-prop-firms",
+      "links": [
+        {
+          "target": "tradovate-prop-firms",
+          "anchor": "Tradovate Prop Firms Guide"
+        },
+        {
+          "target": "which-prop-firms-use-metatrader",
+          "anchor": "Which Prop Firms Use MetaTrader"
+        }
+      ]
+    },
+    {
+      "host": "prop-firm-demo-account-practice-best-platforms",
+      "links": [
+        {
+          "target": "prop-firm-competitions-how-trading-tournaments-work",
+          "anchor": "Prop Firm Competitions and Trading Tournaments"
+        }
+      ]
+    },
+    {
+      "host": "cfd-trading-step-by-step-guide",
+      "links": [
+        {
+          "target": "are-prop-firms-cfd-what-you-actually-trade",
+          "anchor": "Are Prop Firms CFD? What You Actually Trade"
+        }
+      ]
+    },
+    {
+      "host": "best-prop-firms-in-usa",
+      "links": [
+        {
+          "target": "prop-firms-accepting-us-clients",
+          "anchor": "Prop Firms Accepting US Clients"
+        }
+      ]
+    },
+    {
+      "host": "best-prop-firms-in-australia",
+      "links": [
+        {
+          "target": "best-prop-firms-in-new-zealand",
+          "anchor": "Best Prop Firms in New Zealand"
+        }
+      ]
+    }
+  ]
+}

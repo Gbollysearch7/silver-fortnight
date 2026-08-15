@@ -1,0 +1,42 @@
+{
+  "generated": "2026-08-15",
+  "note": "Loop 4 run 2 \u2014 the 4 inserts deferred from run 1 (targets published in wave 5).",
+  "inserts": [
+    {
+      "host": "how-to-pass-a-prop-firm-challenge",
+      "links": [
+        {
+          "target": "what-happens-when-you-pass-a-prop-firm-challenge",
+          "anchor": "What Happens When You Pass a Prop Firm Challenge"
+        }
+      ]
+    },
+    {
+      "host": "are-prop-firms-legit",
+      "links": [
+        {
+          "target": "prop-firms-not-paying-out",
+          "anchor": "Prop Firms Not Paying Out: Rule Breach or Red Flag"
+        }
+      ]
+    },
+    {
+      "host": "do-prop-firms-allow-scalping",
+      "links": [
+        {
+          "target": "scalping-futures-prop-firms",
+          "anchor": "Scalping With Futures Prop Firms"
+        }
+      ]
+    },
+    {
+      "host": "which-prop-firm-is-the-cheapest",
+      "links": [
+        {
+          "target": "how-much-do-prop-firms-cost",
+          "anchor": "How Much Do Prop Firms Cost"
+        }
+      ]
+    }
+  ]
+}

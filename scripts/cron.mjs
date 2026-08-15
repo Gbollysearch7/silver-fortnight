@@ -31,6 +31,16 @@ const POSTS_PER_DAY = 5;
 const PUBLISH_HOURS_UTC = [6, 9, 12, 15, 18]; // 5 slots to catch up on missed articles
 
 printHeader('Blog Automation Cron');
+
+// ⛔ PAUSED — publishing disabled pending content quality audit
+// Toggle via Railway env var CRON_PAUSED=true|false (preferred), or flip the constant below.
+const PUBLISHING_PAUSED = process.env.CRON_PAUSED === 'false' ? false : true;
+if (PUBLISHING_PAUSED) {
+  printWarning('Publishing is PAUSED. No posts will be generated or published.');
+  printWarning('To resume: set CRON_PAUSED=false in Railway env vars (or flip PUBLISHING_PAUSED in scripts/cron.mjs)');
+  process.exit(0);
+}
+
 printInfo(`Schedule: ${POSTS_PER_DAY} posts/day at ${PUBLISH_HOURS_UTC.join(', ')} UTC`);
 printInfo(`Queue: ${QUEUE_PATH}`);
 

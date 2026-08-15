@@ -23,6 +23,7 @@ import { serialize } from '../lib/markdown.mjs';
 import { research } from '../lib/researcher.mjs';
 // Use new AI writer v2 that supports both Claude and OpenAI
 import { generateArticle, compareProvidersForArticle } from '../lib/ai-writer-v2.mjs';
+import { validateInternalLinks } from '../lib/internal-link-validator.mjs';
 
 const args = parseArgs();
 
@@ -271,11 +272,35 @@ if (foundMarker && !scaffoldOnly) {
 
 // Word count gate — real articles must have substance
 const wordCountCheck = articleContent.split(/\s+/).filter(w => w.length > 0).length;
-if (!scaffoldOnly && wordCountCheck < 400) {
+if (!scaffoldOnly && wordCountCheck < 600) {
   printError(`FATAL: Generated content is only ${wordCountCheck} words — suspiciously short.`);
-  printError('Minimum is 400 words. AI may have returned an error message or empty response.');
+  printError('Minimum is 600 words. AI may have returned an error message or empty response.');
   printError('ABORTING — refusing to publish thin content.');
   process.exit(1);
+}
+
+// Internal link gate — AI must not invent /blog-posts/X links that don't exist.
+// History: in April 2026, 77 ghost links across 29 articles had to be unwrapped after the fact.
+if (!scaffoldOnly) {
+  try {
+    const result = await validateInternalLinks(articleContent, { allowSelf: slug });
+    if (!result.valid) {
+      printError(`FATAL: Generated content contains ${result.ghosts.length} internal link(s) to non-existent /blog-posts/ slugs.`);
+      printError(`Published slug count: ${result.totalPublished}`);
+      for (const g of result.ghosts.slice(0, 10)) {
+        printError(`  ghost link -> /blog-posts/${g.slug}  (${g.type})`);
+      }
+      printError('ABORTING — refusing to publish article that links to articles that do not exist.');
+      process.exit(1);
+    }
+    if (result.links.length > 0) {
+      printSuccess(`Internal link check passed: ${result.links.length} link(s), all targets exist.`);
+    }
+  } catch (err) {
+    printError(`FATAL: Internal link validation failed to run: ${err.message}`);
+    printError('Cannot verify links are real — ABORTING to be safe.');
+    process.exit(1);
+  }
 }
 
 // Build frontmatter

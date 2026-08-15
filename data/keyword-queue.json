@@ -214,7 +214,7 @@
       "template": "how-to",
       "category": "prop-firm-guides",
       "priority": 4,
-      "status": "queued",
+      "status": "skipped",
       "notes": "Downloadable resource, high conversion potential",
       "tier": 0,
       "estMonthlySearches": 5,
@@ -232,7 +232,8 @@
       "slug": "prop-firm-challenge-calculator-excel-template-free-download",
       "stagedAt": null,
       "duration": "228.6s",
-      "_ghost_reset": true
+      "_ghost_reset": true,
+      "skip_reason": "excel/template/pdf — not suitable for web content"
     },
     {
       "id": "510",
@@ -733,7 +734,7 @@
       "template": "how-to",
       "category": "prop-firm-guides",
       "priority": 25,
-      "status": "queued",
+      "status": "skipped",
       "notes": "Template download",
       "tier": 0,
       "estMonthlySearches": 8,
@@ -751,7 +752,8 @@
       "slug": "prop-firm-challenge-spreadsheet-template-free-download",
       "stagedAt": null,
       "duration": "70.9s",
-      "_ghost_reset": true
+      "_ghost_reset": true,
+      "skip_reason": "excel/template/pdf — not suitable for web content"
     },
     {
       "id": "521",
@@ -1160,7 +1162,7 @@
       "template": "how-to",
       "category": "trading-education",
       "priority": 13,
-      "status": "queued",
+      "status": "skipped",
       "notes": "Free template download",
       "tier": 0,
       "estMonthlySearches": 6,
@@ -1178,7 +1180,8 @@
       "slug": "prop-firm-challenge-journal-template-free-trading-log",
       "stagedAt": null,
       "duration": "48.4s",
-      "_ghost_reset": true
+      "_ghost_reset": true,
+      "skip_reason": "excel/template/pdf — not suitable for web content"
     },
     {
       "id": "530",
@@ -5240,7 +5243,7 @@
       "tier": 0,
       "volume": 10,
       "intent": "Informational",
-      "status": "queued",
+      "status": "skipped",
       "ai_validated": true,
       "notes": "Tier 0 keyword (10 searches/month). Needs AI validation.",
       "created_at": "2026-02-13T04:06:32.485Z",
@@ -5249,7 +5252,8 @@
       "ai_validation_reasoning": "This keyword is about traders looking for high-frequency trading (HFT) expert advisors (EAs) to use in prop firm trading. While it mentions 'free download' which could attract freebie-seekers, the intent is clearly from traders wanting tools to trade with prop firms. This is educational/resource content that can discuss EA usage rules, restrictions, and best practices across prop firms including TradersYard.",
       "ai_brand_detected": null,
       "ai_target_audience": "traders",
-      "ai_validated_at": "2026-02-13T07:53:24.132Z"
+      "ai_validated_at": "2026-02-13T07:53:24.132Z",
+      "skip_reason": "excel/template/pdf — not suitable for web content"
     },
     {
       "id": "199",
@@ -6041,7 +6045,7 @@
       "tier": 0,
       "volume": 10,
       "intent": "Informational",
-      "status": "queued",
+      "status": "skipped",
       "ai_validated": true,
       "notes": "Tier 0 keyword (10 searches/month). Needs AI validation.",
       "created_at": "2026-02-13T04:06:32.485Z",
@@ -6050,7 +6054,8 @@
       "ai_validation_reasoning": "This keyword is about traders seeking guidance on passing prop firm evaluations/challenges. It's educational content that applies generically to all prop firms including TradersYard. The 'pdf' suffix suggests they're looking for a downloadable guide or resource about evaluation strategies.",
       "ai_brand_detected": null,
       "ai_target_audience": "traders",
-      "ai_validated_at": "2026-02-13T08:01:07.328Z"
+      "ai_validated_at": "2026-02-13T08:01:07.328Z",
+      "skip_reason": "excel/template/pdf — not suitable for web content"
     },
     {
       "id": "236",
