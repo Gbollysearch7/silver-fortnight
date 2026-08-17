@@ -1,5 +1,15 @@
 # TY Blog Graph — Scheduled Routine Prompts
 
+> **DEPLOYED LOCALLY 17 Aug 2026** via macOS crontab + `scripts/run-routine.sh`
+> (headless `claude -p` against this working tree; secrets from local `.env`;
+> git push authenticated). Schedule (Europe/London local): truth-check daily
+> 07:03 · CTR rewrites Mon 08:07 · production Tue+Thu 08:11 (STAGES only,
+> publishes on human "go") · link sweep 1st 09:07 · depth run 15th 09:11.
+> Caveat: the Mac must be awake at fire time; missed fires are skipped.
+> Manage: `crontab -l` / `crontab -e`. Kill switch: `crontab -r` (removes all)
+> or delete a line. Logs: `logs/routines/`. Cloud routines remain the upgrade
+> path once the Claude GitHub App is installed (creation currently 401s).
+
 Five routines that run the whole system. Each prompt is self-contained: paste it as
 the task when creating a scheduled cloud agent (via `/schedule` in Claude Code or the
 routines UI on claude.ai/code), attach this GitHub repo, and set the cron shown.
@@ -27,7 +37,18 @@ Standing rules that override everything:
 - Fail loudly: if a gate fails or data is missing, STOP and report. Never
   improvise around a failed step, never publish partial work.
 - Stay within scope caps stated below. When done, write a short run report
-  to output/reports/routine-runs.md (append: date, routine, actions, receipts).
+  to runbooks/routine-runs.md (append: date, routine, actions, receipts).
+- STATE PERSISTENCE (critical): you run in an ephemeral clone. At the end of
+  every run, `git add` and commit + push every state file you changed —
+  data/rewrite-ledger.json, data/*-tickets.json, receipts, blogs/ frontmatter,
+  output/thumbnails-html/*.jpg, runbooks/routine-runs.md — with a message like
+  "routine: <name> <date>". If you cannot push, say so LOUDLY in your report:
+  unpushed state means the next run's guardrails are blind.
+- SECRETS: publishing needs WEBFLOW_API_KEY, indexing needs the Google service
+  account (GOOGLE_SERVICE_ACCOUNT_PATH or GOOGLE_SERVICE_ACCOUNT_JSON), truth
+  loop landing pages need FIRECRAWL_API_KEY — all from the environment, never
+  from the repo. If a needed secret is missing, STOP that step and report it;
+  do not work around it.
 ```
 
 ---
