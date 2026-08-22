@@ -1,24 +1,31 @@
 {
-  "date": "2026-08-17",
-  "baseline": "2026-08-15",
+  "date": "2026-08-22",
+  "baseline": "2026-08-17",
   "sources_checked": 12,
   "changes": [
     {
       "url": "https://tradersyard.com/",
       "change": "MODIFIED",
       "added": [
+        "$15695$509",
+        "$8799$269",
+        "$5544$159",
+        "$3679$99",
+        "$1951$49",
+        "Reward Frequency: 15 daysNews Trading: NoLeverage: Up to 1:75Consistency: NoneMin. Profitable Days: 6 daysUp to 100% reward splitOvernight holding allowedActivation fee: NoneChallenge duration: Unlimited",
+        "[Read all rules](https://tradersyard.com/rules)",
+        "Traders from most countries can participate. Availability is subject to local regulations and restricted jurisdictions; eligibility is confirmed during registration or checkout. [View the detailed list of eligible countries.](https://help.tradersyard.com/en/articles/16414108-country-restrictions-for-tradersyard-challenges)",
+        "[Read More FAQ](https://help.tradersyard.com/en/collections/19706904-general-faqs)"
+      ],
+      "removed": [
         "$2822$509",
         "$1644$269",
         "$1076$159",
         "$742$99",
-        "$407$49"
-      ],
-      "removed": [
-        "$5612$509",
-        "$3216$269",
-        "$2071$159",
-        "$1404$99",
-        "$760$49"
+        "$407$49",
+        "Reward Frequency: 15 daysNews Trading: NoLeverage: Up to 1:75Consistency: NoneMin. Profitable Days: 6 daysUp to 100% reward splitOvernight holding allowed",
+        "Traders from most countries can participate. Availability is subject to local regulations and restricted jurisdictions; eligibility is confirmed during registration or checkout. [View the detailed list of eligible countries.](https://docs.tradersyard.com/traderchallenge/faqs#is-my-country-restricted-from-participating-in-a-challenge)",
+        "[Read More FAQ](https://docs.tradersyard.com/traderchallenge/faqs)"
       ]
     }
   ]
